@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+body {margin: 0; padding: 0;}
+a {text-decoration: none;}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/killerwhale2.jpg);
+    background-size: cover;
+    background-position: center 28%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+header {
+    width: calc(100% - 100px);
+    display: flex;
+    margin-top: 20px;
+    padding: 0 50px;
+    justify-content: space-between;
+    align-items: baseline;
+    position: fixed;
+}
+header a {
+    color: white;
+}
+
+header .logo a {
+    margin-right: 50px
+}
+header .logo nav a {
+    margin: 0 50px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.logo nav {
+    font-size: 18px;
+}
+
+header .logo {
+    font-size: 48px;
+}
+
+.wrapper header .auth a {
+    margin: 0 50px;
+    font-size: 18px;
+}
+
+body .wrapper main p {
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 48px;
+    line-height: 100vh;
+}
