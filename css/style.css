@@ -30,7 +30,7 @@ header .logo a {
     margin-right: 50px
 }
 header .logo nav a {
-    margin: 0 50px;
+    margin: 0 30px;
 }
 
 .logo {
@@ -47,8 +47,12 @@ header .logo {
     font-size: 48px;
 }
 
+.wrapper header .auth {
+    margin-right: 20px;
+}
+
 .wrapper header .auth a {
-    margin: 0 50px;
+    margin: 0 0 0 60px;
     font-size: 18px;
 }
 
