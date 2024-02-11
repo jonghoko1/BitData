@@ -3,6 +3,8 @@
 body {margin: 0; padding: 0; user-select: none;}
 a {text-decoration: none;}
 
+
+/* 메인페이지 */
 .wrapper {
     width: 100vw;
     height: 100vh;
@@ -62,4 +64,96 @@ body .wrapper main p {
     text-align: center;
     font-size: 48px;
     line-height: 100vh;
+}
+
+
+/* 회원가입 모달 노출 여부(JS) */
+.modal {
+    /* display: none; */
+    /* opacity: 0;
+    visibility: hidden; */
+}
+/* 회원가입 모달 */
+.modal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.modal_background {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+.modal_content {
+    width: 440px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #333;
+    padding: 20px 40px 10px;
+}
+.modal_content button {
+    cursor: pointer;
+}
+.modal_content label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.modal_content input {
+    box-sizing: border-box;
+    height: 40px;
+    width: 100%;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: 1px solid #828282;
+}
+.modal_content > form > div {
+    margin-bottom: 16px;
+}
+.modal_content > h2 {
+    text-align: center;
+}
+.modal_content > form > .user_id {
+    font-size: 0;
+}
+.modal_content > form > .user_id > input {
+    width: 75%;
+    margin-right: 10px;
+    display: inline-block;
+}
+.modal_content > form > .user_id > button {
+    box-sizing: border-box;
+    width: calc(25% - 10px);
+    height: 40px;
+    display: inline-block;
+    background-color: #d6d6d6;
+    border-radius: 10px;
+    border: none;
+}
+.modal_content > .close_btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+.modal_content > .close_btn > svg {
+    width: 35px;
+    height: 35px;
+}
+.modal_content .register_btn {
+    margin-top: 30px;
+    text-align: center;
+}
+.modal_content .register_btn > button {
+    width: 55%;
+    height: 40px;
+    background-color: #d6d6d6;
+    border-radius: 10px;
+    border: none;
 }
