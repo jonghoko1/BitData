@@ -53,9 +53,13 @@ header .logo {
     margin-right: 20px;
 }
 
-.wrapper header .auth a {
+.wrapper header .auth > button {
     margin: 0 0 0 60px;
     font-size: 18px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
 }
 
 body .wrapper main p {
@@ -70,7 +74,6 @@ body .wrapper main p {
 /* 회원가입 모달 노출 여부(JS) */
 .hidden{
     display: none;
-    opacity: 0;
 }
 /* 회원가입 모달 */
 .modal {
@@ -138,23 +141,40 @@ body .wrapper main p {
 .modal_content > form > .user_pw,.user_pw_check {
     position: relative;
 }
-.modal_content > form svg {
+.modal_content > form > .user_pw > button {
     width: 20px;
     height: 20px;
     cursor: pointer;
     position: absolute;
     right: 12px;
-    bottom: 11px;
+    bottom: 10px;
+    border: none;
+    background-color: transparent;
+}
+.modal_content > form > .user_pw_check > button {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 12px;
+    bottom: 10px;
+    border: none;
+    background-color: transparent;
 }
 .modal_content > .close_btn {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 16px;
+    right: 16px;
     cursor: pointer;
 }
-.modal_content > .close_btn > svg {
-    width: 35px;
-    height: 35px;
+.modal_content > .close_btn > button {
+    width: 38px;
+    height: 38px;
+    background-color: transparent;
+    border: none;
+}
+.modal_content > .close_btn > button > img {
+    width: 100%;
 }
 .modal_content .register_btn {
     margin-top: 30px;
