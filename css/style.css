@@ -68,11 +68,10 @@ body .wrapper main p {
 
 
 /* 회원가입 모달 노출 여부(JS) */
-/* .modal {
+.hidden{
     display: none;
     opacity: 0;
-    visibility: hidden;
-} */
+}
 /* 회원가입 모달 */
 .modal {
     width: 100%;
