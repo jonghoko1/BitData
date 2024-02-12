@@ -68,11 +68,11 @@ body .wrapper main p {
 
 
 /* 회원가입 모달 노출 여부(JS) */
-.modal {
-    /* display: none; */
-    /* opacity: 0;
-    visibility: hidden; */
-}
+/* .modal {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+} */
 /* 회원가입 모달 */
 .modal {
     width: 100%;
@@ -135,6 +135,17 @@ body .wrapper main p {
     background-color: #d6d6d6;
     border-radius: 10px;
     border: none;
+}
+.modal_content > form > .user_pw,.user_pw_check {
+    position: relative;
+}
+.modal_content > form svg {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    position: absolute;
+    right: 12px;
+    bottom: 11px;
 }
 .modal_content > .close_btn {
     position: absolute;
