@@ -138,18 +138,7 @@ body .wrapper main p {
 }
 
 .login-modal_content > form > .user_id > input {
-    margin-right: 10px;
     display: inline-block;
-}
-
-.login-modal_content > form > .user_id > button {
-    box-sizing: border-box;
-    width: calc(25% - 10px);
-    height: 40px;
-    display: inline-block;
-    background-color: #d6d6d6;
-    border-radius: 10px;
-    border: none;
 }
 
 /* 패스워드 입력 */
