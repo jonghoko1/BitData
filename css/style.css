@@ -85,13 +85,13 @@ body .wrapper main p {
     left: 0;
 }
 
-.login-modal_background {
+.login-modal .background {
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.5);
 }
 
-.login-modal_content {
+.login-modal .content {
     width: 440px;
     position: absolute;
     top: 50%;
@@ -103,17 +103,48 @@ body .wrapper main p {
     padding: 20px 40px 10px;
 }
 
-.login-modal_content button {
+.login-modal .content button {
+    padding: 0;
     cursor: pointer;
 }
 
-.login-modal_content label {
+/* 타이틀 */
+.login-modal .content .title h2 {
+    text-align: center;
+    margin: 60px 0;
+}
+
+/* 닫기 버튼 */
+.login-modal .content .close_btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.login-modal .content .close_btn button {
+    width: 38px;
+    height: 38px;
+    background: none;
+    border: none;
+}
+
+.login-modal .content .close_btn button img {
+    width: 100%;
+}
+
+/* 폼 */
+.login-modal .content form div {
+    margin-bottom: 16px;
+}
+
+.login-modal .content label {
     display: block;
     font-size: 12px;
     margin-bottom: 5px;
 }
 
-.login-modal_content input {
+/* 아이디 입력 */
+.login-modal .content input {
     box-sizing: border-box;
     height: 40px;
     width: 100%;
@@ -122,31 +153,12 @@ body .wrapper main p {
     border: 1px solid #828282;
 }
 
-.login-modal_content > form > div {
-    margin-bottom: 16px;
-}
-
-/* 타이틀 */
-.login-modal_content > h2 {
-    text-align: center;
-    margin: 60px 0;
-}
-
-/* 아이디 입력 */
-.login-modal_content > form > .user_id {
-    font-size: 0;
-}
-
-.login-modal_content > form > .user_id > input {
-    display: inline-block;
-}
-
 /* 패스워드 입력 */
-.login-modal_content > form > .user_pw {
+.login-modal .content form .user-pw {
     position: relative;
 }
 
-.login-modal_content > form > .user_pw > button {
+.login-modal .content form .user-pw button {
     width: 20px;
     height: 20px;
     cursor: pointer;
@@ -157,32 +169,14 @@ body .wrapper main p {
     background-color: transparent;
 }
 
-/* 닫기 버튼 */
-.login-modal_content > .close_btn {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-}
-
-.login-modal_content > .close_btn > button {
-    width: 38px;
-    height: 38px;
-    background-color: transparent;
-    border: none;
-}
-
-.login-modal_content > .close_btn > button > img {
-    width: 100%;
-}
-
 /* 로그인 버튼 */
-.login-modal_content .login_btn {
+.login-modal .content .login-btn {
     margin-top: 55px;
     margin-bottom: 30px;
     text-align: center;
 }
 
-.login-modal_content .login_btn > button {
+.login-modal .content .login-btn button {
     width: 55%;
     height: 40px;
     background-color: #d6d6d6;
@@ -207,6 +201,7 @@ body .wrapper main p {
     padding-left: 10px;
     font-size: 12px;
     color: #008636;
+    font-weight: bold;
 }
 
 /* 회원가입 모달 */
