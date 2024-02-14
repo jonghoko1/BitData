@@ -15,7 +15,7 @@ function closeLoginModal(){
 
 // JoinUs Modal PopUp
 const openJoinMod = document.querySelector('.joinus');
-const joinModal = document.querySelector('.modal');
+const joinModal = document.querySelector('.joinus-modal');
 const closeJoinMod = document.querySelector('.close-modal');
 openJoinMod.addEventListener('click',showJoinModal);
 closeJoinMod.addEventListener('click',closeJoinModal);
@@ -26,8 +26,8 @@ function closeJoinModal(){
     joinModal.classList.add('hidden');
 }
 
-const pwdInput = document.getElementById('user_pw');
-const showPwd = document.getElementById('openeye');
+const pwdInput = document.getElementById('user-pw');
+const showPwd = document.getElementById('openeye1');
 showPwd.addEventListener('click',function(){
     if(pwdInput.type === 'password') {
         pwdInput.type = 'text';
@@ -40,7 +40,7 @@ showPwd.addEventListener('click',function(){
 
 
 
-const pwdCheck = document.getElementById('user_pw_check');
+const pwdCheck = document.getElementById('user-pw-check');
 const showPwdCheck = document.getElementById('openeye2');
 showPwdCheck.addEventListener('click',function(){
     if(pwdCheck.type === 'password') {
