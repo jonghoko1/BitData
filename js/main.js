@@ -52,6 +52,15 @@ showPwdCheck.addEventListener('click',function(){
     }
 });
 
+/*function pwdAlert(){
+    if(pwdInput != pwdCheck) {
+        alert('비밀번호 불일치!');
+    }
+    else{
+
+    }
+};*/
+
 /*
 function checkKor(event) {
     // const regExp = /[^0-9a-zA-Z]/g; // 숫자와 영문자만 허용
@@ -80,6 +89,14 @@ function checkKor(k){
 function checkEngNum(e1){
     e1.value  = e1.value.replace(/[^A-Za-z0-9]+/ig, '');
 }
+const userId = document.getElementById('user-id');
+const doubleCheckBtn = document.querySelector('.double-check-btn');
 
-
+function doubleCheckBtnActive(){
+    if(userId.value.length > 4 && userId.value.length < 17){
+        doubleCheckBtn.disabled = false;}
+    else{
+        doubleCheckBtn.disabled = true; 
+    }
+}
 
