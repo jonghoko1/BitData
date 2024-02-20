@@ -1,4 +1,3 @@
-
 // Login Modal PopUp
 const openLoginMod = document.querySelector('.login');
 const loginModal = document.querySelector('.login-modal');
@@ -26,31 +25,32 @@ function closeJoinModal(){
     joinModal.classList.add('hidden');
 }
 
-const pwdInput = document.getElementById('user-pw');
-const showPwd = document.getElementById('openeye1');
-showPwd.addEventListener('click',function(){
-    if(pwdInput.type === 'password') {
-        pwdInput.type = 'text';
-        showPwd.src = './img/eye.svg';
-    }else{
-        pwdInput.type = 'password';
-        showPwd.src = './img/eye-slash.svg';
-    }
-});
+// 비밀번호 마스킹 버튼 이벤트 추가
+function passwordShowBtnDown(pwdInputId, btnId) {
+    pwdInputId = document.getElementById(pwdInputId);
+    btnId = document.getElementById(btnId);
+    // 버튼 드래그 방지
+    btnId.ondragstart = function() {
+        return false;
+    };
 
+    btnId.addEventListener('mousedown', function() {
+        pwdInputId.type = 'text';
+        btnId.querySelector('img').src = './img/eye.svg';
+        document.addEventListener('mouseup', function() {
+            pwdInputId.type = 'password';
+            btnId.querySelector('img').src = './img/eye-slash.svg';
+        },
+        {once: true});
+    });
+}
 
-
-const pwdCheck = document.getElementById('user-pw-check');
-const showPwdCheck = document.getElementById('openeye2');
-showPwdCheck.addEventListener('click',function(){
-    if(pwdCheck.type === 'password') {
-        pwdCheck.type = 'text';
-        showPwdCheck.src = './img/eye.svg';
-    }else{
-        pwdCheck.type = 'password';
-        showPwdCheck.src = './img/eye-slash.svg';
-    }
-});
+// 로그인 모달 비밀번호 버튼 마스킹 기능 추가
+passwordShowBtnDown('login-user-pw', 'openeye3');
+// 회원가입 모달 비밀번호 버튼 마스킹 기능 추가
+passwordShowBtnDown('user-pw', 'openeye1');
+// 회원가입 모달 비밀번호 확인 버튼 마스킹 기능 추가
+passwordShowBtnDown('user-pw-check', 'openeye2');
 
 /*
 function checkKor(event) {
@@ -80,6 +80,3 @@ function checkKor(k){
 function checkEngNum(e1){
     e1.value  = e1.value.replace(/[^A-Za-z0-9]+/ig, '');
 }
-
-
-
