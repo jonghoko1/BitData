@@ -1,3 +1,7 @@
+// 인풋박스 입력값 초기화
+function inputTagInit(inputTag) {
+    inputTag.value = null;
+}
 
 // Login Modal PopUp
 const openLoginMod = document.querySelector('.login');
@@ -10,8 +14,9 @@ function showLoginModal(){
 }
 function closeLoginModal(){
     loginModal.classList.add('hidden');
+    inputTagInit(document.querySelectorAll('.login-modal input')[0]);
+    inputTagInit(document.querySelectorAll('.login-modal input')[1]);
 }
-
 
 // JoinUs Modal PopUp
 const openJoinMod = document.querySelector('.joinus');
@@ -24,6 +29,10 @@ function showJoinModal(){
 }
 function closeJoinModal(){
     joinModal.classList.add('hidden');
+    inputTagInit(document.querySelectorAll('.joinus-modal input')[0]);
+    inputTagInit(document.querySelectorAll('.joinus-modal input')[1]);
+    inputTagInit(document.querySelectorAll('.joinus-modal input')[2]);
+    inputTagInit(document.querySelectorAll('.joinus-modal input')[3]);
 }
 
 const pwdInput = document.getElementById('user-pw');
@@ -37,8 +46,6 @@ showPwd.addEventListener('click',function(){
         showPwd.src = './img/eye-slash.svg';
     }
 });
-
-
 
 const pwdCheck = document.getElementById('user-pw-check');
 const showPwdCheck = document.getElementById('openeye2');
@@ -80,6 +87,3 @@ function checkKor(k){
 function checkEngNum(e1){
     e1.value  = e1.value.replace(/[^A-Za-z0-9]+/ig, '');
 }
-
-
-
