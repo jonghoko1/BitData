@@ -73,32 +73,35 @@
                     </button>
                 </div>
                 <h2>회원가입</h2>
-                <form action="">
+                <form id="joinus-modal-form" action="">
                     <div class="user-name">
                         <label for="user-name">이름</label>
-                        <input type="text" oninput="checkKor(this)" name="" id="user-name" placeholder="한글 이름을 입력해주세요(한글 2~4자 입력)" maxlength="4">
+                        <input type="text" oninput="checkKor(this)" name="user-name" id="user-name" placeholder="한글 이름을 입력해주세요(한글 2~4자 입력)" maxlength="4">
                     </div>
                     <div class="user-id">
                         <label for="user-id">아이디</label>
-                        <input type="text" style="text-transform: lowercase;" oninput="checkEngNum(this)" name="" id="user-id" placeholder="아이디를 입력해주세요(영문, 숫자 5~16자 입력)" maxlength="16">
+                        <input type="text" style="text-transform: lowercase;" oninput="checkEngNum(this)" name="user-id" id="user-id" placeholder="아이디를 입력해주세요(영문, 숫자 5~16자 입력)" maxlength="16">
                         <button><b>중복확인</b></button>
                     </div>
                     <div class="user-pw">
                         <label for="user-pw">비밀번호</label>
-                        <input type="password" oninput="checkEngNum(this)" name="" id="user-pw" placeholder="비밀번호를 입력해주세요(영문, 숫자 8~20자 입력)" maxlength="20">
+                        <input type="password" oninput="checkEngNum(this)" name="user-pw" id="user-pw" placeholder="비밀번호를 입력해주세요(영문, 숫자 8~20자 입력)" maxlength="20">
                         <button type ="button" id="openeye1" class="eye">
                             <img src="./img/eye-slash.svg" alt="비밀번호 보기 버튼" >
                         </button>
                     </div>
                     <div class="user-pw-check">
                         <label for="user-pw-check">비밀번호 확인</label>
-                        <input type="password" oninput="checkEngNum(this)" name="" id="user-pw-check" placeholder="비밀번호를 입력해주세요(영문, 숫자 8~20자 입력)" maxlength="20">
-                        <button type ="button" id="openeye2" class="eye">
-                            <img src="./img/eye-slash.svg" alt="비밀번호 보기 버튼" >
-                        </button>
+                        <div class="input-space">
+                            <input type="password" oninput="checkEngNum(this)" name="user-pw-check" id="user-pw-check" placeholder="비밀번호를 입력해주세요(영문, 숫자 8~20자 입력)" maxlength="20">
+                            <button type ="button" id="openeye2" class="eye">
+                                <img src="./img/eye-slash.svg" alt="비밀번호 보기 버튼" >
+                            </button>
+                        </div>
+                        <p class="mismatch-notice hidden">비밀번호가 일치하지 않습니다.</p>
                     </div>
                     <div class="register-btn">
-                        <button><b>회원가입</b></button>
+                        <button onclick="register(event)"><b>회원가입</b></button>
                     </div>
                 </form>
             </div>
