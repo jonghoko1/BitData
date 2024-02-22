@@ -76,12 +76,12 @@
                 <form action="">
                     <div class="user-name">
                         <label for="user-name">이름</label>
-                        <input type="text" oninput="checkKor(this)" name="" id="user-name" placeholder="한글 이름을 입력해주세요(한글 2~4자 입력)" maxlength="4">
+                        <input type="text" oninput="checkKor(this)" name="" id="user-name" placeholder="한글 이름을 입력해주세요(한글 2~4자 입력)" minlength="2" maxlength="4">
                     </div>
                     <div class="user-id">
                         <label for="user-id">아이디</label>
-                        <input type="text" style="text-transform: lowercase;" oninput="checkEngNum(this)" name="" id="user-id" placeholder="아이디를 입력해주세요(영문, 숫자 5~16자 입력)" maxlength="16">
-                        <button><b>중복확인</b></button>
+                        <input type="text" style="text-transform: lowercase;" oninput="doubleCheckBtnActive(checkEngNum(this))" name="" id="user-id" placeholder="아이디를 입력해주세요(영문, 숫자 5~16자 입력)" maxlength="16">
+                        <button class="double-check-btn" type="button" value="중복확인" disabled><b>중복확인</b></button>
                     </div>
                     <div class="user-pw">
                         <label for="user-pw">비밀번호</label>

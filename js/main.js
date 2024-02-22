@@ -35,6 +35,7 @@ function closeJoinModal(){
     inputTagInit(document.querySelectorAll('.joinus-modal input')[3]);
 }
 
+// 비밀번호 마스킹 및 마스킹 해제 코드
 const pwdInput = document.getElementById('user-pw');
 const showPwd = document.getElementById('openeye1');
 showPwd.addEventListener('click',function(){
@@ -47,6 +48,8 @@ showPwd.addEventListener('click',function(){
     }
 });
 
+
+// 비밀번호 확인 마스킹 및 마스킹 해제 코드
 const pwdCheck = document.getElementById('user-pw-check');
 const showPwdCheck = document.getElementById('openeye2');
 showPwdCheck.addEventListener('click',function(){
@@ -59,6 +62,7 @@ showPwdCheck.addEventListener('click',function(){
     }
 });
 
+// 이름 입력 양식 [이전 코드] (한글만 허용)
 /*
 function checkKor(event) {
     // const regExp = /[^0-9a-zA-Z]/g; // 숫자와 영문자만 허용
@@ -70,6 +74,8 @@ function checkKor(event) {
   };
 */
 
+
+// 아이디 및 비밀번호 입력 양식 [이전 코드] (영문/숫자만 허용)
 /*
 function checkKor(event) {
     // const regExp = /[^0-9a-zA-Z]/g; // 숫자와 영문자만 허용
@@ -80,10 +86,24 @@ function checkKor(event) {
     }
   };
 */
+
+// 이름 입력 양식 (한글만 허용)
 function checkKor(k){
     k.value  = k.value.replace(/[^ㄱ-힣]+/ig, '');
 }
-
+// 아이디 및 비밀번호 입력 양식 (영문/숫자만 허용)
 function checkEngNum(e1){
     e1.value  = e1.value.replace(/[^A-Za-z0-9]+/ig, '');
+}
+const userId = document.getElementById('user-id');
+const doubleCheckBtn = document.querySelector('.double-check-btn');
+
+
+//중복확인 버튼 활성화
+function doubleCheckBtnActive(){
+    if(userId.value.length > 4 && userId.value.length < 17){
+        doubleCheckBtn.disabled = false;}
+    else{
+        doubleCheckBtn.disabled = true; 
+    }
 }
