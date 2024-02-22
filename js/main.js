@@ -36,6 +36,13 @@ function closeJoinModal(){
     mismatchNoticeActive(false);
 }
 
+// 로그인 모달 비밀번호 버튼 마스킹 기능 추가
+passwordShowBtnDown('login-user-pw', 'openeye3');
+// 회원가입 모달 비밀번호 버튼 마스킹 기능 추가
+passwordShowBtnDown('joinus-user-pw', 'openeye1');
+// 회원가입 모달 비밀번호 확인 버튼 마스킹 기능 추가
+passwordShowBtnDown('joinus-user-pw-check', 'openeye2');
+
 // 비밀번호 마스킹 버튼 이벤트 추가
 function passwordShowBtnDown(pwdInputId, btnId) {
     pwdInputId = document.getElementById(pwdInputId);
@@ -56,38 +63,6 @@ function passwordShowBtnDown(pwdInputId, btnId) {
     });
 }
 
-// 로그인 모달 비밀번호 버튼 마스킹 기능 추가
-passwordShowBtnDown('login-user-pw', 'openeye3');
-// 회원가입 모달 비밀번호 버튼 마스킹 기능 추가
-passwordShowBtnDown('user-pw', 'openeye1');
-// 회원가입 모달 비밀번호 확인 버튼 마스킹 기능 추가
-passwordShowBtnDown('user-pw-check', 'openeye2');
-
-// 이름 입력 양식 [이전 코드] (한글만 허용)
-/*
-function checkKor(event) {
-    // const regExp = /[^0-9a-zA-Z]/g; // 숫자와 영문자만 허용
-    const regExp = /[^ㄱ-ㅎ|가-힣]/g; // 한글만 허용
-    const del = event.target;
-    if (regExp.test(del.value)) {
-      del.value = del.value.replace(regExp, '');
-    }
-  };
-*/
-
-
-// 아이디 및 비밀번호 입력 양식 [이전 코드] (영문/숫자만 허용)
-/*
-function checkKor(event) {
-    // const regExp = /[^0-9a-zA-Z]/g; // 숫자와 영문자만 허용
-    const checkKor = /[^ㄱ-ㅎ|가-힣]/g; // 한글만 허용
-    const del = event.target;
-    if (checkKor.test(del.value)) {
-      del.value = del.value.replace(checkKor, '');
-    }
-  };
-*/
-
 // 이름 입력 양식 (한글만 허용)
 function checkKor(k){
     k.value  = k.value.replace(/[^ㄱ-힣]+/ig, '');
@@ -102,10 +77,10 @@ function register(event) {
     event.preventDefault();
     var form = document.getElementById("joinus-modal-form");
     var formData = new FormData(form);
-    var userName = formData.get("user-name");
-    var userId = formData.get("user-id");
-    var userPw = formData.get("user-pw");
-    var userPwCheck = formData.get("user-pw-check");
+    var userName = formData.get("joinus-user-name");
+    var userId = formData.get("joinus-user-id");
+    var userPw = formData.get("joinus-user-pw");
+    var userPwCheck = formData.get("joinus-user-pw-check");
 
 
     if (userPw !== userPwCheck){
@@ -118,6 +93,7 @@ function register(event) {
     console.log("pass");
 }
 
+// 비밀번호 불일치 안내문 활성화 및 비활성화 기능
 function mismatchNoticeActive(active) {
     var mismatchNotice = document.querySelector(".joinus-modal .user-pw-check .mismatch-notice");
     var registerBtn = document.querySelector(".joinus-modal .register-btn");
@@ -129,16 +105,4 @@ function mismatchNoticeActive(active) {
         mismatchNotice.classList.add("hidden");
         registerBtn.classList.remove("mismatch");
     };
-}
-const userId = document.getElementById('user-id');
-const doubleCheckBtn = document.querySelector('.double-check-btn');
-
-
-//중복확인 버튼 활성화
-function doubleCheckBtnActive(){
-    if(userId.value.length > 4 && userId.value.length < 17){
-        doubleCheckBtn.disabled = false;}
-    else{
-        doubleCheckBtn.disabled = true; 
-    }
 }

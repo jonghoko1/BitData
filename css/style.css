@@ -1,7 +1,14 @@
 @charset "utf-8";
 
-body {margin: 0; padding: 0; user-select: none;}
-a {text-decoration: none;}
+body {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+}
 
 
 /* 메인페이지 */
@@ -24,6 +31,7 @@ header {
     align-items: baseline;
     position: fixed;
 }
+
 header a {
     color: white;
 }
@@ -31,6 +39,7 @@ header a {
 header .logo a {
     margin-right: 50px
 }
+
 header .logo nav a {
     margin: 0 30px;
 }
@@ -53,7 +62,7 @@ header .logo {
     margin-right: 20px;
 }
 
-.wrapper header .auth > button {
+.wrapper header .auth button {
     margin: 0 0 0 60px;
     font-size: 18px;
     background-color: transparent;
@@ -72,7 +81,7 @@ body .wrapper main p {
 
 
 /* 모달 미노출 css */
-.hidden{
+.hidden {
     display: none;
 }
 
@@ -88,7 +97,7 @@ body .wrapper main p {
 .login-modal .background {
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .login-modal .content {
@@ -153,7 +162,11 @@ body .wrapper main p {
     border: 1px solid #828282;
 }
 
-/* 패스워드 입력 */
+.login-modal .content form .user-id input {
+    text-transform: lowercase;
+}
+
+/* 비밀번호 입력칸 */
 .login-modal .content form .user-pw {
     position: relative;
 }
@@ -170,7 +183,7 @@ body .wrapper main p {
     padding: 0;
 }
 
-.login-modal .content form .user-pw .eye > img {
+.login-modal .content form .user-pw .eye img {
     width: 100%;
 }
 
@@ -218,13 +231,13 @@ body .wrapper main p {
     left: 0;
 }
 
-.modal-background {
+.joinus-modal .background {
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal-content {
+.joinus-modal .content {
     width: 440px;
     position: absolute;
     top: 50%;
@@ -236,41 +249,47 @@ body .wrapper main p {
     padding: 20px 40px 10px;
 }
 
-.modal-content button {
+.joinus-modal .content button {
+    padding: 0;
     cursor: pointer;
 }
 
 /* 타이틀 */
-.modal-content > h2 {
+.joinus-modal .content h2 {
     text-align: center;
 }
 
 /* 닫기 버튼 */
-.modal-content > .close-btn {
+.joinus-modal .content .close-btn {
     position: absolute;
     top: 16px;
     right: 16px;
 }
 
-.modal-content > .close-btn > button {
+.joinus-modal .content .close-btn button {
     width: 38px;
     height: 38px;
     background-color: transparent;
     border: none;
 }
 
-.modal-content > .close-btn > button > img {
+.joinus-modal .content .close-btn button img {
     width: 100%;
 }
 
 /* 폼 양식 */
-.modal-content label {
+.joinus-modal .content form div {
+    margin-bottom: 16px;
+}
+
+.joinus-modal .content label {
     display: block;
     font-size: 12px;
     margin-bottom: 5px;
 }
 
-.modal-content input {
+/* 아이디 입력칸 */
+.joinus-modal .content input {
     box-sizing: border-box;
     height: 40px;
     width: 100%;
@@ -279,48 +298,42 @@ body .wrapper main p {
     border: 1px solid #828282;
 }
 
-.modal-content > form > div {
-    margin-bottom: 16px;
-}
-
-/* 아이디 입력칸 */
-.modal-content > form > .user-id {
+.joinus-modal .content form .user-id {
     font-size: 0;
 }
 
-.modal-content > form > .user-id > input {
+.joinus-modal .content form .user-id input {
     width: 75%;
     margin-right: 10px;
     display: inline-block;
+    text-transform: lowercase;
 }
 
-.modal-content > form > .user-id > button {
+.joinus-modal .content form .user-id .double-check-btn {
     box-sizing: border-box;
     width: calc(25% - 10px);
     height: 40px;
     display: inline-block;
-    background-color: #d6d6d6;
     border-radius: 10px;
     border: none;
+}
+
+.joinus-modal .content form .user-id .double-check-btn[data-state='inactive'] {
+    background-color: #d6d6d6;
+}
+
+.joinus-modal .content form .user-id .double-check-btn[data-state='active'] {
+    background-color: green;
+    color: white;
 }
 
 /* 비밀번호 및 비밀번호 확인 입력칸 */
-.modal-content > form > .user-id > button:not([disabled]) {
-    box-sizing: border-box;
-    width: calc(25% - 10px);
-    height: 40px;
-    display: inline-block;
-    background-color: green;
-    color: white;
-    border-radius: 10px;
-    border: none;
-}
-
-.modal-content > form > .user-pw,.user-pw-check .input-space {
+.joinus-modal .content form .user-pw,
+.user-pw-check .input-space {
     position: relative;
 }
 
-.modal-content .eye {
+.joinus-modal .content .eye {
     width: 20px;
     height: 20px;
     cursor: pointer;
@@ -332,17 +345,17 @@ body .wrapper main p {
     padding: 0;
 }
 
-.modal-content .eye > img {
+.joinus-modal .content .eye img {
     width: 100%;
 }
 
 /* 회원가입 버튼 */
-.modal-content .register-btn {
+.joinus-modal .content .register-btn {
     margin-top: 30px;
     text-align: center;
 }
 
-.modal-content .register-btn > button {
+.joinus-modal .content .register-btn button {
     width: 55%;
     height: 40px;
     background-color: #d6d6d6;
@@ -351,11 +364,15 @@ body .wrapper main p {
 }
 
 /* 비밀번호 확인 불일치 안내문 */
-.modal-content .mismatch {
+.joinus-modal .content form .input-space {
+    margin: 0;
+}
+
+.joinus-modal .content .mismatch {
     margin-top: 14px;
 }
 
-.modal-content form .user-pw-check .mismatch-notice {
+.joinus-modal .content form .user-pw-check .mismatch-notice {
     margin: 0;
     font-size: 12px;
     color: red;

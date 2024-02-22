@@ -65,8 +65,8 @@
         </div>
         <!-- JoinUs Modal PopUp -->
         <div class="joinus-modal hidden">
-            <div class="modal-background"></div>
-            <div class="modal-content">
+            <div class="background"></div>
+            <div class="content">
                 <div class="close-btn">
                     <button type="button" class="close-modal">
                         <img src="./img/x-lg.svg" alt="닫기 버튼">
@@ -75,25 +75,25 @@
                 <h2>회원가입</h2>
                 <form id="joinus-modal-form" action="">
                     <div class="user-name">
-                        <label for="user-name">이름</label>
-                        <input type="text" oninput="checkKor(this)" name="user-name" id="user-name" placeholder="한글 이름을 입력해주세요(한글 2~4자 입력)" minlength="2" maxlength="4">
+                        <label for="joinus-user-name">이름</label>
+                        <input type="text" oninput="checkKor(this)" name="joinus-user-name" id="joinus-user-name" placeholder="한글 이름을 입력해주세요(한글 2~4자 입력)" minlength="2" maxlength="4">
                     </div>
                     <div class="user-id">
-                        <label for="user-id">아이디</label>
-                        <input type="text" style="text-transform: lowercase;" oninput="doubleCheckBtnActive(checkEngNum(this))" name="user-id" id="user-id" placeholder="아이디를 입력해주세요(영문, 숫자 5~16자 입력)" maxlength="16">
-                        <button class="double-check-btn" type="button" value="중복확인" disabled><b>중복확인</b></button>
+                        <label for="joinus-user-id">아이디</label>
+                        <input type="text" oninput="doubleCheckBtnActive(checkEngNum(this))" name="joinus-user-id" id="joinus-user-id" placeholder="아이디를 입력해주세요(영문, 숫자 5~16자 입력)" maxlength="16">
+                        <button class="double-check-btn" type="button" data-state="inactive"><b>중복확인</b></button>
                     </div>
                     <div class="user-pw">
-                        <label for="user-pw">비밀번호</label>
-                        <input type="password" oninput="checkEngNum(this)" name="user-pw" id="user-pw" placeholder="비밀번호를 입력해주세요(영문, 숫자 8~20자 입력)" maxlength="20">
+                        <label for="joinus-user-pw">비밀번호</label>
+                        <input type="password" oninput="checkEngNum(this)" name="joinus-user-pw" id="joinus-user-pw" placeholder="비밀번호를 입력해주세요(영문, 숫자 8~20자 입력)" minlength="8" maxlength="20">
                         <button type ="button" id="openeye1" class="eye">
                             <img src="./img/eye-slash.svg" alt="비밀번호 보기 버튼" >
                         </button>
                     </div>
                     <div class="user-pw-check">
-                        <label for="user-pw-check">비밀번호 확인</label>
+                        <label for="joinus-user-pw-check">비밀번호 확인</label>
                         <div class="input-space">
-                            <input type="password" oninput="checkEngNum(this)" name="user-pw-check" id="user-pw-check" placeholder="비밀번호를 입력해주세요(영문, 숫자 8~20자 입력)" maxlength="20">
+                            <input type="password" oninput="checkEngNum(this)" name="joinus-user-pw-check" id="joinus-user-pw-check" placeholder="비밀번호를 입력해주세요(영문, 숫자 8~20자 입력)" minlength="8" maxlength="20">
                             <button type ="button" id="openeye2" class="eye">
                                 <img src="./img/eye-slash.svg" alt="비밀번호 보기 버튼" >
                             </button>
