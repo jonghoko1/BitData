@@ -149,3 +149,11 @@ function mismatchNoticeActive(active) {
         registerBtn.classList.remove('mismatch');
     };
 }
+
+// 회원가입하기 버튼 클릭 시 모달 전환
+const asdf = document.querySelector('.switch-to-joinus')
+asdf.addEventListener('click',switchToJoinus);
+function switchToJoinus(){
+    loginModal.classList.add("hidden");
+    joinModal.classList.remove("hidden");
+}
