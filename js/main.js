@@ -3,7 +3,7 @@ function inputTagInit(inputTag) {
     inputTag.value = null;
 }
 
-// Login Modal PopUp
+// Login Modal PopUp 닫기 버튼
 const openLoginMod = document.querySelector('.login');
 const loginModal = document.querySelector('.login-modal');
 const closeLoginMod = document.querySelector('.close-login-modal');
@@ -18,7 +18,7 @@ function closeLoginModal(){
     inputTagInit(document.querySelectorAll('.login-modal input')[1]);
 }
 
-// JoinUs Modal PopUp
+// JoinUs Modal PopUp 닫기 버튼
 const openJoinMod = document.querySelector('.joinus');
 const joinModal = document.querySelector('.joinus-modal');
 const closeJoinMod = document.querySelector('.close-modal');
@@ -34,6 +34,59 @@ function closeJoinModal(){
     inputTagInit(document.querySelectorAll('.joinus-modal input')[2]);
     inputTagInit(document.querySelectorAll('.joinus-modal input')[3]);
     mismatchNoticeActive(false);
+    checkForDuplication(false);
+}
+
+// 이름 입력 양식 (한글만 허용)
+function checkKor(input){
+    input.value = input.value.replace(/[^ㄱ-힣]+/ig, '');
+}
+// 아이디 및 비밀번호 입력 양식 (영문/숫자만 허용)
+function checkEngNum(input){
+    input.value  = input.value.replace(/[^A-Za-z0-9]+/ig, '');
+}
+
+// 회원가입 아이디 입력칸
+const joinusUserId = document.getElementById('joinus-user-id');
+// 회원가입 아이디 중복확인 버튼
+const checkForDuplicationBtn = document.querySelector('.check-for-duplication-btn');
+
+joinusUserId.addEventListener('input', function() {
+    checkForDuplicationBtnSet();
+});
+// 회원가입 아이디 중복확인 버튼 상태 변경
+function checkForDuplicationBtnSet() {
+    if (joinusUserId.value.length > 4) {
+        checkForDuplicationBtn.classList.replace('inactive-btn', 'active-btn');
+        checkForDuplicationBtn.disabled = false;
+    }
+    else {
+        checkForDuplicationBtn.classList.replace('active-btn', 'inactive-btn');
+        checkForDuplicationBtn.disabled = true;
+    };
+}
+
+// 회원가입 아이디 중복확인
+checkForDuplicationBtn.addEventListener('click', function() {
+    checkForDuplication(true);
+});
+function checkForDuplication(result) {
+    if (result) {
+        checkForDuplicationBtn.classList.replace('active-btn', 'confirmed-btn');
+        checkForDuplicationBtn.disabled = true;
+        checkForDuplicationBtn.textContent = '확인완료';
+        
+        joinusUserId.classList.replace('unconfirmed-input', 'confirmed-input');
+        joinusUserId.disabled = true;
+    }
+    else {
+        checkForDuplicationBtn.classList.replace('confirmed-btn', 'inactive-btn');
+        checkForDuplicationBtn.disabled = true;
+        checkForDuplicationBtn.textContent = '중복확인';
+        
+        joinusUserId.classList.replace('confirmed-input', 'unconfirmed-input');
+        joinusUserId.disabled = false;
+    };
 }
 
 // 로그인 모달 비밀번호 버튼 마스킹 기능 추가
@@ -63,24 +116,15 @@ function passwordShowBtnDown(pwdInputId, btnId) {
     });
 }
 
-// 이름 입력 양식 (한글만 허용)
-function checkKor(k){
-    k.value  = k.value.replace(/[^ㄱ-힣]+/ig, '');
-}
-// 아이디 및 비밀번호 입력 양식 (영문/숫자만 허용)
-function checkEngNum(e1){
-    e1.value  = e1.value.replace(/[^A-Za-z0-9]+/ig, '');
-}
-
 // 비밀번호 일치 여부 확인
 function register(event) {
     event.preventDefault();
-    var form = document.getElementById("joinus-modal-form");
+    var form = document.getElementById('joinus-modal-form');
     var formData = new FormData(form);
-    var userName = formData.get("joinus-user-name");
-    var userId = formData.get("joinus-user-id");
-    var userPw = formData.get("joinus-user-pw");
-    var userPwCheck = formData.get("joinus-user-pw-check");
+    var userName = formData.get('joinus-user-name');
+    var userId = formData.get('joinus-user-id');
+    var userPw = formData.get('joinus-user-pw');
+    var userPwCheck = formData.get('joinus-user-pw-check');
 
 
     if (userPw !== userPwCheck){
@@ -90,19 +134,18 @@ function register(event) {
         mismatchNoticeActive(true);
         return;
     };
-    console.log("pass");
 }
 
 // 비밀번호 불일치 안내문 활성화 및 비활성화 기능
 function mismatchNoticeActive(active) {
-    var mismatchNotice = document.querySelector(".joinus-modal .user-pw-check .mismatch-notice");
-    var registerBtn = document.querySelector(".joinus-modal .register-btn");
+    var mismatchNotice = document.querySelector('.joinus-modal .user-pw-check .mismatch-notice');
+    var registerBtn = document.querySelector('.joinus-modal .register-btn');
     if (active) {
-        mismatchNotice.classList.remove("hidden");
-        registerBtn.classList.add("mismatch");
+        mismatchNotice.classList.remove('hidden');
+        registerBtn.classList.add('mismatch');
     }
     else {
-        mismatchNotice.classList.add("hidden");
-        registerBtn.classList.remove("mismatch");
+        mismatchNotice.classList.add('hidden');
+        registerBtn.classList.remove('mismatch');
     };
 }
