@@ -39,8 +39,8 @@ function closeJoinModal() {
     inputTagInit(document.querySelectorAll('.joinus-modal input')[1]);
     inputTagInit(document.querySelectorAll('.joinus-modal input')[2]);
     inputTagInit(document.querySelectorAll('.joinus-modal input')[3]);
-    mismatchNoticeActive(false);
     checkForDuplication(false);
+    mismatchNoticeActive(false);
 }
 
 const loginUserId = document.getElementById('login-user-id'); // 로그인 아이디 입력칸
@@ -89,6 +89,16 @@ function checkKor(input) {
 function checkEngNum(input) {
     input.value = input.value.replace(/[^A-Za-z0-9]+/ig, '');
 }
+
+joinusUserName.addEventListener('focusout', function () {
+    var inputStr = this.value;
+    if (inputStr.length > 0) {
+        if (inputStr.match(/[ㄱ-ㅎㅏ-ㅣ]/gi)) {
+            inputStr = inputStr.replace(/[ㄱ-ㅎㅏ-ㅣ]/gi, '');
+        }
+    }
+    this.value = inputStr;
+});
 
 // 로그인 버튼 활성화 비활성화
 function loginBtnActive() {
