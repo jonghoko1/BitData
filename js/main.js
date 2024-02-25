@@ -7,6 +7,7 @@ function inputTagInit(inputTag) {
 const openLoginMod = document.querySelector('.login');
 const loginModal = document.querySelector('.login-modal');
 const closeLoginMod = document.querySelector('.close-login-modal');
+// 닫기 버튼 드래그 방지
 closeLoginMod.ondragstart = function () {
     return false;
 }
@@ -25,6 +26,7 @@ function closeLoginModal() {
 const openJoinMod = document.querySelector('.joinus');
 const joinModal = document.querySelector('.joinus-modal');
 const closeJoinMod = document.querySelector('.close-joinus-modal');
+// 닫기 버튼 드래그 방지
 closeJoinMod.ondragstart = function () {
     return false;
 }
@@ -81,24 +83,36 @@ joinusUserPwCheck.addEventListener('input', function () {
     joinusBtnActive();
 });
 
-// 이름 입력 양식 (한글만 허용)
+// 입력칸 한글 이외 입력 방지
 function checkKor(input) {
-    input.value = input.value.replace(/[^ㄱ-힣]+/ig, '');
+    if (input.value.match(/[^ㄱ-힣]+/gi)) {
+        alert('한글만 입력 가능합니다.');
+        input.value = input.value.replace(/[^ㄱ-힣]+/gi, '');
+    }
 }
-// 아이디 및 비밀번호 입력 양식 (영문/숫자만 허용)
+// 입력칸 영문 및 숫자 이외 입력 방지
 function checkEngNum(input) {
-    input.value = input.value.replace(/[^A-Za-z0-9]+/ig, '');
+    if (input.value.match(/[^A-Za-z0-9]+/gi)) {
+        alert('영문 및 숫자만 입력 가능합니다.');
+        input.value = input.value.replace(/[^A-Za-z0-9]+/gi, '');
+    }
 }
 
+// 이름 입력칸 focusout시 불완성형 한글 삭제
 joinusUserName.addEventListener('focusout', function () {
-    var inputStr = this.value;
+    incompleteKorPrevent(this);
+});
+
+// 불완성형 한글 삭제
+function incompleteKorPrevent(input) {
+    var inputStr = input.value;
     if (inputStr.length > 0) {
-        if (inputStr.match(/[ㄱ-ㅎㅏ-ㅣ]/gi)) {
-            inputStr = inputStr.replace(/[ㄱ-ㅎㅏ-ㅣ]/gi, '');
+        if (inputStr.match(/[ㄱ-ㅎㅏ-ㅣ]/g)) {
+            inputStr = inputStr.replace(/[ㄱ-ㅎㅏ-ㅣ]/g, '');
         }
     }
-    this.value = inputStr;
-});
+    input.value = inputStr;
+}
 
 // 로그인 버튼 활성화 비활성화
 function loginBtnActive() {
