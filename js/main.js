@@ -1,4 +1,3 @@
-
 // Login Modal PopUp 닫기 버튼
 const openLoginMod = document.querySelector('.login');
 const loginModal = document.querySelector('.login-modal');
@@ -93,7 +92,6 @@ function checkEngNum(input) {
         input.value = input.value.replace(/[^A-Za-z0-9]+/gi, '');
     }
 }
-
 
 // 모달 닫기 시 인풋박스 입력값 초기화
 function inputTagInit(inputTag) {
@@ -265,6 +263,13 @@ function registerSuccess(){
     // 로그인 모달로 전환
     joinModal.classList.add("hidden");
     loginModal.classList.remove("hidden");
+    // 회원가입 모달 입력 초기화
+    inputTagInit(document.querySelectorAll('.joinus-modal input')[0]);
+    inputTagInit(document.querySelectorAll('.joinus-modal input')[1]);
+    inputTagInit(document.querySelectorAll('.joinus-modal input')[2]);
+    inputTagInit(document.querySelectorAll('.joinus-modal input')[3]);
+    checkForDuplication(false);
+    mismatchNoticeActive(false);
 }
 
 // 비밀번호 불일치 안내문 활성화 및 비활성화 기능
