@@ -85,6 +85,27 @@ body .wrapper main p {
     display: none;
 }
 
+/* 입력칸 상태 스타일 */
+.confirmed-input {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* 버튼 상태 스타일 */
+.inactive-btn {
+    background-color: #d6d6d6;
+    color: #4d4d4d;
+}
+
+.active-btn {
+    background-color: #008636;
+    color: white;
+}
+
+.confirmed-btn {
+    background-color: rgba(0, 134, 54, 0.5);
+    color: white;
+}
+
 /* 로그인 모달 */
 .login-modal {
     width: 100%;
@@ -197,7 +218,6 @@ body .wrapper main p {
 .login-modal .content .login-btn button {
     width: 55%;
     height: 40px;
-    background-color: #d6d6d6;
     border-radius: 10px;
     border: none;
 }
@@ -317,10 +337,6 @@ input:autofill:active {
     transition: background-color 5000s ease-in-out 0s;
 }
 
-.joinus-modal .content form .user-id .confirmed-input {
-    color: rgba(0, 0, 0, 0.5);
-}
-
 .joinus-modal .content form .user-id .check-for-duplication-btn {
     box-sizing: border-box;
     width: calc(25% - 10px);
@@ -328,21 +344,6 @@ input:autofill:active {
     border-radius: 10px;
     border: none;
     font-weight: bold;
-}
-
-.joinus-modal .content form .user-id .inactive-btn {
-    background-color: #d6d6d6;
-    color: #4d4d4d;
-}
-
-.joinus-modal .content form .user-id .active-btn {
-    background-color: #008636;
-    color: white;
-}
-
-.joinus-modal .content form .user-id .confirmed-btn {
-    background-color: rgba(0, 134, 54, 0.5);
-    color: white;
 }
 
 /* 비밀번호 및 비밀번호 확인 입력칸 */
@@ -376,7 +377,6 @@ input:autofill:active {
 .joinus-modal .content .register-btn button {
     width: 55%;
     height: 40px;
-    background-color: #d6d6d6;
     border-radius: 10px;
     border: none;
 }
