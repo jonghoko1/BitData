@@ -1,7 +1,3 @@
-// 인풋박스 입력값 초기화
-function inputTagInit(inputTag) {
-    inputTag.value = null;
-}
 
 // Login Modal PopUp 닫기 버튼
 const openLoginMod = document.querySelector('.login');
@@ -96,6 +92,12 @@ function checkEngNum(input) {
         alert('영문 및 숫자만 입력 가능합니다.');
         input.value = input.value.replace(/[^A-Za-z0-9]+/gi, '');
     }
+}
+
+
+// 모달 닫기 시 인풋박스 입력값 초기화
+function inputTagInit(inputTag) {
+    inputTag.value = null;
 }
 
 // 이름 입력칸 focusout시 불완성형 한글 삭제
@@ -214,6 +216,16 @@ function passwordShowBtnDown(input, btnId) {
     });
 }
 
+// 로그인 모달에서 회원가입하기 버튼 클릭 시 회원가입 모달로 전환
+const switchToJoinusBtn = document.querySelector('.switch-to-joinus');
+switchToJoinusBtn.addEventListener('click',switchToJoinus);
+function switchToJoinus(){
+    loginModal.classList.add("hidden");
+    joinModal.classList.remove("hidden");
+}
+
+// 회원가입 모달의 회원가입 버튼 클릭 시
+
 // 비밀번호 일치 여부 확인
 function register(event) {
     event.preventDefault();
@@ -230,7 +242,29 @@ function register(event) {
         // 비밀번호 불일치 안내문구 노출
         mismatchNoticeActive(true);
         return;
+    }
+    else {
+        // 비밀번호 일치 시(회원가입 요청 API 호출)
+        // 현재는 바로 성공 함수 호출(API 개발 되면 API 함수 호출로 변경 필요)
+        registerSuccess();
     };
+}
+
+// 회원가입 요청 API 호출
+// const registerRequestBtn = document.querySelector('.register-requests');
+// registerRequestBtn.addEventListener('click',registerRequest);
+// function registerRequest(){
+//     ~
+// }
+
+// 회원가입 요청 API 호출 response 로 true 값 반환 된 경우
+// API response 값을 조건으로 잡아야함(현재는 API가 없으니 비밀번호가 일치하면 실행하도록 진행 > 추후 변경 필요)
+function registerSuccess(){
+    // 회원가입 성공 알럿창 노출
+    alert("회원가입이 완료되었습니다.");
+    // 로그인 모달로 전환
+    joinModal.classList.add("hidden");
+    loginModal.classList.remove("hidden");
 }
 
 // 비밀번호 불일치 안내문 활성화 및 비활성화 기능
