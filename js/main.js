@@ -220,6 +220,8 @@ switchToJoinusBtn.addEventListener('click',switchToJoinus);
 function switchToJoinus(){
     loginModal.classList.add("hidden");
     joinModal.classList.remove("hidden");
+    inputTagInit(document.querySelectorAll('.login-modal input')[0]);
+    inputTagInit(document.querySelectorAll('.login-modal input')[1]);
 }
 
 // 회원가입 모달의 회원가입 버튼 클릭 시
