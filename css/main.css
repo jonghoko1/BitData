@@ -1,3 +1,21 @@
 @charset "utf-8";
 @import "./reset.css";
 
+button {
+    padding: 0;
+    background-color: #fff;
+    border: none;
+}
+
+/* 스크롤 화면 구성 */
+.index-style {}
+.index-style main.scroll-section {}
+/* 스크롤 화면 pagination */
+.index-style .pagination {}
+.index-style .pagination ul {}
+.index-style .pagination ul li {}
+.index-style .pagination ul li button {
+    width: 20px; height: 20px;
+    background-image: url(../resources/img/main/pagination-non-select.png);
+    background-size: cover;
+}
