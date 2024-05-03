@@ -13,6 +13,7 @@ button {
     padding: 0;
     background-color: #fff;
     border: none;
+    cursor: pointer;
 }
 
 .hidden {
