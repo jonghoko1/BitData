@@ -21,11 +21,16 @@ function stopScroll(e) {
     e.preventDefault();
 }
 // 스크롤 애니메이션 재생
-function scrollAnimationStart(animation) {
+function scrollAnimationStart(animation, index) {
     isPlayAnimation = true;
     setTimeout(function () { isPlayAnimation = false }, animationPlayTime);
+    if (index == undefined) {
+        animation();
+    } else {
+        animation(index);
+    }
 
-    animation();
+    updatePaginationBtn();
 }
 // 위로 스크롤시 애니메이션
 function scrollUpAnimation() {
@@ -39,5 +44,29 @@ function scrollDownAnimation() {
     const $screenHeight = window.innerHeight; // 화면의 높이
     $scrollSection.style.transform = `translateY(${curScrollSectionHeight -= $screenHeight}px)`;
 }
+function indexOfScrollAnimation(index) {
+    let difference = curSectionIndex - index;
+    curSectionIndex = index;
+    const $screenHeight = window.innerHeight; // 화면의 높이
+    $scrollSection.style.transform = `translateY(${curScrollSectionHeight += $screenHeight * difference}px)`;
+}
+// pagination
+const $paginationBtn = document.querySelectorAll(".scroll-box .pagination button");
+// pagination 버튼 활성화 상태 업데이트
+function updatePaginationBtn() {
+    for (btn of $paginationBtn) {
+        btn.classList.remove("active");
+    }
+    $paginationBtn[curSectionIndex].classList.add("active");
+}
+// pagination 클릭 했을 때
+function clickPaginationBtn(index) {
+    if (index != curSectionIndex) { // 위로 이동
+        scrollAnimationStart(indexOfScrollAnimation, index);
+    }
+}
+
+// Main
 // 스크롤 이벤트 등록
 window.addEventListener("wheel", scrollEvent, { passive: false });
+updatePaginationBtn();

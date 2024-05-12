@@ -98,3 +98,6 @@ button {
     background-image: url(../../resources/img/main/pagination-non-select.png);
     background-size: cover;
 }
+.scroll-box .pagination ul li button.active {
+    background-image: url(../../resources/img/main/pagination-select.png);
+}
