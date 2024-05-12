@@ -1,43 +1,43 @@
 // 화면 스크롤
-const $scrollSections = document.querySelectorAll(".scroll-section .section-item-template");
-var curSection = 0;
+const $scrollSection = document.querySelector(".scroll-section");
+const $scrollSectionItems = document.querySelectorAll(".scroll-section .section-item");
+var curSectionIndex = 0;
+var curScrollSectionHeight = 0;
 var isPlayAnimation = false;
+const animationPlayTime = 2000;
 // 스크롤 이벤트
-const scrollEvent = function (e) {
+function scrollEvent(e) {
     stopScroll(e);
     if (!isPlayAnimation) { // 애니메이션이 재생 중이 아닐 경우
-        if (e.deltaY < 0 && curSection - 1 >= 0) { // 위로 스크롤 시
-            scrollUpAnimation();
-        } else if (e.deltaY > 0 && curSection + 1 < $scrollSections.length) { // 아래로 스크롤시
-            scrollDownAnimation();
+        if (e.deltaY < 0 && curSectionIndex - 1 >= 0) { // 위로 스크롤 시
+            scrollAnimationStart(scrollUpAnimation);
+        } else if (e.deltaY > 0 && curSectionIndex + 1 < $scrollSectionItems.length) { // 아래로 스크롤시
+            scrollAnimationStart(scrollDownAnimation);
         }
     }
 }
 // 스크롤 방지
-const stopScroll = function (e) {
+function stopScroll(e) {
     e.preventDefault();
 }
-// 위로 스크롤시 애니메이션
-const scrollUpAnimation = function () {
+// 스크롤 애니메이션 재생
+function scrollAnimationStart(animation) {
     isPlayAnimation = true;
-    setTimeout(function () { isPlayAnimation = false }, 1000)
+    setTimeout(function () { isPlayAnimation = false }, animationPlayTime);
 
-    let fadeOutSection = $scrollSections[curSection];
-    let fadeInSection = $scrollSections[--curSection];
-
-    fadeOutSection.classList.add("hidden");
-    fadeInSection.classList.remove("hidden");
+    animation();
+}
+// 위로 스크롤시 애니메이션
+function scrollUpAnimation() {
+    curSectionIndex--;
+    const $screenHeight = window.innerHeight; // 화면의 높이
+    $scrollSection.style.transform = `translateY(${curScrollSectionHeight += $screenHeight}px)`;
 }
 // 아래로 스크롤시 애니메이션
-const scrollDownAnimation = function () {
-    isPlayAnimation = true;
-    setTimeout(function () { isPlayAnimation = false }, 1000)
-
-    let fadeOutSection = $scrollSections[curSection];
-    let fadeInSection = $scrollSections[++curSection];
-
-    fadeOutSection.classList.add("hidden");
-    fadeInSection.classList.remove("hidden"); 
+function scrollDownAnimation() {
+    curSectionIndex++;
+    const $screenHeight = window.innerHeight; // 화면의 높이
+    $scrollSection.style.transform = `translateY(${curScrollSectionHeight -= $screenHeight}px)`;
 }
 // 스크롤 이벤트 등록
 window.addEventListener("wheel", scrollEvent, { passive: false });

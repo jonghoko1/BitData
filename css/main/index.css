@@ -16,65 +16,64 @@ button {
     cursor: pointer;
 }
 
-.hidden {
-    display: none;
-}
-
 /* 스크롤 화면 구성 */
-.index-style {}
-.index-style main.scroll-section {}
-.index-style main.scroll-section {}
-.index-style main.scroll-section .section-item-template {}
-
-/* 스크롤 section 0 */
-.index-style main.scroll-section .section-0 {}
-.index-style main.scroll-section .section-0 .content-container {
-    width: 100%; height: 100%;
+.scroll-box {
+    width: 100%; height: 100vh;
+    position: fixed;
 }
-.index-style main.scroll-section .section-0 .content-container .title {
+.scroll-box main.scroll-section {
+    width: 100%; height: 100vh;
+    transition: transform 1s ease;
+}
+.scroll-box main.scroll-section .section-item {
+    width: 100%; height: 100vh;
+    position: relative;
+}
+.scroll-box main.scroll-section .section-item.active {}
+/* 스크롤 section 0 */
+.scroll-box main.scroll-section .section-0 {}
+.scroll-box main.scroll-section .section-0 .content-container {}
+.scroll-box main.scroll-section .section-0 .content-container .title {
     position: absolute;
     top: 20%; left: 25%; transform: translate(0, -50%);
     font-size: 32px; font-weight: bold;
 }
-.index-style main.scroll-section .section-0 .content-container .content {}
-.index-style main.scroll-section .section-0 .content-container .content .login-join {
+.scroll-box main.scroll-section .section-0 .content-container .content {}
+.scroll-box main.scroll-section .section-0 .content-container .content .login-join {
     position: absolute;
     top: 20%; right: 25%; transform: translate(0, -50%);
     font-size: 14px;
 }
-.index-style main.scroll-section .section-0 .content-container .content .subtitle {
+.scroll-box main.scroll-section .section-0 .content-container .content .subtitle {
     position: absolute;
     top: 50%; left: 25%; transform: translate(0, -50%);
     font-size: 48px; font-weight: bold; color: #555;
 }
-
 /* 스크롤 section 1 */
-.index-style main.scroll-section .section-1 {}
-.index-style main.scroll-section .section-1 .content-container {
-    width: 100%; height: 100%;
-}
-.index-style main.scroll-section .section-1 .content-container .content {}
+.scroll-box main.scroll-section .section-1 {}
+.scroll-box main.scroll-section .section-1 .content-container {}
+.scroll-box main.scroll-section .section-1 .content-container .content {}
 /* 사용자 가이드 */
-.index-style main.scroll-section .section-1 .content-container .content .user-guide {
+.scroll-box main.scroll-section .section-1 .content-container .content .user-guide {
     position: absolute;
     top: 20%; left: 20%;
 }
 /* 사용자 가이드 텍스트 스타일 */
-.index-style main.scroll-section .section-1 .content-container .content .user-guide .text {
+.scroll-box main.scroll-section .section-1 .content-container .content .user-guide .text {
     margin-bottom: 20px;
     font-size: 22px; font-weight: bold;
 }
 /* 슬로건 */
-.index-style main.scroll-section .section-1 .content-container .content .slogan-container {
+.scroll-box main.scroll-section .section-1 .content-container .content .slogan-container {
     position: absolute;
     top: 20%; right: 25%;
     font-size: 28px;font-weight: bold;
 }
-.index-style main.scroll-section .section-1 .content-container .content .slogan-container .slogan {
+.scroll-box main.scroll-section .section-1 .content-container .content .slogan-container .slogan {
     margin-bottom: 20px;
 }
 /* 회사 정보 */
-.index-style main.scroll-section .section-1 .content-container .content .company-information {
+.scroll-box main.scroll-section .section-1 .content-container .content .company-information {
     width: auto; height: auto;
     position: absolute;
     bottom: 20%; left: 20%;
@@ -82,19 +81,19 @@ button {
     font-size: 12px;
 }
 /* 정보 블록 마진 */
-.index-style main.scroll-section .section-1 .content-container .content .company-information article {
+.scroll-box main.scroll-section .section-1 .content-container .content .company-information article {
     margin: auto;
     margin-right: 50px;
 }
 
 /* 스크롤 화면 pagination */
-.index-style .pagination {
+.scroll-box .pagination {
     padding: 20px;
     position: fixed; top: 50%; right: 20%;
 }
-.index-style .pagination ul {}
-.index-style .pagination ul li {}
-.index-style .pagination ul li button {
+.scroll-box .pagination ul {}
+.scroll-box .pagination ul li {}
+.scroll-box .pagination ul li button {
     width: 20px; height: 20px;
     background-image: url(../../resources/img/main/pagination-non-select.png);
     background-size: cover;
