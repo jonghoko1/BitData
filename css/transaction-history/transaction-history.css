@@ -69,14 +69,64 @@ aside.sidebar {
 
 /* 내용 */
 .content {
-  width: 100%;
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column;
+  overflow: auto;
 }
 /* 거래내역 헤더 */
 .content-header {
   width: 100%; height: 70px;
+  min-width: 1200px;
+  position: sticky;
   box-sizing: border-box;
   border-bottom: 1px solid #8E8E8E;
   font-size: 22px; font-weight: bold;
   line-height: 70px;
   padding: 0px 30px;
 }
+.content-body {
+  width: 1200px; height: 100%;
+  box-sizing: border-box;
+  padding-left: 20px;
+}
+/* 필터 영역 */
+.content-filter {}
+/* 각 필터 section */
+.filter-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+/* 승패, 일자 필터 section */
+#filter-winlose {}
+#filter-winlose .winlose-input span, label{
+  display: inline-block;
+  margin-right: 20px;
+}
+#filter-winlose span {
+  font-weight: bold; font-size: 16px;
+  color: #575757;
+}
+#filter-winlose label {
+  font-size: 16px;
+  color: #575757;
+  cursor: pointer;
+}
+#filter-winlose label input[type='radio'] {
+  appearance: none;
+  width: 20px; height: 20px;
+  vertical-align: -3.5px;
+  margin: 0; margin-right: 5px;
+  border: 2px solid #0C8CE9; border-radius: 50%;
+  cursor: pointer;
+}
+#filter-winlose label input[type='radio']:checked {
+  width: 18px; height: 18px;
+  background-color: #0C8CE9;
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px #0C8CE9;
+}
+.filter-date {}
+/* 코인, 페이지당 항목 수 section */
+.filter-symbol {}
+.pagination-option {}

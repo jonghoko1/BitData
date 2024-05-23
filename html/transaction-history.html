@@ -27,30 +27,37 @@
             </header>
             <main class="content-body">
                 <section class="content-filter">
-                    <!-- 승패 필터 -->
-                    <div class="filter-win-or-lose">
-                        <span><input type="radio" name="data-win-or-lose" checked/> 전체</span>
-                        <span><input type="radio" name="data-win-or-lose"/> 승</span>
-                        <span><input type="radio" name="data-win-or-lose"/> 패</span>
+                    <div class="filter-container">
+                        <!-- 승패 필터 -->
+                        <form id="filter-winlose">
+                            <div class="winlose-input">
+                                <span>필터</span>
+                                <label><input type="radio" name="data-winlose" value="all" checked>전체</label>
+                                <label><input type="radio" name="data-winlose" value="win">승리</label>
+                                <label><input type="radio" name="data-winlose" value="lose">패배</label>
+                            </div>
+                        </form>
+                        <!-- 일자 필터 -->
+                        <div class="filter-date">
+                            <span>일자 설정 <input type="date" name="data-date"></span>
+                        </div>
                     </div>
-                    <!-- 일자 필터 -->
-                    <div class="filter-date">
-                        <span>일자 설정 <input type="date" name="data-date"></span>
-                    </div>
-                    <!-- 코인 필터 -->
-                    <div class="filter-symbol">
-                        <span>검색 <input type="text" name="data-symbol" placeholder="코인명을 입력해주세요."></span>
-                    </div>
-                    <!-- 페이지 당 항목 수 -->
-                    <div class="pagination-option">
-                        <label for="option-item">페이지당 항목 수 </label>
-                        <select name="option-item" id="option-item">
-                            <option value="10">10</option>
-                            <option value="20">20</option>
-                            <option value="30">30</option>
-                            <option value="50">50</option>
-                            <option value="100">100</option>
-                        </select>
+                    <div class="filter-container">
+                        <!-- 코인 필터 -->
+                        <div class="filter-symbol">
+                            <span>검색 <input type="text" name="data-symbol" placeholder="코인명을 입력해주세요."></span>
+                        </div>
+                        <!-- 페이지 당 항목 수 -->
+                        <div class="pagination-option">
+                            <label for="option-item">페이지당 항목 수 </label>
+                            <select name="option-item" id="option-item">
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="30">30</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                        </div>
                     </div>
                 </section>
                 <section class="content-table">
