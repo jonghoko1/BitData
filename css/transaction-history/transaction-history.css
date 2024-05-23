@@ -66,3 +66,16 @@ aside.sidebar {
   font-size: 14px; color: #363636;
 }
 
+/* 내용 */
+.content {
+  width: 100%;
+}
+/* 거래내역 헤더 */
+.content-header {
+  width: 100%; height: 70px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #8E8E8E;
+  font-size: 22px; font-weight: bold;
+  line-height: 70px;
+  padding: 0px 30px;
+}
