@@ -136,4 +136,18 @@ aside.sidebar {
 }
 /* 코인, 페이지당 항목 수 section */
 .filter-symbol {}
+.filter-symbol span {
+  display: inline-block;
+  margin-right: 20px;
+  font-weight: bold; font-size: 16px;
+  color: #575757;
+}
+.filter-symbol input[type='text'] {
+  width: 200px;
+  font-size: 14px;
+  border: 1px solid #D8D8D8; border-radius: 6px;
+}
+.filter-symbol input[type='text']:focus {
+  outline: 1px solid #0C8CE9;
+}
 .pagination-option {}
