@@ -128,6 +128,12 @@ aside.sidebar {
   box-shadow: 0 0 0 2px #0C8CE9;
 }
 .filter-date {}
+.filter-date span {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 14px;
+  color: #363636;
+}
 /* 코인, 페이지당 항목 수 section */
 .filter-symbol {}
 .pagination-option {}
