@@ -48,12 +48,13 @@ aside.sidebar {
 }
 .sidebar-menu li {
   font-size: 14px; color: #363636; opacity: 50%;
-  margin-left: 10px;
-  margin-bottom: 20px;
-  cursor: pointer;
 }
 .sidebar-menu li.active {
   color: #000; opacity: 100%;
+}
+.sidebar-menu li a {
+  display: block;
+  padding: 10px 0px;
 }
 /* 로그아웃 버튼 */
 .sidebar-footer {
