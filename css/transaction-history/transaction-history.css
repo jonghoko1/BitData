@@ -89,6 +89,7 @@ aside.sidebar {
   box-sizing: border-box;
   padding-left: 20px;
 }
+
 /* 필터 영역 */
 .content-filter {}
 /* 각 필터 section */
@@ -151,3 +152,12 @@ aside.sidebar {
   outline: 1px solid #0C8CE9;
 }
 .pagination-option {}
+.pagination-option label {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 16px;
+  color: #575757;
+}
+.pagination-option select {
+
+}
