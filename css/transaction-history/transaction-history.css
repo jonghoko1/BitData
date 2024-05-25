@@ -5,8 +5,8 @@
 a,
 a:link,
 a:visited {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 /* button-style reset */
 button {
@@ -16,148 +16,171 @@ button {
     cursor: pointer;
 }
 
-table, td, th {
-    border : 1px solid black;
-    border-collapse : collapse;
+table,
+td,
+th {
+    border: 1px solid black;
+    border-collapse: collapse;
 }
 
 .contents-container {
-  width: 100%; height: 100vh;
-  display: flex;
+    width: 100%;
+    height: 100vh;
+    display: flex;
 }
 
 /* 사이드 네비게이션 바 */
 aside.sidebar {
-  width: 200px; height: 100%;
-  flex-shrink: 0;
-  box-sizing: border-box;
-  padding: 30px 20px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-right: 1px solid #8E8E8E;
+    width: 200px;
+    height: 100%;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    padding: 30px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid #8E8E8E;
 }
 /* 타이틀 */
 .sidebar-header {
-  font-size: 24px; font-weight: bold; color: #0C8CE9;
-  margin-bottom: 100px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #0C8CE9;
+    margin-bottom: 100px;
 }
 /* 메뉴 */
 .sidebar-menu {
-  width: 100%;
+    width: 100%;
 }
 .sidebar-menu li {
-  font-size: 14px; color: #363636; opacity: 50%;
+    font-size: 14px;
+    color: #363636;
+    opacity: 50%;
 }
 .sidebar-menu li.active {
-  color: #000; opacity: 100%;
+    color: #000;
+    opacity: 100%;
 }
 .sidebar-menu li a {
-  display: block;
-  padding: 10px 0px;
+    display: block;
+    padding: 10px 0px;
 }
 /* 로그아웃 버튼 */
 .sidebar-footer {
-  margin-top: auto;
+    margin-top: auto;
 }
 .sidebar-footer button {
-  width: 145px; height: 35px;
-  border: 1px solid #8E8E8E;
-  border-radius: 10px;
-  font-size: 14px; color: #363636;
+    width: 145px;
+    height: 35px;
+    border: 1px solid #8E8E8E;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #363636;
 }
 
 /* 내용 */
 .content {
-  width: 100%; height: 100%;
-  display: flex; flex-direction: column;
-  overflow: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
 }
 /* 거래내역 헤더 */
 .content-header {
-  width: 100%; height: 70px;
-  min-width: 1200px;
-  position: sticky;
-  box-sizing: border-box;
-  border-bottom: 1px solid #8E8E8E;
-  font-size: 22px; font-weight: bold;
-  line-height: 70px;
-  padding: 0px 30px;
+    width: 100%;
+    height: 70px;
+    min-width: 1200px;
+    position: sticky;
+    box-sizing: border-box;
+    border-bottom: 1px solid #8E8E8E;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 70px;
+    padding: 0px 30px;
 }
 .content-body {
-  width: 1200px; height: 100%;
-  box-sizing: border-box;
-  padding-left: 20px;
+    width: 1200px;
+    height: 100%;
+    box-sizing: border-box;
+    padding-left: 20px;
 }
 
 /* 필터 영역 */
 .content-filter {}
 /* 각 필터 section */
 .filter-container {
-  margin-top: 50px;
-  display: flex;
-  justify-content: space-between;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
 }
 /* 승패, 일자 필터 section */
 #filter-winlose {}
-#filter-winlose .winlose-input span, label{
-  display: inline-block;
-  margin-right: 20px;
+
+#filter-winlose .winlose-input span,
+label {
+    display: inline-block;
+    margin-right: 20px;
 }
 #filter-winlose span {
-  font-weight: bold; font-size: 16px;
-  color: #575757;
+    font-weight: bold;
+    font-size: 16px;
+    color: #575757;
 }
 #filter-winlose label {
-  font-size: 16px;
-  color: #575757;
-  cursor: pointer;
+    font-size: 16px;
+    color: #575757;
+    cursor: pointer;
 }
 #filter-winlose label input[type='radio'] {
-  appearance: none;
-  width: 20px; height: 20px;
-  vertical-align: -3.5px;
-  margin: 0; margin-right: 5px;
-  border: 2px solid #0C8CE9; border-radius: 50%;
-  cursor: pointer;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    vertical-align: -3.5px;
+    margin: 0;
+    margin-right: 5px;
+    border: 2px solid #0C8CE9;
+    border-radius: 50%;
+    cursor: pointer;
 }
 #filter-winlose label input[type='radio']:checked {
-  width: 18px; height: 18px;
-  margin-right: 7px;
-  background-color: #0C8CE9;
-  border: 3px solid white;
-  box-shadow: 0 0 0 2px #0C8CE9;
+    width: 18px;
+    height: 18px;
+    margin-right: 7px;
+    background-color: #0C8CE9;
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px #0C8CE9;
 }
 .filter-date {}
 .filter-date span {
-  display: inline-block;
-  margin-right: 20px;
-  font-size: 14px;
-  color: #363636;
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 14px;
+    color: #363636;
 }
 /* 코인, 페이지당 항목 수 section */
 .filter-symbol {}
 .filter-symbol span {
-  display: inline-block;
-  margin-right: 20px;
-  font-weight: bold; font-size: 16px;
-  color: #575757;
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #575757;
 }
 .filter-symbol input[type='text'] {
-  width: 200px;
-  font-size: 14px;
-  border: 1px solid #D8D8D8; border-radius: 6px;
+    width: 200px;
+    font-size: 14px;
+    border: 1px solid #D8D8D8;
+    border-radius: 6px;
 }
 .filter-symbol input[type='text']:focus {
-  outline: 1px solid #0C8CE9;
+    outline: 1px solid #0C8CE9;
 }
 .pagination-option {}
 .pagination-option label {
-  display: inline-block;
-  margin-right: 10px;
-  font-size: 16px;
-  color: #575757;
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 16px;
+    color: #575757;
 }
-.pagination-option select {
-
-}
+.pagination-option select {}
