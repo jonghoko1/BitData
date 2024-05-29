@@ -5,8 +5,8 @@
 a,
 a:link,
 a:visited {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 /* button-style reset */
 button {
