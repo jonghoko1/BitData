@@ -1,13 +1,6 @@
 @charset "utf-8";
 @import "./reset.css";
 
-button {
-    padding: 0;
-    background-color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
 /* 로고 */
 .login-logo {
     position: fixed;
@@ -42,4 +35,3 @@ button {
 .content .kakao-login {
     background-color: #F4E54E;
 }
-.content .banner {}
