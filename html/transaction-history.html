@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,16 @@
     <link rel="stylesheet" href="../css/transaction-history/transaction-history.css">
     <link rel="stylesheet" href="../css/transaction-history/image-memo-modal.css">
 </head>
+
 <body>
     <div class="contents-container">
         <!-- 사이드 네비 -->
         <aside class="sidebar">
-            <div class="sidebar-header">BitData</div>
+            <div class="sidebar-header">
+                <div class="title">
+                    BitData
+                </div>
+            </div>
             <ul class="sidebar-menu">
                 <li><a href="">대시보드</a></li>
                 <li class="active"><a href="">거래내역</a></li>
@@ -24,7 +30,9 @@
         <div class="content">
             <!-- 헤더 -->
             <header class="content-header">
-                거래내역
+                <div class="title">
+                    거래내역
+                </div>
             </header>
             <main class="content-body">
                 <section class="content-filter">
@@ -128,58 +136,62 @@
         </div>
     </div>
     <!-- 거래내역 이미지 메모장 -->
-    <h2>이미지 메모장 모달</h2>
-    <button id="myBtn">Open Modal</button>
-
-    <div id="myModal" class="modal">    
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2>이미지 메모장</h2>
-          <span class="close">&times;</span>
+    <div class="modal image-memo hidden">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="title">
+                    이미지 메모장
+                </div>
+                <button class="close-btn">
+                    <img src="../resources/img/transaction-history/x-button.jpeg" alt="">
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="image-card">
+                    <img src="../resources/img/transaction-history/image.png" alt="Image">
+                    <div class="info">
+                        <div class="title">TITLE</div>
+                        <div class="description">DESCRIPTION</div>
+                        <div class="more">...더보기</div>
+                    </div>
+                    <div class="actions">
+                        <button class="adjust">수정하기</button>
+                        <button class="delete">삭제</button>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="../resources/img/transaction-history/image.png" alt="Image">
+                    <div class="info">
+                        <div class="title">TITLE</div>
+                        <div class="description">DESCRIPTION</div>
+                        <div class="more">...더보기</div>
+                    </div>
+                    <div class="actions">
+                        <button class="adjust">수정하기</button>
+                        <button class="delete">삭제</button>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="../resources/img/transaction-history/image.png" alt="Image">
+                    <div class="info">
+                        <div class="title">TITLE</div>
+                        <div class="description">DESCRIPTION</div>
+                        <div class="more">...더보기</div>
+                    </div>
+                    <div class="actions">
+                        <button class="adjust">수정하기</button>
+                        <button class="delete">삭제</button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="note">
+                        * 이미지는 최대 3개까지 업로드 가능합니다.
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-          <div class="image-card">
-            <img src="https://via.placeholder.com/50" alt="Image">
-            <div class="info">
-              <h3>TITLE</h3>
-              <p>DESCRIPTION</p>
-              <a class="more">...더보기</a>
-            </div>
-            <div class="actions">
-              <button class="adjust">수정하기</button>
-              <button class="delete">삭제</button>
-            </div>
-          </div>
-          <div class="image-card">
-            <img src="https://via.placeholder.com/50" alt="Image">
-            <div class="info">
-              <h3>TITLE</h3>
-              <p>안녕하세요 고종호입니다...</p>
-              <a class="more">...더보기</a>
-            </div>
-            <div class="actions">
-              <button class="adjust">수정하기</button>
-              <button class="delete">삭제</button>
-            </div>
-          </div>
-          <div class="image-card">
-            <img src="https://via.placeholder.com/50" alt="Image">
-            <div class="info">
-              <h3>TITLE</h3>
-              <p>DESCRIPTION</p>
-              <a class="more">...더보기</a>
-            </div>
-            <div class="actions">
-              <button class="adjust">수정하기</button>
-              <button class="delete">삭제</button>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer note">
-          * 이미지는 최대 3개까지 업로드 가능합니다.
-        </div>
-      </div>
-    
     </div>
 </body>
+
 </html>
