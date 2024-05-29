@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>거래내역</title>
     <link rel="stylesheet" href="../css/transaction-history/transaction-history.css">
+    <link rel="stylesheet" href="../css/transaction-history/image-memo-modal.css">
 </head>
 <body>
     <div class="contents-container">
@@ -125,6 +126,60 @@
                 </section>
             </main>
         </div>
+    </div>
+    <!-- 거래내역 이미지 메모장 -->
+    <h2>이미지 메모장 모달</h2>
+    <button id="myBtn">Open Modal</button>
+
+    <div id="myModal" class="modal">    
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>이미지 메모장</h2>
+          <span class="close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <div class="image-card">
+            <img src="https://via.placeholder.com/50" alt="Image">
+            <div class="info">
+              <h3>TITLE</h3>
+              <p>DESCRIPTION</p>
+              <a class="more">...더보기</a>
+            </div>
+            <div class="actions">
+              <button class="adjust">수정하기</button>
+              <button class="delete">삭제</button>
+            </div>
+          </div>
+          <div class="image-card">
+            <img src="https://via.placeholder.com/50" alt="Image">
+            <div class="info">
+              <h3>TITLE</h3>
+              <p>안녕하세요 고종호입니다...</p>
+              <a class="more">...더보기</a>
+            </div>
+            <div class="actions">
+              <button class="adjust">수정하기</button>
+              <button class="delete">삭제</button>
+            </div>
+          </div>
+          <div class="image-card">
+            <img src="https://via.placeholder.com/50" alt="Image">
+            <div class="info">
+              <h3>TITLE</h3>
+              <p>DESCRIPTION</p>
+              <a class="more">...더보기</a>
+            </div>
+            <div class="actions">
+              <button class="adjust">수정하기</button>
+              <button class="delete">삭제</button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer note">
+          * 이미지는 최대 3개까지 업로드 가능합니다.
+        </div>
+      </div>
+    
     </div>
 </body>
 </html>
