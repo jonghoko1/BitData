@@ -51,7 +51,7 @@ function indexOfScrollAnimation(index) {
     $scrollSection.style.transform = `translateY(${curScrollSectionHeight += $screenHeight * difference}px)`;
 }
 // pagination
-const $paginationBtn = document.querySelectorAll(".scroll-box .pagination button");
+const $paginationBtn = document.querySelectorAll(".pagination button");
 // pagination 버튼 활성화 상태 업데이트
 function updatePaginationBtn() {
     for (btn of $paginationBtn) {
