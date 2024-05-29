@@ -8,16 +8,24 @@
     <script defer src="./scripts/main/index.js"></script>
 </head>
 <body>
-    <div class="scroll-box">
-        <main class="scroll-section">
+    <main class="scroll-box">
+        <div class="scroll-section">
             <div class="section-item section-0">
                 <div class="content-container">
-                    <div class="title">ORCA</div>
-                    <div class="content">
+                    <header>
+                        <div class="title">
+                            BitData
+                        </div>
                         <div class="login-join">
                             <a href="./html/login-join.html">로그인 / 회원가입</a>
                         </div>
-                        <div class="subtitle">바이낸스</br>USDT 선물</br>거래 데이터</div>
+                    </header>
+                    <div class="content">
+                        <div class="subtitle">
+                            바이낸스</br>
+                            USDT 선물</br>
+                            거래 데이터
+                        </div>
                     </div>
                 </div>
             </div>
@@ -25,42 +33,41 @@
                 <div class="content-container">
                     <div class="content">
                         <div class="user-guide">
-                            <div class="text"><a href="./html/notice.html">공지사항</a></div>
-                            <div class="text"><a href="./html/terms-of-service.html">서비스 이용약관</a></div>
-                            <div class="text"><a href="./html/privacy-policy.html">개인정보 처리방침</a></div>
+                            <div class="page-link"><a href="./html/notice.html">공지사항</a></div>
+                            <div class="page-link"><a href="./html/terms-of-service.html">서비스 이용약관</a></div>
+                            <div class="page-link"><a href="./html/privacy-policy.html">개인정보 처리방침</a></div>
                         </div>
                         <div class="slogan-container">
                             <div class="slogan">
-                                <div>바이낸스 선물</div>
-                                <div>거래 데이터 편하게</div>
-                                <div>관리하고 분석하세요.</div> 
+                                바이낸스 선물<br/>
+                                거래 데이터 편하게<br/>
+                                관리하고 분석하세요.
                             </div>
-                            <div>ORCA</div>
-                        </div>
-                        <div class="company-information">
-                            <article>
-                                <div>빗데이터</div>
-                                <div>서울시 강남구 압구정로 313, 43동 502호</div>
-                            </article>
-                            <article>
-                                <div>사업자 번호 : 302-66-00538</div>
-                            </article>
-                            <article>
-                                <div>고객센터</div>
-                                <div>TEL : 00-000-000</div>
-                                <div>MAIL : orcabitdata@gmail.com</div>
-                            </article>
+                            <div>BitData</div>
                         </div>
                     </div>
+                    <footer>
+                        <section class="company-information">
+                            <div>
+                                빗데이터<br/>
+                                사업자 번호 : 302-66-00538<br/>
+                                서울시 강남구 압구정로 313, 43동 502호
+                            </div>
+                            <div>
+                                고객센터<br/>
+                                MAIL : orcabitdata@gmail.com<br/>
+                            </div>
+                        </section>
+                    </footer>
                 </div>
             </div>
-        </main>
-        <nav class="pagination">
-            <ul>
-                <li><button type="button" aria-labelledby="section-0" onclick="clickPaginationBtn(0)"></button></li>
-                <li><button type="button" aria-labelledby="section-1" onclick="clickPaginationBtn(1)"></button></li>
-            </ul>
-        </nav>
-    </div>
+        </div>
+    </main>
+    <nav class="pagination">
+        <ul>
+            <li><button type="button" aria-labelledby="section-0" onclick="clickPaginationBtn(0)"></button></li>
+            <li><button type="button" aria-labelledby="section-1" onclick="clickPaginationBtn(1)"></button></li>
+        </ul>
+    </nav>
 </body>
 </html>
