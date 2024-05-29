@@ -1,85 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>거래내역</title>
     <link rel="stylesheet" href="../css/transaction-history/transaction-history.css">
 </head>
+
 <body>
-    <!-- 사이드 네비 -->
-    <nav class="sidebar">
-        <div class="title">Bit Data</div>
-        <div>대시보드</div>
-        <div class="active">거래내역</div>
-        <div>설정</div>
-        <button>로그아웃</button>
-    </nav>
-    <!-- 헤더 -->
-    <header>거래내역</header>
-    <main>
-        <!-- 승패 필터 -->
-        <div class="filter-win-or-lose">
-            <span><input type="radio" name="data-win-or-lose" checked/> 전체</span>
-            <span><input type="radio" name="data-win-or-lose"/> 승</span>
-            <span><input type="radio" name="data-win-or-lose"/> 패</span>
+    <div class="contents-container">
+        <!-- 사이드 네비 -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="title">
+                    BitData
+                </div>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="">대시보드</a></li>
+                <li class="active"><a href="">거래내역</a></li>
+                <li><a href="">설정</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <button>로그아웃</button>
+            </div>
+        </aside>
+        <div class="content">
+            <!-- 헤더 -->
+            <header class="content-header">
+                <div class="title">
+                    거래내역
+                </div>
+            </header>
+            <main class="content-body">
+                <section class="content-filter">
+                    <div class="filter-container">
+                        <!-- 승패 필터 -->
+                        <form id="filter-winlose">
+                            <div class="winlose-input">
+                                <span>필터</span>
+                                <label><input type="radio" name="data-winlose" value="all" checked>전체</label>
+                                <label><input type="radio" name="data-winlose" value="win">승리</label>
+                                <label><input type="radio" name="data-winlose" value="lose">패배</label>
+                            </div>
+                        </form>
+                        <!-- 일자 필터 -->
+                        <div class="filter-date">
+                            <span>일자 설정</span>
+                            <input type="date" name="data-date">
+                        </div>
+                    </div>
+                    <div class="filter-container">
+                        <!-- 코인 필터 -->
+                        <div class="filter-symbol">
+                            <span>검색</span>
+                            <input type="text" name="data-symbol" placeholder="코인명을 입력해주세요.">
+                        </div>
+                        <!-- 페이지 당 항목 수 -->
+                        <div class="pagination-option">
+                            <label for="option-item">페이지당 항목 수 </label>
+                            <select name="option-item" id="option-item">
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="30">30</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+                <section class="content-table">
+                    <!-- 거래 내역 테이블 -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>거래 일시</th>
+                                <th>코인명</th>
+                                <th>포지션</th>
+                                <th>레버리지 비율</th>
+                                <th>최종 손익</th>
+                                <th>최종 손익률</th>
+                                <th>매수 금액</th>
+                                <th>매도 금액</th>
+                                <th>매수 단가</th>
+                                <th>매도 단가</th>
+                                <th>포지션 유지 시간</th>
+                                <th>자세히</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2024-10-22</td>
+                                <td>ETHUSDT.P</td>
+                                <td>SHORT</td>
+                                <td>X100</td>
+                                <td>1,000,000</td>
+                                <td>50.0%</td>
+                                <td>2,000,000</td>
+                                <td>2,000,000</td>
+                                <td>221</td>
+                                <td>222</td>
+                                <td>5시간 30분</td>
+                                <td>자세히</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section class="content-footer">
+                    <!-- 페이지 이동 -->
+                    <div class="pagination-number">
+                        <button class="pre-start-btn">
+                            <img src="../resources/img/transaction-history/pre-start-btn.png" alt="처음으로 버튼">
+                        </button>
+                        <button class="pre-btn">
+                            <img src="../resources/img/transaction-history/pre-btn.png" alt="이전 버튼">
+                        </button>
+                        <div class="page-number-container">
+                            <button class="page-number-btn page-number-1">1</button>
+                            <button class="page-number-btn page-number-2">2</button>
+                            <button class="page-number-btn page-number-3">3</button>
+                            <button class="page-number-btn page-number-4">4</button>
+                            <button class="page-number-btn page-number-5">5</button>
+                        </div>
+                        <button class="next-btn">
+                            <img src="../resources/img/transaction-history/next-btn.png" alt="다음 버튼">
+                        </button>
+                        <button class="next-end-btn">
+                            <img src="../resources/img/transaction-history/next-end-btn.png" alt="마지막으로 버튼">
+                        </button>
+                    </div>
+                </section>
+            </main>
         </div>
-        <!-- 일자 필터 -->
-        <div class="filter-date">
-            <span>일자 설정 <input type="date" name="data-date"></span>
+    </div>
+    <!-- 거래내역 이미지 메모장 -->
+    <div class="modal image-memo hidden">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="title">
+                    이미지 메모장
+                </div>
+                <button class="close-btn">
+                    <img src="../resources/img/transaction-history/x-button.jpeg" alt="">
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="image-card">
+                    <img src="../resources/img/transaction-history/image.png" alt="Image">
+                    <div class="info">
+                        <div class="title">TITLE</div>
+                        <div class="description">DESCRIPTION</div>
+                        <div class="more">...더보기</div>
+                    </div>
+                    <div class="actions">
+                        <button class="adjust">수정하기</button>
+                        <button class="delete">삭제</button>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="../resources/img/transaction-history/image.png" alt="Image">
+                    <div class="info">
+                        <div class="title">TITLE</div>
+                        <div class="description">DESCRIPTION</div>
+                        <div class="more">...더보기</div>
+                    </div>
+                    <div class="actions">
+                        <button class="adjust">수정하기</button>
+                        <button class="delete">삭제</button>
+                    </div>
+                </div>
+                <div class="image-card">
+                    <img src="../resources/img/transaction-history/image.png" alt="Image">
+                    <div class="info">
+                        <div class="title">TITLE</div>
+                        <div class="description">DESCRIPTION</div>
+                        <div class="more">...더보기</div>
+                    </div>
+                    <div class="actions">
+                        <button class="adjust">수정하기</button>
+                        <button class="delete">삭제</button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="note">
+                        * 이미지는 최대 3개까지 업로드 가능합니다.
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- 코인 필터 -->
-        <div class="filter-symbol">
-            <span>검색 <input type="text" name="data-symbol" placeholder="코인명을 입력해주세요."></span>
-        </div>
-        <!-- 페이지 당 항목 수 -->
-        <div class="pagination-option">
-            <label for="option-item">페이지당 항목 수 </label>
-            <select name="option-item" id="option-item">
-                <option value="10">10</option>
-                <option value="20">20</option>
-                <option value="30">30</option>
-                <option value="50">50</option>
-                <option value="100">100</option>
-            </select>
-        </div>
-        <!-- 거래 내역 테이블 -->
-        <table>
-            <thead>
-                <tr>
-                    <th>거래 일시</th>
-                    <th>코인명</th>
-                    <th>포지션</th>
-                    <th>레버리지 비율</th>
-                    <th>최종 손익</th>
-                    <th>최종 손익률</th>
-                    <th>매수 금액</th>
-                    <th>매도 금액</th>
-                    <th>매수 단가</th>
-                    <th>매도 단가</th>
-                    <th>포지션 유지 시간</th>
-                    <th>자세히</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>2024-10-22</td>
-                    <td>ETHUSDT.P</td>
-                    <td>SHORT</td>
-                    <td>X100</td>
-                    <td>1,000,000</td>
-                    <td>50.0%</td>
-                    <td>2,000,000</td>
-                    <td>2,000,000</td>
-                    <td>221</td>
-                    <td>222</td>
-                    <td>5시간 30분</td>
-                    <td>자세히</td>
-                </tr>
-            </tbody>
-        </table>
-        <!-- 페이지 이동 -->
-        <div class="pagination-number">1 2 3 4 5</div>
-    </main>
+    </div>
 </body>
+
 </html>
