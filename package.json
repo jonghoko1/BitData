@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "live-server src/html"
+    "start": "live-server src/html",
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
