@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',  // 프로젝트의 진입 파일 경로
+  entry: './src/js/main.js',  // 프로젝트의 진입 파일 경로
   output: {
     filename: 'bundle.js',  // 출력 파일명
     path: path.resolve(__dirname, 'dist')  // 출력 디렉토리
