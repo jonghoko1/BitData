@@ -6,6 +6,7 @@
     position: fixed;
     top: 0; left: 0;
     z-index: 1;
+    color: #575757;
 }
 .modal-background {
     width: 100%; height: 100%;
@@ -31,18 +32,14 @@
 /* 모달 타이틀 */
 .modal-header .title {
     font-weight: bold; font-size: 22px;
-    color: #575757;
 }
 /* 닫기 버튼 */
 .modal-header .close-btn img {
     width: 22px; height: 22px;
 }
-/* 모달 바디 */
-.modal-body {
-    margin-top: 20px;
-}
 /* 이미지 카드 */
 .image-card {
+    padding: 10px 0;
     display: flex;
     align-items: center;
 }
@@ -54,16 +51,18 @@
 /* 이미지 */
 .image-card .info {
     box-sizing: border-box;
-    flex-grow: 1;
+    height: 144px;
+    flex-grow: 1; /* 여백 채우기 */
     padding: 10px;
 }
 /* 이미지 제목 */
 .image-card .info .title {
-    font-size: 30px;
+    font-weight: bold; font-size: 22px;
 }
 /* 이미지 설명 */
 .image-card .info .description {
-    font-size: 22px;
+    height: calc(144px - 22px - 16px - 20px);
+    font-size: 14px;
 }
 /* 이미지 설명 더보기 */
 .image-card .info .more {
@@ -76,18 +75,30 @@
     flex-direction: column;
 }
 .image-card .actions button {
-    color: white;
+    padding: 5px 15px;
     border: none; border-radius: 10px;
-    padding: 5px;
     margin-bottom: 10px;
+    font-weight: bold;
 }
-.image-card .actions .adjust {
-    background-color: #0C8CE9;
+.image-card .actions .view {
+    border: 1px solid #000;
+    color: #000;
 }
 .image-card .actions .delete {
     background-color: #FA7878;
+    color: #fff;
 }
 .note {
     font-size: 12px;
     color: #777;
+}
+
+/* 업로드 버튼 */
+.upload-btn {
+    padding: 5px 15px;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: #0C8CE9;
+    font-weight: bold;
+    color: #fff;
 }
