@@ -1,100 +1,82 @@
-.hidden {
-    display: none;
-}
-.modal {
-    width: 100%; height: 100%; 
-    position: fixed;
-    top: 0; left: 0;
+.image-memo {
     z-index: 1;
     color: #575757;
 }
-.modal-background {
-    width: 100%; height: 100%;
-    background-color: rgba(0,0,0,0.5); 
-}
-.modal-content {
+.image-memo .modal-content {
     width: 575px;
-    border-radius: 10px;
-    padding: 10px;
-    background-color: #fff;
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
 }
-.modal-header, .modal-body, .modal-footer {
-    padding: 10px;
-}
+
 /* 모달 헤더 */
-.modal-header {
+.image-memo .modal-header {
     display: flex;
     justify-content: space-between;
 }
 /* 모달 타이틀 */
-.modal-header .title {
+.image-memo .modal-header .title {
     font-weight: bold; font-size: 22px;
 }
 /* 닫기 버튼 */
-.modal-header .close-btn img {
+.image-memo .modal-header .close-btn img {
     width: 22px; height: 22px;
 }
 /* 이미지 카드 */
-.image-card {
+.image-memo .image-card {
     padding: 10px 0;
     display: flex;
     align-items: center;
 }
 /* 이미지 카드 */
-.image-card img {
+.image-memo .image-card img {
     width: 144px;
     height: 144px;
 }
 /* 이미지 */
-.image-card .info {
+.image-memo .image-card .info {
     box-sizing: border-box;
     height: 144px;
     flex-grow: 1; /* 여백 채우기 */
     padding: 10px;
 }
 /* 이미지 제목 */
-.image-card .info .title {
+.image-memo .image-card .info .title {
     font-weight: bold; font-size: 22px;
 }
 /* 이미지 설명 */
-.image-card .info .description {
+.image-memo .image-card .info .description {
     height: calc(144px - 22px - 16px - 20px);
     font-size: 14px;
 }
 /* 이미지 설명 더보기 */
-.image-card .info .more {
+.image-memo .image-card .info .more {
     color: #989898;
     cursor: pointer;
 }
 /* 이미지 카드 동작 */
-.image-card .actions {
+.image-memo .image-card .actions {
     display: flex;
     flex-direction: column;
 }
-.image-card .actions button {
+.image-memo .image-card .actions button {
     padding: 5px 15px;
     border: none; border-radius: 10px;
     margin-bottom: 10px;
     font-weight: bold;
 }
-.image-card .actions .view {
+.image-memo .image-card .actions .view {
     border: 1px solid #000;
     color: #000;
 }
-.image-card .actions .delete {
+.image-memo .image-card .actions .delete {
     background-color: #FA7878;
     color: #fff;
 }
-.note {
+.image-memo .notice {
     font-size: 12px;
     color: #777;
 }
 
 /* 업로드 버튼 */
-.upload-btn {
+.image-memo .upload-btn {
     padding: 5px 15px;
     border-radius: 10px;
     margin-left: 10px;

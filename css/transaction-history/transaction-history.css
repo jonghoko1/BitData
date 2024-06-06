@@ -1,6 +1,8 @@
 @charset "utf-8";
 @import "../reset.css";
+@import "./modal.css";
 @import "./image-memo-modal.css";
+@import "./image-memo-view-modal.css";
 
 .contents-container {
     width: 100%;
