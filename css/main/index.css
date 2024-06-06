@@ -1,21 +1,6 @@
 @charset "utf-8";
 @import "../reset.css";
 
-/* a-style reset */
-a,
-a:link,
-a:visited {
-    color: inherit;
-    text-decoration: none;
-}
-/* button-style reset */
-button {
-    padding: 0;
-    background-color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
 /* 스크롤 화면 구성 */
 .scroll-box {
     width: 100%; height: 100vh;
@@ -38,6 +23,8 @@ button {
 .section-0 header .login-join {
     position: absolute;
     top: 20%; right: 25%; transform: translate(0, -50%);
+}
+.section-0 header .login-join a {
     font-weight: bold; font-size: 14px;
 }
 .section-0 .content .subtitle {

@@ -49,6 +49,9 @@ table {
 
 /* 추가 */
 /* a-style reset */
+body {
+	user-select: none;
+}
 a,
 a:link,
 a:visited {
