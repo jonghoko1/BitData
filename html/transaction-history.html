@@ -140,8 +140,8 @@
         </div>
     </div>
     <!-- 거래내역 이미지 메모장 -->
-    <!-- <div class="modal image-memo hidden"> -->
-    <div class="modal image-memo">
+    <div class="modal image-memo hidden">
+    <!-- <div class="modal image-memo"> -->
         <div class="modal-background"></div>
         <div class="modal-content">
             <div class="modal-header">
@@ -188,7 +188,9 @@
             </div>
         </div>
     </div>
-    <div class="modal image-memo-view">
+    <!-- 이미지 크게 보기 모달 -->
+    <div class="modal image-memo-view hidden">
+    <!-- <div class="modal image-memo-view"> -->
         <div class="modal-content">
             <div class="content-image">
                 <img src="../resources/img/transaction-history/image-memo-modal/image.png" alt="Image">
@@ -211,6 +213,27 @@
                         메모 수정하기
                     </button>
                 </footer>
+            </div>
+        </div>
+    </div>
+    <!-- 메모 수정 모달 -->
+    <div class="modal memo-update">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <header>
+                <div class="title">메모장</div>
+                <button type="button" class="close-btn">
+                    <img src="../resources/img/transaction-history/x-button.jpeg" alt="닫기 버튼">
+                </button>
+            </header>
+            <div class="content-body">
+                <form action="" method="post">
+                    <input type="text" name="title" id="title" placeholder="제목을 입력해주세요." required>
+                    <br>
+                    <textarea name="description" id="description" placeholder="텍스트를 입력해주세요."></textarea>
+                    <br>
+                    <button type="submit">저장</button>
+                </form>
             </div>
         </div>
     </div>
