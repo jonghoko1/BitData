@@ -2,3 +2,77 @@
     z-index: 2;
 }
 
+.image-memo-view .modal-content {
+    box-sizing: border-box;
+    width: 80%; height: 80%;
+    padding: 0;
+    display: flex;
+}
+/* 이미지 영역 */
+.image-memo-view .content-image {
+    width: calc((2 / 3) * 100%); height: 100%;
+    padding: 10px;
+}
+.image-memo-view .content-image img {
+    width: 100%; height: 100%;
+    object-fit: contain;
+}
+.image-memo-view .content-memo {
+    width: 100%; height: 100%;
+    padding: 10px;
+}
+/* 영역 구분선 */
+.image-memo-view .content-outline {
+    border-left: 1px solid #D8D8D8;
+}
+/* 메모 영역 */
+.image-memo-view .content-memo {
+    box-sizing: border-box;
+    width: calc((1 / 3) * 100%); height: 100%;
+    padding: 10px;
+    color: #575757;
+    display: flex;
+    flex-direction: column;
+}
+/* 메모 영역 헤더 */
+.image-memo-view .content-memo header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* 타이틀 */
+.image-memo-view .content-memo header .title {
+    padding: 5px;
+    font-weight: bold; font-size: 30px;
+}
+/* 닫기 버튼 */
+.image-memo-view .content-memo header button {
+    padding: 5px;
+}
+.image-memo-view .content-memo header button img {
+    width: 30px; height: 30px;
+}
+/* 디스크립션 */
+.image-memo-view .content-memo .content-body {
+    flex-grow: 1;
+    padding: 10px;
+}
+.image-memo-view .content-memo .content-body .discription-area {
+    padding: 5px;
+    font-size: 14px;
+    color: #575757;
+}
+/* [메모 수정하기] 버튼 */
+.image-memo-view .content-memo footer {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+.image-memo-view .content-memo footer button {
+    padding: 5px 10px;
+    border: 1px solid #D8D8D8; border-radius: 10px;
+    font-weight: bold; font-size: 16px;
+    color: #575757;
+    cursor: pointer;
+}
