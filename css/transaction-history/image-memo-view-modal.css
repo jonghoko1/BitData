@@ -47,10 +47,10 @@
     font-weight: bold; font-size: 30px;
 }
 /* 닫기 버튼 */
-.image-memo-view .content-memo header button {
+.image-memo-view .content-memo header .close-btn {
     padding: 5px;
 }
-.image-memo-view .content-memo header button img {
+.image-memo-view .content-memo header .close-btn img {
     width: 30px; height: 30px;
 }
 /* 디스크립션 */
