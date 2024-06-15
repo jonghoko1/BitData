@@ -64,11 +64,11 @@
     margin-bottom: 10px;
     font-weight: bold;
 }
-.image-memo .image-card .actions .view {
+.image-memo .image-card .actions .view-btn {
     border: 1px solid #000;
     color: #000;
 }
-.image-memo .image-card .actions .delete {
+.image-memo .image-card .actions .delete-btn {
     background-color: #FA7878;
     color: #fff;
 }
