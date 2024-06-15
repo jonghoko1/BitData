@@ -33,8 +33,7 @@
 /* 이미지 */
 .image-memo .image-card .info {
     box-sizing: border-box;
-    height: 144px;
-    flex-grow: 1; /* 여백 채우기 */
+    width: 355px; height: 144px;
     padding: 10px;
 }
 /* 이미지 제목 */
@@ -43,7 +42,7 @@
 }
 /* 이미지 설명 */
 .image-memo .image-card .info .description {
-    width: 100%; height: 70px;
+    height: 70px;
     margin-bottom: 10px;
     font-size: 14px;
     overflow: hidden;
