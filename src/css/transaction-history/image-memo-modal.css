@@ -43,13 +43,16 @@
 }
 /* 이미지 설명 */
 .image-memo .image-card .info .description {
-    height: calc(144px - 22px - 16px - 20px);
+    width: 100%; height: 70px;
+    margin-bottom: 10px;
     font-size: 14px;
-}
-/* 이미지 설명 더보기 */
-.image-memo .image-card .info .more {
-    color: #989898;
-    cursor: pointer;
+    overflow: hidden;
+    word-break: break-word;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical
+ 
 }
 /* 이미지 카드 동작 */
 .image-memo .image-card .actions {
