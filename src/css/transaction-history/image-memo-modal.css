@@ -21,14 +21,14 @@
 }
 /* 이미지 카드 */
 .image-memo .image-card {
+    height: 144px;
     padding: 10px 0;
     display: flex;
     align-items: center;
 }
 /* 이미지 카드 */
 .image-memo .image-card img {
-    width: 144px;
-    height: 144px;
+    width: 144px; height: 144px;
 }
 /* 이미지 */
 .image-memo .image-card .info {
@@ -79,7 +79,7 @@
 .image-memo .upload-btn {
     padding: 5px 15px;
     border-radius: 10px;
-    margin-left: 10px;
+    margin-left: 20px;
     background-color: #0C8CE9;
     font-weight: bold;
     color: #fff;
