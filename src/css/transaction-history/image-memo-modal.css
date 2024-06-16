@@ -7,16 +7,16 @@
 }
 
 /* 모달 헤더 */
-.image-memo .modal-header {
+.image-memo header {
     display: flex;
     justify-content: space-between;
 }
 /* 모달 타이틀 */
-.image-memo .modal-header .title {
+.image-memo header .title {
     font-weight: bold; font-size: 22px;
 }
 /* 닫기 버튼 */
-.image-memo .modal-header .close-btn img {
+.image-memo header .close-btn img {
     width: 22px; height: 22px;
 }
 /* 이미지 카드 */
@@ -85,6 +85,9 @@
     align-items: center;
 }
 .image-memo .button-box.hidden {
+    display: none;
+}
+.image-memo #image-upload {
     display: none;
 }
 .image-memo .upload-btn {
