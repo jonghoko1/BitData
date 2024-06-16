@@ -27,12 +27,12 @@ const imageMemoModalCloseBtnClick = function() { // 닫기 버튼 클릭시
 const imageMemoModalViewBtnClick = function() { // 보기 버튼 클릭시
     $imageMemoViewModal.classList.remove('hidden');
 }
-const imageMemoModalDeleteBtnClick = function(event) {
+const imageMemoModalDeleteBtnClick = function(event) { // [삭제] 버튼 클릭 시
 
     if (confirm('메모를 삭제하시겠습니까?')) {
         const $imageCard = event.target.closest('.image-card');
         $imageCard.remove();
-        if (document.querySelector('.image-memo .button-box') === null) {
+        if (document.querySelector('.image-memo .button-box') === null) { // [업로드] 버튼 없을 시 [업로드] 버튼 추가
             const $uploadBtn = document.createElement('div');
             $uploadBtn.classList.add('button-box');
             $uploadBtn.innerHTML = `
