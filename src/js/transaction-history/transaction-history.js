@@ -13,7 +13,8 @@ const $imageMemoModalUploadBtn = document.querySelector('.image-memo .upload-btn
 // 이미지 크게 보기 모달
 const $imageMemoViewModal = document.querySelector('.image-memo-view'); // 이미지 크게 보기 모달
 const $imageMemoViewModalCloseBtn = document.querySelector('.image-memo-view .close-btn'); // 닫기 버튼
-const $imageMemoViewModalUpdateBtn = document.querySelector('.image-memo-view .update-btn'); // 업데이트 모달
+const $imageMemoViewModalImage = document.querySelector('.image-memo-view .content-image img'); // 이미지 태그
+const $imageMemoViewModalUpdateBtn = document.querySelector('.image-memo-view .update-btn'); // [수정하기] 버튼
 // 메모 수정 모달
 const $memoUpdateModal = document.querySelector('.memo-update'); // 메모 수정 모달
 
@@ -28,8 +29,10 @@ const closeImageMemoModal = function() { // 이미지 메모장 모달 닫기
     $imageMemoModal.classList.add('hidden'); // 모달 숨기기
     document.body.style.overflow = 'auto'; // 뒷 배경 스크롤 가능
 };
-const viewImageInModal = function() { // 보기 버튼 클릭시
+const viewImageInModal = function(event) { // 보기 버튼 클릭시
     $imageMemoViewModal.classList.remove('hidden'); // 이미지 크게 보기 모달 노출
+    const $img = event.target.closest('.image-card').querySelector('img'); // 이미지 소스 가져오기
+    $imageMemoViewModalImage.src = $img.src; // 이미지 크게 보기 이미지에 대입
 };
 const deleteImageCard = function(event) { // 삭제 버튼 클릭시
     if (confirm('메모를 삭제하시겠습니까?')) {
