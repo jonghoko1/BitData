@@ -32,14 +32,7 @@ const imageMemoModalDeleteBtnClick = function(event) { // [삭제] 버튼 클릭
     if (confirm('메모를 삭제하시겠습니까?')) {
         const $imageCard = event.target.closest('.image-card');
         $imageCard.remove();
-        if (document.querySelector('.image-memo .button-box') === null) { // [업로드] 버튼 없을 시 [업로드] 버튼 추가
-            const $uploadBtn = document.createElement('div');
-            $uploadBtn.classList.add('button-box');
-            $uploadBtn.innerHTML = `
-                <button type="button" class="upload-btn">업로드</button>
-            `;
-            $imageMemoModalBody.insertBefore($uploadBtn, $imageMemoModalFooter);
-        }
+        $imageMemoModalUploadBtn.parentElement.classList.remove('hidden'); // 업로드 버튼 노출
     }
 }
 // 이미지 크게 보기 모달

@@ -84,6 +84,9 @@
     display: flex;
     align-items: center;
 }
+.image-memo .button-box.hidden {
+    display: none;
+}
 .image-memo .upload-btn {
     padding: 5px 15px;
     border-radius: 10px;
