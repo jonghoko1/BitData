@@ -25,6 +25,12 @@ const imageMemoModalCloseBtnClick = function() { // 닫기 버튼 클릭시
 const imageMemoModalViewBtnClick = function() { // 보기 버튼 클릭시
     $imageMemoViewModal.classList.remove('hidden');
 }
+const imageMemoModalDeleteBtnClick = function(event) {
+    if (confirm('메모를 삭제하시겠습니까?')) {
+        const $imageCard = event.target.closest('.image-card');
+        $imageCard.remove();
+    }
+}
 // 이미지 크게 보기 모달
 const imageMemoModalViewBtnCloseBtnClick = function() { // 보기 버튼 클릭시
     $imageMemoViewModal.classList.add('hidden');
@@ -37,6 +43,9 @@ $imageMemoBtn.addEventListener('click', imageMemoBtnClick); // 메모 버튼 클
 $imageMemoModalCloseBtn.addEventListener('click', imageMemoModalCloseBtnClick) // 닫기 버튼 클릭 이벤트 추가
 for (let viewBtn of $imageMemoModalViewBtn) { // 보기 버튼 클릭 이벤트 추가
     viewBtn.addEventListener('click', imageMemoModalViewBtnClick); 
+}
+for (let deleteBtn of $imageMemoModalDeleteBtn) { // 보기 버튼 클릭 이벤트 추가
+    deleteBtn.addEventListener('click', imageMemoModalDeleteBtnClick); 
 }
 // 이미지 크게 보기 모달
 $imageMemoViewModalCloseBtn.addEventListener('click', imageMemoModalViewBtnCloseBtnClick); // 닫기 버튼 클릭 이벤트 추가
