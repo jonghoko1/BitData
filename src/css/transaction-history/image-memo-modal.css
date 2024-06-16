@@ -26,7 +26,7 @@
     display: flex;
     align-items: center;
 }
-/* 이미지 카드 */
+/* 이미지 */
 .image-memo .image-card img {
     width: 144px; height: 144px;
 }
@@ -78,6 +78,12 @@
 }
 
 /* 업로드 버튼 */
+.image-memo .button-box {
+    height: 144px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
 .image-memo .upload-btn {
     padding: 5px 15px;
     border-radius: 10px;

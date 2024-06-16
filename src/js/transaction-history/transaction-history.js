@@ -3,6 +3,8 @@
 const $imageMemoBtn = document.querySelector('.image-memo-btn'); // 거래내역 메모 버튼
 // 이미지 메모장 모달
 const $imageMemoModal = document.querySelector('.image-memo'); // 이미지 메모장 모달
+const $imageMemoModalBody = document.querySelector('.image-memo .modal-body'); // 모달 바디
+const $imageMemoModalFooter = document.querySelector('.image-memo .modal-footer'); // 모달 푸터
 const $imageMemoModalCloseBtn = document.querySelector('.image-memo .close-btn'); // 닫기 버튼
 const $imageMemoModalViewBtn = document.querySelectorAll('.image-memo .view-btn'); // 보기 버튼
 const $imageMemoModalDeleteBtn = document.querySelectorAll('.image-memo .delete-btn'); // 삭제 버튼
@@ -26,9 +28,18 @@ const imageMemoModalViewBtnClick = function() { // 보기 버튼 클릭시
     $imageMemoViewModal.classList.remove('hidden');
 }
 const imageMemoModalDeleteBtnClick = function(event) {
+
     if (confirm('메모를 삭제하시겠습니까?')) {
         const $imageCard = event.target.closest('.image-card');
         $imageCard.remove();
+        if (document.querySelector('.image-memo .button-box') === null) {
+            const $uploadBtn = document.createElement('div');
+            $uploadBtn.classList.add('button-box');
+            $uploadBtn.innerHTML = `
+                <button type="button" class="upload-btn">업로드</button>
+            `;
+            $imageMemoModalBody.insertBefore($uploadBtn, $imageMemoModalFooter);
+        }
     }
 }
 // 이미지 크게 보기 모달
