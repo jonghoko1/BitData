@@ -142,65 +142,80 @@
     </div>
     <!-- 거래내역 이미지 메모장 -->
     <div class="modal image-memo hidden">
-    <!-- <div class="modal image-memo"> -->
         <div class="modal-background"></div>
         <div class="modal-content">
-            <div class="modal-header">
+            <header>
                 <div class="title">
                     이미지 메모장
                 </div>
                 <button type="button" class="close-btn">
                     <img src="../resources/img/transaction-history/x-button.jpeg" alt="닫기 버튼">
                 </button>
-            </div>
+            </header>
             <div class="modal-body">
-                <div class="image-card">
-                    <img src="../resources/img/transaction-history/image-memo-modal/image.png" alt="Image">
-                    <div class="info">
-                        <div class="title">IMAGE0001</div>
-                        <div class="description">
-                            디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션
-                            디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션
+                <div class="image-card-container">
+                    <div class="image-card">
+                        <img src="../resources/img/transaction-history/image-memo-modal/image.png" alt="Image">
+                        <div class="info">
+                            <div class="title">IMAGE0001</div>
+                            <div class="description">
+                                디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션
+                                디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션
+                            </div>
+                            <div class="upload-date">2024-05-02 22:21</div>
                         </div>
-                        <div class="upload-date">2024-05-02 22:21</div>
+                        <div class="actions">
+                            <button class="view-btn">보기</button>
+                            <button class="delete-btn">삭제</button>
+                        </div>
                     </div>
-                    <div class="actions">
-                        <button class="view-btn">보기</button>
-                        <button class="delete-btn">삭제</button>
+                    <div class="image-card">
+                        <img src="../resources/img/transaction-history/image-memo-modal/image.png" alt="Image">
+                        <div class="info">
+                            <div class="title">IMAGE0001</div>
+                            <div class="description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sint vero molestiae corrupti, alias labore laborum eligendi quidem quos? Totam a ad id animi molestiae quibusdam laudantium ullam officia vel.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae impedit tempora ratione, recusandae placeat reiciendis eos ex atque in soluta ut ea fuga at optio quo magni nulla eius aut?
+                            </div>
+                            <div class="upload-date">2024-05-02 22:21</div>
+                        </div>
+                        <div class="actions">
+                            <button class="view-btn">보기</button>
+                            <button class="delete-btn">삭제</button>
+                        </div>
+                    </div>
+                    <div class="image-card">
+                        <img src="../resources/img/transaction-history/image-memo-modal/image.png" alt="Image">
+                        <div class="info">
+                            <div class="title">IMAGE0001</div>
+                            <div class="description">
+                                디스크립션
+                            </div>
+                            <div class="upload-date">2024-05-02 22:21</div>
+                        </div>
+                        <div class="actions">
+                            <button class="view-btn">보기</button>
+                            <button class="delete-btn">삭제</button>
+                        </div>
                     </div>
                 </div>
-                <div class="image-card">
-                    <img src="../resources/img/transaction-history/image-memo-modal/image.png" alt="Image">
-                    <div class="info">
-                        <div class="title">IMAGE0001</div>
-                        <div class="description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sint vero molestiae corrupti, alias labore laborum eligendi quidem quos? Totam a ad id animi molestiae quibusdam laudantium ullam officia vel.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae impedit tempora ratione, recusandae placeat reiciendis eos ex atque in soluta ut ea fuga at optio quo magni nulla eius aut?
-                        </div>
-                        <div class="upload-date">2024-05-02 22:21</div>
-                    </div>
-                    <div class="actions">
-                        <button class="view-btn">보기</button>
-                        <button class="delete-btn">삭제</button>
-                    </div>
-                </div>
-                <div class="image-card">
+                <div class="button-box hidden">
+                    <input type="file" id="image-upload" accept=".jpg, .jpeg, .png, .gif">
                     <button type="button" class="upload-btn">업로드</button>
                 </div>
-                <div class="modal-footer">
-                    <div class="notice">
-                        * 이미지는 최대 3개까지 업로드 가능합니다.
-                    </div>
-                </div>
             </div>
+            <footer>
+                <div class="notice">
+                    * 이미지는 최대 3개까지 업로드 가능합니다.
+                </div>
+            </footer>
         </div>
     </div>
     <!-- 이미지 크게 보기 모달 -->
     <div class="modal image-memo-view hidden">
-    <!-- <div class="modal image-memo-view"> -->
         <div class="modal-content">
             <div class="content-image">
-                <img src="../resources/img/transaction-history/image-memo-modal/image.png" alt="Image">
+                <img src="" alt="Image">
             </div>
             <div class="content-outline"></div>
             <div class="content-memo">
@@ -216,7 +231,7 @@
                     </div>
                 </div>
                 <footer>
-                    <button type="button">
+                    <button type="button" class="update-btn">
                         메모 수정하기
                     </button>
                 </footer>
@@ -224,8 +239,7 @@
         </div>
     </div>
     <!-- 메모 수정 모달 -->
-    <!-- <div class="modal memo-update hidden"> -->
-    <div class="modal memo-update">
+    <div class="modal memo-update hidden">
         <div class="modal-background"></div>
         <div class="modal-content">
             <header>

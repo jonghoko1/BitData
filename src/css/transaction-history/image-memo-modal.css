@@ -7,16 +7,16 @@
 }
 
 /* 모달 헤더 */
-.image-memo .modal-header {
+.image-memo header {
     display: flex;
     justify-content: space-between;
 }
 /* 모달 타이틀 */
-.image-memo .modal-header .title {
+.image-memo header .title {
     font-weight: bold; font-size: 22px;
 }
 /* 닫기 버튼 */
-.image-memo .modal-header .close-btn img {
+.image-memo header .close-btn img {
     width: 22px; height: 22px;
 }
 /* 이미지 카드 */
@@ -26,7 +26,7 @@
     display: flex;
     align-items: center;
 }
-/* 이미지 카드 */
+/* 이미지 */
 .image-memo .image-card img {
     width: 144px; height: 144px;
 }
@@ -78,6 +78,18 @@
 }
 
 /* 업로드 버튼 */
+.image-memo .button-box {
+    height: 144px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+.image-memo .button-box.hidden {
+    display: none;
+}
+.image-memo #image-upload {
+    display: none;
+}
 .image-memo .upload-btn {
     padding: 5px 15px;
     border-radius: 10px;
