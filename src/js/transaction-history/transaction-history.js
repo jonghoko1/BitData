@@ -17,6 +17,10 @@ const $imageMemoViewModalImage = document.querySelector('.image-memo-view .conte
 const $imageMemoViewModalUpdateBtn = document.querySelector('.image-memo-view .update-btn'); // [수정하기] 버튼
 // 메모 수정 모달
 const $memoUpdateModal = document.querySelector('.memo-update'); // 메모 수정 모달
+const $memoUpdateModalCloseBtn = document.querySelector('.memo-update .close-btn'); // 닫기 버튼
+const $memoUpdateModalTitleInput = document.getElementById('title'); // 제목 입력란
+const $memoUpdateModalDescriptionInput = document.getElementById('description'); // 설명 입력란
+const $memoUpdateModalSaveBtn = document.querySelector('.memo-update .save-btn'); // 저장 버튼
 
 // methods
 // 거래내역
@@ -101,13 +105,32 @@ const formatDate = function(date) { // 날짜 형식
     const minutes = String(date.getMinutes()).padStart(2, '0');
     return `${year}-${month}-${day} ${hours}:${minutes}`;
 };
+// 이미지 크게 보기 모달
 const closeImageViewModal = function() { // 이미지 크게 보기 모달 닫기
     $imageMemoViewModal.classList.add('hidden');
 };
-// 메모 수정 모달
 const openMemoUpdateModal = function() { // 메모 수정 모달 열기
     $memoUpdateModal.classList.remove('hidden');
 };
+// 메모 수정 모달
+const closeMemoUpdateModal = function() { // 메모 수정 모달 닫기
+    $memoUpdateModal.classList.add('hidden');
+}
+const saveMemoUpdateModal = function(event) { // 메모 수정 사항 저장
+    event.preventDefault(); // 기본 동작(페이지 새로고침) 방지
+
+    // 제목 입력 여부 확인
+    const inputTitle = $memoUpdateModalTitleInput.value.trim();
+    if (inputTitle === '') {
+        alert('제목을 입력해주세요.');
+    } else {
+        // 확인/취소 알림창 띄우기
+        const confirmResult = confirm('저장하시겠습니까?');
+        if (confirmResult) {
+            closeMemoUpdateModal();
+        }
+    }
+}
 
 // main
 // 거래내역
@@ -128,3 +151,4 @@ $imageMemoModalDeleteBtns.forEach(deleteBtn => {
 $imageMemoViewModalCloseBtn.addEventListener('click', closeImageViewModal);
 $imageMemoViewModalUpdateBtn.addEventListener('click', openMemoUpdateModal);
 // 메모 수정 모달
+$memoUpdateModalCloseBtn.addEventListener('click', closeMemoUpdateModal);
