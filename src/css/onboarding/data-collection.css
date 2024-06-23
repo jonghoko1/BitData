@@ -1,0 +1,28 @@
+@import "../reset.css";
+@import "../default.css";
+
+/* 메인 */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main .title {
+    padding: 5px;
+    text-align: center;
+    font-weight: bold; font-size: 32px;
+}
+main header {
+    margin-bottom: 30px;
+}
+main .loading-spinner img {
+    width: 100px; height: 100px;
+    padding: 20px;
+}
+main p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+main p:last-child {
+    color: #7B7B7B;
+}
