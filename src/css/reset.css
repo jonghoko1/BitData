@@ -66,6 +66,8 @@ button {
     cursor: pointer;
 }
 /* input[type='text'], textarea 양식 통일 */
-input[type="text"], textarea {
+input[type="text"], 
+input[type="password"],
+textarea {
 	font-family: Arial, sans-serif;
 }
