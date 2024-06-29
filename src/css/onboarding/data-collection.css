@@ -19,10 +19,11 @@ main .loading-spinner img {
     width: 100px; height: 100px;
     padding: 20px;
 }
-main p {
+main .status {
     margin-bottom: 20px;
     font-size: 16px;
 }
-main p:last-child {
+main .notice {
+    font-size: 16px;
     color: #7B7B7B;
 }

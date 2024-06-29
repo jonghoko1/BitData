@@ -19,14 +19,24 @@
             <form action="">
                 <div class="input-block">
                     <label for="api-key">API Key</label>
-                    <input type="text" id="api-key" class="key-input" placeholder="API Key를 입력해주세요">
+                    <input 
+                        type="text" 
+                        id="api-key" 
+                        class="key-input" 
+                        placeholder="API Key를 입력해주세요"
+                        maxlength="64">
                 </div>
                 <div class="input-block">
                     <label for="secret-key">Secret Key</label>
-                    <input type="password" id="secret-key" class="key-input" placeholder="Secret Key를 입력해주세요">
+                    <input 
+                        type="password" 
+                        id="secret-key" 
+                        class="key-input" 
+                        placeholder="Secret Key를 입력해주세요"
+                        maxlength="64">
                     <div class="notice">※ Key 값이 외부 유출되지 않도록 절대 유의해주세요.</div>
                 </div>
-                <button type="submit" class="start-btn active">빗데이터 시작하기!</button>
+                <button type="submit" class="start-btn">빗데이터 시작하기!</button>
             </form>
         </div>
     </main>

@@ -29,6 +29,7 @@ main .content form {
     align-items: center;
 }
 main .content form .input-block {
+    margin-bottom: 10px;
     font-size: 0;
 }
 main .content form .input-block label {
@@ -53,9 +54,11 @@ main .content form .start-btn {
     border: 1px solid rgba(0, 134, 54, 0.5);
     font-weight: bold; font-size: 18px;
     color: rgba(0, 0, 0, 0.5);
+    cursor: default;
 }
 main .content form .start-btn.active {
     border: none;
     background-color: #008636;
     color: #fff;
+    cursor: pointer;
 }
