@@ -1,0 +1,100 @@
+.image-memo {
+    z-index: 1;
+    color: #575757;
+}
+.image-memo .modal-content {
+    width: 575px;
+}
+
+/* 모달 헤더 */
+.image-memo header {
+    display: flex;
+    justify-content: space-between;
+}
+/* 모달 타이틀 */
+.image-memo header .title {
+    font-weight: bold; font-size: 22px;
+}
+/* 닫기 버튼 */
+.image-memo header .close-btn img {
+    width: 22px; height: 22px;
+}
+/* 이미지 카드 */
+.image-memo .image-card {
+    height: 144px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+/* 이미지 */
+.image-memo .image-card img {
+    width: 144px; height: 144px;
+}
+/* 이미지 */
+.image-memo .image-card .info {
+    box-sizing: border-box;
+    width: 355px; height: 144px;
+    padding: 10px;
+}
+/* 이미지 제목 */
+.image-memo .image-card .info .title {
+    font-weight: bold; font-size: 22px;
+}
+/* 이미지 설명 */
+.image-memo .image-card .info .description {
+    height: 70px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    overflow: hidden;
+    word-break: break-word;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical
+ 
+}
+/* 이미지 카드 동작 */
+.image-memo .image-card .actions {
+    display: flex;
+    flex-direction: column;
+}
+.image-memo .image-card .actions button {
+    padding: 5px 15px;
+    border: none; border-radius: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.image-memo .image-card .actions .view-btn {
+    border: 1px solid #000;
+    color: #000;
+}
+.image-memo .image-card .actions .delete-btn {
+    background-color: #FA7878;
+    color: #fff;
+}
+.image-memo .notice {
+    font-size: 12px;
+    color: #777;
+}
+
+/* 업로드 버튼 */
+.image-memo .button-box {
+    height: 144px;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+.image-memo .button-box.hidden {
+    display: none;
+}
+.image-memo #image-upload {
+    display: none;
+}
+.image-memo .upload-btn {
+    padding: 5px 15px;
+    border-radius: 10px;
+    margin-left: 20px;
+    background-color: #0C8CE9;
+    font-weight: bold;
+    color: #fff;
+}

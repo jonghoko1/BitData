@@ -1,0 +1,24 @@
+{
+  "name": "bitdata",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/html/index.html",
+    "build": "parcel build src/html/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2",
+    "live-server": "^1.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.6",
+    "@babel/preset-env": "^7.24.6",
+    "babel-loader": "^9.1.3",
+    "parcel-bundler": "^1.12.5",
+    "webpack-cli": "^5.1.4"
+  }
+}

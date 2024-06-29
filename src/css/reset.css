@@ -46,3 +46,28 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* 추가 */
+/* a-style reset */
+body {
+	user-select: none;
+}
+a,
+a:link,
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+/* button-style reset */
+button {
+    padding: 0;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+/* input[type='text'], textarea 양식 통일 */
+input[type="text"], 
+input[type="password"],
+textarea {
+	font-family: Arial, sans-serif;
+}
