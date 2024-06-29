@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>거래내역</title>
+    <!-- 아이콘 -->
+    <link rel="icon" href="../resources/img/BitData_icon.png" type="image/png">
+
     <link rel="stylesheet" href="../css/transaction-history/transaction-history.css">
+    <script defer src="../js/transaction-history/transaction-history.js"></script>
 </head>
 
 <body>
@@ -86,7 +90,7 @@
                                 <th>매수 단가</th>
                                 <th>매도 단가</th>
                                 <th>포지션 유지 시간</th>
-                                <th>자세히</th>
+                                <th>메모</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -102,7 +106,11 @@
                                 <td>221</td>
                                 <td>222</td>
                                 <td>5시간 30분</td>
-                                <td>자세히</td>
+                                <td>
+                                    <button type="button" class="image-memo-btn">
+                                        <img src="../resources/img/transaction-history/memo-btn.png" alt="메모 버튼">
+                                    </button>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -138,56 +146,116 @@
     <div class="modal image-memo hidden">
         <div class="modal-background"></div>
         <div class="modal-content">
-            <div class="modal-header">
+            <header>
                 <div class="title">
                     이미지 메모장
                 </div>
-                <button class="close-btn">
-                    <img src="../resources/img/transaction-history/x-button.jpeg" alt="">
+                <button type="button" class="close-btn">
+                    <img src="../resources/img/transaction-history/x-button.jpeg" alt="닫기 버튼">
                 </button>
-            </div>
+            </header>
             <div class="modal-body">
-                <div class="image-card">
-                    <img src="../resources/img/transaction-history/image.png" alt="Image">
-                    <div class="info">
-                        <div class="title">TITLE</div>
-                        <div class="description">DESCRIPTION</div>
-                        <div class="more">...더보기</div>
+                <div class="image-card-container">
+                    <div class="image-card">
+                        <img src="../resources/img/transaction-history/image-memo-modal/image.png" alt="Image">
+                        <div class="info">
+                            <div class="title">IMAGE0001</div>
+                            <div class="description">
+                                디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션
+                                디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션디스크립션
+                            </div>
+                            <div class="upload-date">2024-05-02 22:21</div>
+                        </div>
+                        <div class="actions">
+                            <button class="view-btn">보기</button>
+                            <button class="delete-btn">삭제</button>
+                        </div>
                     </div>
-                    <div class="actions">
-                        <button class="adjust">수정하기</button>
-                        <button class="delete">삭제</button>
+                    <div class="image-card">
+                        <img src="../resources/img/transaction-history/image-memo-modal/image.png" alt="Image">
+                        <div class="info">
+                            <div class="title">IMAGE0001</div>
+                            <div class="description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sint vero molestiae corrupti, alias labore laborum eligendi quidem quos? Totam a ad id animi molestiae quibusdam laudantium ullam officia vel.
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae impedit tempora ratione, recusandae placeat reiciendis eos ex atque in soluta ut ea fuga at optio quo magni nulla eius aut?
+                            </div>
+                            <div class="upload-date">2024-05-02 22:21</div>
+                        </div>
+                        <div class="actions">
+                            <button class="view-btn">보기</button>
+                            <button class="delete-btn">삭제</button>
+                        </div>
+                    </div>
+                    <div class="image-card">
+                        <img src="../resources/img/transaction-history/image-memo-modal/image.png" alt="Image">
+                        <div class="info">
+                            <div class="title">IMAGE0001</div>
+                            <div class="description">
+                                디스크립션
+                            </div>
+                            <div class="upload-date">2024-05-02 22:21</div>
+                        </div>
+                        <div class="actions">
+                            <button class="view-btn">보기</button>
+                            <button class="delete-btn">삭제</button>
+                        </div>
                     </div>
                 </div>
-                <div class="image-card">
-                    <img src="../resources/img/transaction-history/image.png" alt="Image">
-                    <div class="info">
-                        <div class="title">TITLE</div>
-                        <div class="description">DESCRIPTION</div>
-                        <div class="more">...더보기</div>
-                    </div>
-                    <div class="actions">
-                        <button class="adjust">수정하기</button>
-                        <button class="delete">삭제</button>
+                <div class="button-box hidden">
+                    <input type="file" id="image-upload" accept=".jpg, .jpeg, .png, .gif">
+                    <button type="button" class="upload-btn">업로드</button>
+                </div>
+            </div>
+            <footer>
+                <div class="notice">
+                    * 이미지는 최대 3개까지 업로드 가능합니다.
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- 이미지 크게 보기 모달 -->
+    <div class="modal image-memo-view hidden">
+        <div class="modal-content">
+            <div class="content-image">
+                <img src="" alt="Image">
+            </div>
+            <div class="content-outline"></div>
+            <div class="content-memo">
+                <header>
+                    <div class="title">타이틀</div>
+                    <button type="button" class="close-btn">
+                        <img src="../resources/img/transaction-history/x-button.jpeg" alt="닫기 버튼">
+                    </button>
+                </header>
+                <div class="content-body">
+                    <div class="discription-area">
+                        디스크립션
                     </div>
                 </div>
-                <div class="image-card">
-                    <img src="../resources/img/transaction-history/image.png" alt="Image">
-                    <div class="info">
-                        <div class="title">TITLE</div>
-                        <div class="description">DESCRIPTION</div>
-                        <div class="more">...더보기</div>
-                    </div>
-                    <div class="actions">
-                        <button class="adjust">수정하기</button>
-                        <button class="delete">삭제</button>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <div class="note">
-                        * 이미지는 최대 3개까지 업로드 가능합니다.
-                    </div>
-                </div>
+                <footer>
+                    <button type="button" class="update-btn">
+                        메모 수정하기
+                    </button>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <!-- 메모 수정 모달 -->
+    <div class="modal memo-update hidden">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <header>
+                <div class="title">메모장</div>
+                <button type="button" class="close-btn">
+                    <img src="../resources/img/transaction-history/x-button.jpeg" alt="닫기 버튼">
+                </button>
+            </header>
+            <div class="content-body">
+                <form action="" method="post">
+                    <input type="text" name="title" id="title" placeholder="제목을 입력해주세요." maxlength="10" required>
+                    <textarea name="description" id="description" placeholder="텍스트를 입력해주세요." maxlength="200"></textarea>
+                    <button type="submit" class="save-btn">저장</button>
+                </form>
             </div>
         </div>
     </div>

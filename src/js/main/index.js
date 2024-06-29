@@ -1,9 +1,9 @@
 // 화면 스크롤
 const $scrollSection = document.querySelector(".scroll-section");
 const $scrollSectionItems = document.querySelectorAll(".scroll-section .section-item");
-var curSectionIndex = 0;
-var curScrollSectionHeight = 0;
-var isPlayAnimation = false;
+let curSectionIndex = 0;
+let curScrollSectionHeight = 0;
+let isPlayAnimation = false;
 const animationPlayTime = 2000;
 // 스크롤 이벤트
 function scrollEvent(e) {
@@ -52,9 +52,10 @@ function indexOfScrollAnimation(index) {
 }
 // pagination
 const $paginationBtn = document.querySelectorAll(".pagination button");
+
 // pagination 버튼 활성화 상태 업데이트
 function updatePaginationBtn() {
-    for (btn of $paginationBtn) {
+    for (const btn of $paginationBtn) {
         btn.classList.remove("active");
     }
     $paginationBtn[curSectionIndex].classList.add("active");
@@ -68,5 +69,10 @@ function clickPaginationBtn(index) {
 
 // Main
 // 스크롤 이벤트 등록
-window.addEventListener("wheel", scrollEvent, { passive: false });
-updatePaginationBtn();
+window.addEventListener("wheel", scrollEvent, { passive: false }); // 기존 스크롤 방지
+updatePaginationBtn(); // 버튼 이미지 업데이트
+for (let index = 0; index < $paginationBtn.length; index++) {
+    $paginationBtn[index].addEventListener('click', () => {
+        clickPaginationBtn(index);
+    });
+}

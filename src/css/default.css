@@ -1,0 +1,20 @@
+/* 기본 태그 */
+input {
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #d8d8d8; border-radius: 6px;
+}
+
+button {
+    border-radius: 10px;
+}
+
+/* 클래스 */
+/* 헤더 로고 */
+header .logo {
+    padding: 50px;
+    margin: 0 auto;
+    margin-bottom: 120px;
+    text-align: center;
+    font-weight: bold; font-size: 32px;
+}

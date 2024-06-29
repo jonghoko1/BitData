@@ -11,52 +11,58 @@
     transition: transform 1s ease;
 }
 .section-item {
+    box-sizing: border-box;
     width: 100%; height: 100vh;
-    position: relative;
+    padding: 200px clamp(10px, 30%, 500px);
 }
 /* 스크롤 section 0 */
-.section-0 header .title {
-    position: absolute;
-    top: 20%; left: 25%; transform: translate(0, -50%);
-    font-size: 32px; font-weight: bold;
+.section-0 .content-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-.section-0 header .login-join {
-    position: absolute;
-    top: 20%; right: 25%; transform: translate(0, -50%);
+.section-0 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.section-0 header .title {
+    font-size: 32px; font-weight: bold;
 }
 .section-0 header .login-join a {
     font-weight: bold; font-size: 14px;
 }
 .section-0 .content .subtitle {
-    position: absolute;
-    top: 50%; left: 25%; transform: translate(0, -50%);
     font-size: 48px; font-weight: bold; color: #555;
 }
 /* 스크롤 section 1 */
-/* 사용자 가이드 */
-.section-1 .content .user-guide {
-    position: absolute;
-    top: 20%; left: 20%;
+.section-1 .content-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.section-1 .content {
+    display: flex;
+    justify-content: space-between;
 }
 /* 사용자 가이드 텍스트 스타일 */
-.section-1 .content .user-guide .page-link {
+.section-1 .content .user-guide a {
+    display: block;
     margin-bottom: 20px;
     font-size: 22px; font-weight: bold;
 }
 /* 슬로건 */
 .section-1 .content .slogan-container {
-    position: absolute;
-    top: 20%; right: 25%;
-    font-size: 28px;font-weight: bold;
+    font-size: 28px; font-weight: bold;
 }
 .section-1 .content .slogan-container .slogan {
     margin-bottom: 20px;
 }
 /* 회사 정보 */
 .section-1 .company-information {
-    width: auto; height: auto;
-    position: absolute;
-    bottom: 20%; left: 20%;
     display: flex;
     font-size: 12px;
 }
