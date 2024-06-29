@@ -15,7 +15,10 @@ main .title {
 main header {
     margin-bottom: 30px;
 }
-main .loading-spinner img {
+main .status-image {
+    margin-bottom: 20px;
+}
+main .status-image img {
     width: 100px; height: 100px;
     padding: 20px;
 }
