@@ -54,8 +54,8 @@ function noticeInputField(inputField) {
 }
 
 function checkActive() { // api-key 입력란과 secret-key 입력란에 값이 있을 경우 활성화
-    if ($apiKeyInputField.value.length >= 64 &&
-        $secretKeyInputField.value.length >= 64
+    if ($apiKeyInputField.value.length === 64 &&
+        $secretKeyInputField.value.length === 64
     ) {
         $startBtn.classList.add('active');
     } else {
