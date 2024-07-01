@@ -1,6 +1,8 @@
 const $apiManagementFrm = document.querySelector('#api-management-frm'); // API Management 폼
 const $apiKeyInputField = document.querySelector('#api-key'); // api-key 입력란
+const $apiKeyInputFieldNotice = document.querySelector('.api-key-notice'); // api-key 입력란 안내문구
 const $secretKeyInputField = document.querySelector('#secret-key'); // secret-key 입력란
+const $secretKeyInputFieldNotice = document.querySelector('.secret-key-notice'); // secret-key 입력란 안내문구
 const $startBtn = document.querySelector('.start-btn'); // [시작하기] 버튼
 
 
@@ -39,10 +41,8 @@ function checkInputValue(event) { // 영문과 숫자가 아닌 문자가 포함
 }
 
 function checkActive() { // api-key 입력란과 secret-key 입력란에 값이 있을 경우 활성화
-    console.log($apiKeyInputField.value);
-    console.log($secretKeyInputField.value);
-    if ($apiKeyInputField.value !== '' &&
-        $secretKeyInputField.value !== ''
+    if ($apiKeyInputField.value.length >= 64 &&
+        $secretKeyInputField.value.length >= 64
     ) {
         $startBtn.classList.add('active');
     } else {
