@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitData</title>
+    <!-- 아이콘 -->
+    <link rel="icon" href="../../resources/img/BitData_icon.png" type="image/png">
+
+    <link rel="stylesheet" href="../../css/login-join/onboarding.css">
+    <script defer src="../../js/login-join/onboarding.js"></script>
+</head>
+<body>
+    <header>
+        <p class="logo">BitData</p>
+    </header>
+    <main>
+        <header>
+            <h1 class="p-05">바이낸스 계정을 연동해주세요!</h1>
+            <a href="../../resources/pdf/TEST PDF LINK.pdf" class="pdf-link" target="_blank">바이낸스 계정연동 설명서 보기</a>
+            <p class="notice">※ Key 값이 외부 유출되지 않도록 절대 유의해주세요.</p>
+        </header>
+        <div class="content">
+            <form action="" id="api-management-frm">
+                <div class="input-block">
+                    <label for="api-key">API Key</label>
+                    <input 
+                        type="text" 
+                        id="api-key" 
+                        class="key-input" 
+                        placeholder="API Key를 입력해주세요">
+                    <p class="notice hidden">※ API Key 를 다시 한번 확인해주세요.</p>
+                </div>
+                <div class="input-block">
+                    <label for="secret-key">Secret Key</label>
+                    <div class="input-field">
+                        <input 
+                            type="password" 
+                            id="secret-key" 
+                            class="key-input" 
+                            placeholder="Secret Key를 입력해주세요">
+                        <button type="button" class="eye"></button>
+                    </div>
+                    <p class="notice hidden">※ Secret Key 를 다시 한번 확인해주세요.</p>
+                </div>
+                <button type="submit" class="start-btn">빗데이터 시작하기!</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
