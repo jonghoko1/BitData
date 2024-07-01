@@ -1,39 +1,29 @@
 @import "../reset.css";
 @import "../default.css";
 
+header p {
+    margin-bottom: 160px;
+}
+
 /* 메인 */
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-main .title {
-    padding: 5px;
-    text-align: center;
-    font-weight: bold; font-size: 32px;
-}
 main header {
     margin-bottom: 30px;
-}
-/* 상태 이미지 */
-main .status-image {
-    margin-bottom: 20px;
+    text-align: center;
 }
 main .status-image img {
     width: 100px; height: 100px;
     padding: 20px;
-}
-/* 상태 텍스트 */
-main .status {
-    margin-bottom: 20px;
-    font-size: 16px;
 }
 main .status.fail {
     color: #f00;
 }
 /* 안내 텍스트 */
 main .notice {
-    font-size: 16px;
     color: #7B7B7B;
 }
 
