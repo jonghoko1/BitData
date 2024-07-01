@@ -42,9 +42,11 @@ main .content form {
     flex-direction: column;
     align-items: center;
 }
+/* 입력란 블럭 */
 main .content form .input-block {
     font-size: 0;
 }
+/* 입력란 라벨 */
 main .content form .input-block label {
     display: inline-block;
     width: 100px;
@@ -52,9 +54,30 @@ main .content form .input-block label {
     font-weight: bold; font-size: 16px;
     text-align: right;
 }
+/* 아이디, 패스워드 입력란 */
 main .content form .input-block input {
     width: 720px;
     font-size: 14px;
+}
+/* 패스워드 */
+/* 패스워드 입력란 영역 */
+main .content form .input-field {
+    display: inline-block;
+    position: relative;
+}
+/* [보기/숨기기] 버튼 */
+main .content form .input-field button {
+    position: absolute;
+    top: 9px; right: 9px;
+    width: 20px; height: 20px;
+}
+main .content form .input-field button.eye {
+    background: url(../../resources/img/eye.png);
+    background-size: cover;
+}
+main .content form .input-field button.eye.private {
+    background: url(../../resources/img/eye-private.png);
+    background-size: cover;
 }
 
 /* [시작하기] 버튼 */
