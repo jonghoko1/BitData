@@ -1,18 +1,18 @@
 const $apiManagementFrm = document.querySelector('#api-management-frm'); // API Management 폼
 const $apiKeyInputField = document.querySelector('#api-key'); // api-key 입력란
-const $apiKeyInputFieldNotice = document.querySelector('.api-key-notice'); // api-key 입력란 안내문구
 const $secretKeyInputField = document.querySelector('#secret-key'); // secret-key 입력란
-const $secretKeyInputFieldNotice = document.querySelector('.secret-key-notice'); // secret-key 입력란 안내문구
 const $startBtn = document.querySelector('.start-btn'); // [시작하기] 버튼
 
 
 $apiKeyInputField.addEventListener('input', (event) => { // api-key 입력란 값 입력시
     checkInputValue(event); // 영문과 숫자가 아닌 문자가 포함되어 있는지 검사 후 빈문자열로 대체
+    noticeInputField($apiKeyInputField);
     checkActive(); // api-key 입력란과 secret-key 입력란에 값이 있을 경우 활성화
 });
 
 $secretKeyInputField.addEventListener('input', (event) => { // secret-key 입력란 값 입력시
     checkInputValue(event); // 영문과 숫자가 아닌 문자가 포함되어 있는지 검사 후 빈문자열로 대체
+    noticeInputField($secretKeyInputField);
     checkActive(); // api-key 입력란과 secret-key 입력란에 값이 있을 경우 활성화
 });
 
@@ -38,6 +38,19 @@ function checkInputValue(event) { // 영문과 숫자가 아닌 문자가 포함
     if (pattern.test(inputValue)) { // 영문과 숫자가 아닌 문자가 포함되어 있는지 검사
         inputField.value = inputValue.replace(pattern, ''); // 포함되어 있을 경우 빈칸으로 대체
     }
+}
+
+function noticeInputField(inputField) {
+    const $notice = inputField.parentElement.querySelector('.notice');
+
+    if (inputField.value.length === 0 ||
+        inputField.value.length === 64
+    ) {
+        $notice.classList.add('hidden');
+    } else {
+        $notice.classList.remove('hidden');
+    }
+
 }
 
 function checkActive() { // api-key 입력란과 secret-key 입력란에 값이 있을 경우 활성화
