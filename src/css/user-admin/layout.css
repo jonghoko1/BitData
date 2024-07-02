@@ -57,9 +57,14 @@ aside footer .logout-btn {
     box-sizing: border-box;
     width: 100%; height: 70px;
     min-width: 1450px;
-    border-bottom: 1px solid #8E8E8E;
     padding: 0px 30px;
+    border-bottom: 1px solid #8E8E8E;
+    color: #575757;
 }
 .content > header .title {
     line-height: 70px;
+}
+
+main {
+    color: #575757;
 }
