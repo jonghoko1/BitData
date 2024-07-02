@@ -75,11 +75,9 @@ const uploadImage = function(image) {
         newImageCard.innerHTML = `
             <img src="${image.target.result}" alt="Image">
             <div class="info">
-                <div class="title">${title}</div>
-                <div class="description">
-                    디스크립션
-                </div>
-                <div class="upload-date">${date}</div>
+                <p class="title">${title}</p>
+                <p class="description">디스크립션</p>
+                <p class="upload-date">${date}</p>
             </div>
             <div class="actions">
                 <button class="view-btn">보기</button>

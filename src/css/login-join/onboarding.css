@@ -1,6 +1,10 @@
 @import "../reset.css";
 @import "../default.css";
 
+header .logo {
+    margin-bottom: 160px;
+}
+
 /* 양식 */
 /* 헤더 > 주의 사항 */
 main .notice {
@@ -9,6 +13,7 @@ main .notice {
     color: #FA7878;
 }
 main .notice.hidden {
+    display: block;
     visibility: hidden;
 }
 
@@ -17,16 +22,10 @@ main header {
     padding: 10px;
     text-align: center;
 }
-/* 헤더 > 제목 */
-main header .title {
-    padding: 5px;
-    font-weight: bold; font-size: 32px;
-}
 /* 헤더 > 바이낸스 계정 연동 설명서 */
 main header .pdf-link {
     display: inline-block;
     padding: 5px;
-    font-size: 16px;
     color: #0C8CE9;
 }
 
@@ -72,11 +71,11 @@ main .content form .input-field button {
     width: 20px; height: 20px;
 }
 main .content form .input-field button.eye {
-    background: url(../../resources/img/eye.png);
+    background: url(../../resources/img/button/eye.png);
     background-size: cover;
 }
 main .content form .input-field button.eye.private {
-    background: url(../../resources/img/eye-private.png);
+    background: url(../../resources/img/button/eye-private.png);
     background-size: cover;
 }
 
