@@ -1,6 +1,9 @@
 @import "../../reset.css";
 @import "../../default.css";
 
+/* 바이낸스 계정 연동 모달 */
+@import "./binance-setting-modal.css"; 
+
 /* layout */
 @import "../layout.css";
 
