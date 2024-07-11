@@ -8,6 +8,7 @@
     <link rel="icon" href="../../resources/img/BitData_icon.png" type="image/png">
 
     <link rel="stylesheet" href="../../css/user-admin/settings/settings.css">
+    <script defer src="../../js/user-admin/settings/settings.js" type="module"></script>
 </head>
 <body>
     <div class="layout">
@@ -82,6 +83,58 @@
                     <a href="" class="faq">자주 묻는 질문</a>
                 </div>
             </main>
+        </div>
+    </div>
+    <!-- [연동 재시도] 로딩 화면 -->
+    <div class="modal loading hidden">
+        <div class="modal-background"></div>
+        <div class="box">
+            <img src="../../resources/gif/loading-spinner.gif" alt="로딩 스피너">
+            <p>바이낸스 계정 및 데이터 연동 시도중...</p>
+        </div>
+    </div>
+    <!-- 바이낸스 계정 연동 모달 -->
+    <div class="modal binance-setting hidden">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <header>
+                <h2 class="title">바이낸스 계정 연동</h2>
+                <button type="button" class="close-btn">
+                    <img src="../../resources/img/button/x-button.jpeg" alt="닫기 버튼">
+                </button>
+            </header>
+            <div class="modal-body">
+                <form action="" id="api-management-frm">
+                    <div class="input-block">
+                        <label for="api-key">API Key</label>
+                        <input 
+                            type="text" 
+                            id="api-key" 
+                            class="key-input" 
+                            placeholder="API Key를 입력해주세요">
+                        <p class="notice hidden">※ API Key 를 다시 한번 확인해주세요.</p>
+                    </div>
+                    <div class="input-block">
+                        <label for="secret-key">Secret Key</label>
+                        <div class="input-field">
+                            <input 
+                                type="password" 
+                                id="secret-key" 
+                                class="key-input" 
+                                placeholder="Secret Key를 입력해주세요">
+                            <button type="button" class="eye"></button>
+                        </div>
+                        <p class="notice hidden">※ Secret Key 를 다시 한번 확인해주세요.</p>
+                    </div>
+                    <div class="form-footer">
+                        <div>
+                            <a href="../../resources/pdf/TEST PDF LINK.pdf" class="pdf-link" target="_blank">바이낸스 계정연동 설명서 보기</a>
+                            <p class="notice">※ Key 값이 외부 유출되지 않도록 절대 유의해주세요.</p>
+                        </div>
+                        <button type="submit" class="save-btn">저장</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </body>
