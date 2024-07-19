@@ -4,6 +4,9 @@
 /* layout */
 @import "../layout.css";
 
+/* exit-modal */
+@import "../exit/exit-modal.css";
+
 /* 질문 컨테이너 */
 .faq-container {
     max-width: 1000px;

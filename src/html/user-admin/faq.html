@@ -56,5 +56,37 @@
             </main>
         </div>
     </div>
+    <!-- <div class="modal exit hidden"> -->
+    <div class="modal exit">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <header>
+                <h2 class="title">탈퇴하기</h2>
+                <button type="button" class="close-btn">
+                    <img src="../../resources/img/button/x-button.jpeg" alt="닫기 버튼">
+                </button>
+            </header>
+            <div class="modal-body">
+                <div class="exit-warning-block">
+                    <p>정말 탈퇴하시겠습니까?</p>
+                    <ul>
+                        <li>지금 탈퇴하시면 모든 데이터가 삭제되며, 다시 가입시 기존에 있던 데이터는 복구가 불가합니다.</li>
+                        <li>탈퇴한 회원의 경우 재가입 시도 시, 고객센터 문의가 필요할 수 있습니다.</li>
+                    </ul>
+                </div>
+                <div class="exit-reason-block">
+                    <p>더나시는 이유를 알려주세요.</p>
+                    <form action="" method="post" class="exit-reason-frm">
+                        <textarea 
+                            name="exit-reason" 
+                            id="exit-reason"
+                            placeholder="서비스 탈퇴 사유에 대해 알려주세요.&#10;고객님의 소중한 피드백을 담아&#10;더 나은 서비스로 보답 드리도록 하겠습니다."
+                        ></textarea>
+                        <button type="submit" class="submit-exit-btn">회원탈퇴</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
