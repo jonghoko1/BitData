@@ -80,15 +80,18 @@ function relinkResult() { // 연동 시도 3초 초과시
 }
 
 function openBinanceModal() { // 바이낸스 계정 연동 모달 열기
+    document.body.style.overflow = 'hidden'; // 뒷 배경 스크롤 방지
     $binanceSettingModal.classList.remove('hidden');
+    
 }
 
 function closeBinanceModeal() { // 바이낸스 계정 연동 모달 닫기
+    document.body.style.overflow = 'auto'; // 뒷 배경 스크롤 가능
     $binanceSettingModal.classList.add('hidden');
     clearInputField( // 모달 초기화
-        $binanceSettingModalApiKeyInputField,
-        $binanceSettingModalSecretKeyInputField,
-        $binanceSettingModalSettingBtn
+    $binanceSettingModalApiKeyInputField,
+    $binanceSettingModalSecretKeyInputField,
+    $binanceSettingModalSettingBtn
     );
 }
 
