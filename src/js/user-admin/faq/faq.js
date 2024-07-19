@@ -75,5 +75,5 @@ function inputExitReason() {
 }
 
 function submitEixt() {
-    console.log("탈퇴");
+    window.location.href = 'exit-done.html';
 }
