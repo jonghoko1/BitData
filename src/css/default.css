@@ -9,14 +9,21 @@ h3 { font-size: 1rem; }
 input {
     box-sizing: border-box;
     padding: 10px;
-    border: 1px solid #d8d8d8; border-radius: 6px;
+    border: 1px solid #d8d8d8; border-radius: 10px;
 }
 input:focus {
     outline: 1px solid #0C8CE9;
 }
+
 /* button style */
 button {
     border-radius: 10px;
+}
+
+/* textarea style */
+textarea {
+    padding: 10px;
+    border: 1px solid #D8D8D8; border-radius: 10px;
 }
 
 /* Utility classes for spacing */
@@ -70,6 +77,22 @@ header .logo {
 }
 
 /* 모달 */
+/* 모달 틀 */
+/*
+    <div class="modal  hidden">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <header>
+                <h2 class="title"></h2>
+                <button type="button" class="close-btn">
+                    <img src="x-button.jpeg" alt="닫기 버튼">
+                </button>
+            </header>
+            <div class="modal-body"></div>
+            <footer></footer>
+        </div>
+    </div>
+*/
 .modal {
     width: 100%; height: 100%; 
     position: fixed;
