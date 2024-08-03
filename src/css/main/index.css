@@ -31,7 +31,9 @@
 .section-0 header .title {
     font-size: 32px; font-weight: bold;
 }
-.section-0 header .login-join a {
+.section-0 header .login-join a,
+.section-0 header .login-join .temp /* 로그인/회원가입 버튼 비활성화 */
+{
     font-weight: bold; font-size: 14px;
 }
 .section-0 .content .subtitle {
