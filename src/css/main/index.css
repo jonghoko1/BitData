@@ -1,4 +1,5 @@
 @import "../reset.css";
+@import '../default.css';
 
 /* 스크롤 화면 구성 */
 .scroll-box {
