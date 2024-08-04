@@ -76,3 +76,17 @@ for (let index = 0; index < $paginationBtn.length; index++) {
         clickPaginationBtn(index);
     });
 }
+
+// 백도어 로그인
+let popCount = 0;
+
+document.addEventListener('keydown', function(event) {
+    if (event.code === 'Space') {
+        popCount++;
+        if (popCount == 10) {
+            window.location.href = './backdoor.html';
+        }
+    } else {
+        popCount = 0;
+    }
+});
