@@ -61,13 +61,7 @@ a:visited {
 /* button-style reset */
 button {
     padding: 0;
-    background-color: #fff;
+    background-color: transparent;
     border: none;
     cursor: pointer;
-}
-/* input[type='text'], textarea 양식 통일 */
-input[type="text"], 
-input[type="password"],
-textarea {
-	font-family: Arial, sans-serif;
 }

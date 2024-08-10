@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitData | 설정</title>
+    <!-- favicon -->
+    <link rel="icon" href="../../resources/img/BitData_icon.png" type="image/png">
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="../../css/user-admin/settings/settings.css">
+    <!-- js -->
+    <script defer src="../../js/user-admin/settings/settings.js" type="module"></script>
+</head>
+<body>
+    <div class="layout">
+        <!-- 사이드 네비 -->
+        <aside>
+            <header>
+                <h1 class="title">BitData</h1>
+            </header>
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="./dashboard.html">대시보드</a>
+                </li>
+                <li>
+                    <a href="./transaction-history.html">거래내역</a> 
+                </li>
+                <li class="active">
+                    <a href="./settings.html">설정</a>
+                </li>
+            </ul>
+            <footer>
+                <button type="button" class="logout-btn">로그아웃</button>
+            </footer>
+        </aside>
+        <div class="content">
+            <!-- 헤더 -->
+            <header>
+                <h2 class="title">설정</h2>
+            </header>
+            <main>
+                <!-- 본문 -->
+                <div class="card-container">
+                    <div class="user-profile card">
+                        <header class="pb-20">
+                            <h2>내 프로필</h2>
+                        </header>
+                        <div class="card-box">
+                            <header>
+                                <h2 class="username">트레이더님 환영합니다.</h2>
+                            </header>
+                            <div class="user-info">
+                                <p class="name">이름: 오*카</p>
+                                <p class="email">이메일 : or*********@g****.com</p>
+                                <p class="phone">전화번호 : 010-1***-5***</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="user-binance card">
+                        <header class="pb-20">
+                            <h2>바이낸스 계정 연동</h2>
+                        </header>
+                        <div class="card-box">
+                            <header>
+                                <p class="binance-link-status">연동 상태 확인 필요</p>
+                                <button type="button" class="relink-btn">
+                                    <span>연동 재시도</span>
+                                    <img src="../../resources/img/button/restart-btn.png" alt="재시작 버튼">
+                                </button>
+                            </header>
+                            <div class="binance-link-info">
+                                <p class="user-id">User ID : 8*******6</p>
+                                <p class="api-key">API Key : H****Y</p>
+                                <p class="secret-key">Secret Key : ******** </p>
+                            </div>
+                            <button type="button" class="setting-btn">설정하기</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="etc">
+                    <header class="p-10">
+                        <h2>기타</h2>
+                    </header>
+                    <a href="./faq.html" class="faq">자주 묻는 질문</a>
+                </div>
+            </main>
+        </div>
+    </div>
+    <!-- [연동 재시도] 로딩 화면 -->
+    <div class="modal loading hidden">
+        <div class="modal-background"></div>
+        <div class="box">
+            <img src="../../resources/gif/loading-spinner.gif" alt="로딩 스피너">
+            <p>바이낸스 계정 및 데이터 연동 시도중...</p>
+        </div>
+    </div>
+    <!-- 바이낸스 계정 연동 모달 -->
+    <div class="modal binance-setting hidden">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <header>
+                <h2 class="title">바이낸스 계정 연동</h2>
+                <button type="button" class="close-btn">
+                    <img src="../../resources/img/button/x-button.jpeg" alt="닫기 버튼">
+                </button>
+            </header>
+            <div class="modal-body">
+                <form action="" id="api-management-frm">
+                    <div class="input-block">
+                        <label for="api-key">API Key</label>
+                        <input 
+                            type="text" 
+                            id="api-key" 
+                            class="key-input" 
+                            placeholder="API Key를 입력해주세요">
+                        <p class="notice hidden">※ API Key 를 다시 한번 확인해주세요.</p>
+                    </div>
+                    <div class="input-block">
+                        <label for="secret-key">Secret Key</label>
+                        <div class="input-field">
+                            <input 
+                                type="password" 
+                                id="secret-key" 
+                                class="key-input" 
+                                placeholder="Secret Key를 입력해주세요">
+                            <button type="button" class="eye"></button>
+                        </div>
+                        <p class="notice hidden">※ Secret Key 를 다시 한번 확인해주세요.</p>
+                    </div>
+                    <div class="form-footer">
+                        <div>
+                            <a href="../../resources/pdf/TEST PDF LINK.pdf" class="pdf-link" target="_blank" rel="noreferrer">바이낸스 계정연동 설명서 보기</a>
+                            <p class="notice">※ Key 값이 외부 유출되지 않도록 절대 유의해주세요.</p>
+                        </div>
+                        <button type="submit" class="save-btn">저장</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

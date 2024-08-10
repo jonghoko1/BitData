@@ -1,5 +1,5 @@
-@charset "utf-8";
 @import "../reset.css";
+@import '../default.css';
 
 /* 스크롤 화면 구성 */
 .scroll-box {
@@ -31,7 +31,9 @@
 .section-0 header .title {
     font-size: 32px; font-weight: bold;
 }
-.section-0 header .login-join a {
+.section-0 header .login-join a,
+.section-0 header .login-join .temp /* 로그인/회원가입 버튼 비활성화 */
+{
     font-weight: bold; font-size: 14px;
 }
 .section-0 .content .subtitle {
@@ -78,9 +80,9 @@
 }
 .pagination ul li button {
     width: 20px; height: 20px;
-    background-image: url(../../resources/img/main/pagination-non-select.png);
+    background-image: url(../../resources/img/button/pagination-non-select.png);
     background-size: cover;
 }
 .pagination ul li button.active {
-    background-image: url(../../resources/img/main/pagination-select.png);
+    background-image: url(../../resources/img/button/pagination-select.png);
 }
