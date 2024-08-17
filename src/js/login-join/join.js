@@ -1,0 +1,33 @@
+// 체크박스
+const $termsOfServiceCheckBox = document.querySelector('#terms-of-service-checkbox'); // 이용약관 체크박스
+const $fullTermsOfServiceBtn = document.querySelector('.full-terms-of-service'); // 이용약관 전문 보기 버튼
+const $privacyPolicyCheckbox = document.querySelector('#privacy-policy-checkbox'); // 개인정보 동의
+const $fullPrivacyPolicyBtn = document.querySelector('.full-terms-of-service'); // 개인정보 전문 보기 버튼
+// 모달
+const $termsOfServiceModal = document.querySelector('.terms-of-service-modal'); // 이용약관 모달
+const $termsOfServiceModalCloseBtn = document.querySelector('.terms-of-service-modal .close-btn'); // 닫기 버튼
+const $termsOfServiceModalAgreeBtn = document.querySelector('.terms-of-service-modal .agree-btn'); // 동의 버튼
+const $privacyPolicyModal = document.querySelector('.privacy-policy-modal'); // 개인정보 모달
+const $privacyPolicyModalCloseBtn = document.querySelector('.privacy-policy-modal .close-btn'); // 닫기 버튼
+const $privacyPolicyeModalAgreeBtn = document.querySelector('.privacy-policy-modal .agree-btn'); // 동의 버튼
+// 다음 버튼
+const $nextBtn = document.querySelector('.next-btn');
+
+// 다음 버튼 활성화 확인
+const activeNextBtn = function() {
+    if ($termsOfServiceCheckBox.checked && $privacyPolicyCheckbox.checked) {
+        $nextBtn.classList.add('active');
+    } else {
+        $nextBtn.classList.remove('active');
+    }
+};
+
+// 이용약관 체크박스 클릭시
+$termsOfServiceCheckBox.addEventListener('click', function() {
+    activeNextBtn();
+});
+
+// 개인정보 체크박스 클릭시
+$privacyPolicyCheckbox.addEventListener('click', function() {
+    activeNextBtn();
+});
