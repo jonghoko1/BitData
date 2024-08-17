@@ -1,0 +1,95 @@
+@import "../reset.css";
+@import "../default.css";
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 로고 */
+header {
+    margin-bottom: 250px;
+}
+.logo {
+    display: block;
+}
+
+/* 체크박스 */
+main .checkbox-box {
+    width: 320px;
+    margin-bottom: 10px;
+
+    display: flex;
+    align-items: center;
+}
+main .checkbox-box input[type='checkbox'] {
+    cursor: pointer;
+}
+main .checkbox-box label {
+    flex: 1;
+    font-weight: 700;
+    cursor: pointer;
+}
+main .checkbox-box button img {
+    width: 20px; height: 20px;
+}
+/* 동의 버튼 */
+main .next-btn {
+    box-sizing: border-box;
+    display: block;
+    width: 250px; height: 50px;
+    border: 1px solid #008636;
+    margin: 100px auto 0;
+    font-weight: 700; font-size: 16px;
+    color: #808080;
+    cursor: default;
+}
+main .next-btn.active {
+    background-color: #008636;
+    color: #fff;
+    cursor: pointer;
+}
+/* 이용약관 동의 */
+.modal header {
+    margin-bottom: 0;
+}
+.modal .modal-content {
+    width: 500px; height: 450px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modal .modal-body {
+    box-sizing: border-box;
+    width: 100%; flex: 1;
+    padding: 20px;
+}
+.modal .modal-body textarea {
+    box-sizing: border-box;
+    width: 100%; height: 100%;
+    border: none;
+    background-color: #F2F2F2;
+    resize: none;
+}
+/* 버튼 */
+.modal footer {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 20px;
+
+    display: flex;
+    justify-content:space-between;
+}
+.modal footer button {
+    width: 220px; height: 40px;
+    font-weight: 700; font-size: 16px;
+}
+.modal .close-btn {
+    background-color: #F2F2F2;
+}
+.modal .agree-btn {
+    background-color: #008636;
+    color: #fff;
+}
