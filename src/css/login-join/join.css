@@ -50,3 +50,46 @@ main .next-btn.active {
     color: #fff;
     cursor: pointer;
 }
+/* 이용약관 동의 */
+.modal header {
+    margin-bottom: 0;
+}
+.modal .modal-content {
+    width: 500px; height: 450px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.modal .modal-body {
+    box-sizing: border-box;
+    width: 100%; flex: 1;
+    padding: 20px;
+}
+.modal .modal-body textarea {
+    box-sizing: border-box;
+    width: 100%; height: 100%;
+    border: none;
+    background-color: #F2F2F2;
+    resize: none;
+}
+/* 버튼 */
+.modal footer {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 20px;
+
+    display: flex;
+    justify-content:space-between;
+}
+.modal footer button {
+    width: 220px; height: 40px;
+    font-weight: 700; font-size: 16px;
+}
+.modal .close-btn {
+    background-color: #F2F2F2;
+}
+.modal .agree-btn {
+    background-color: #008636;
+    color: #fff;
+}
