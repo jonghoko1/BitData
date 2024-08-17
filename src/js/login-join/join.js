@@ -2,7 +2,7 @@
 const $termsOfServiceCheckBox = document.querySelector('#terms-of-service-checkbox'); // 이용약관 체크박스
 const $fullTermsOfServiceBtn = document.querySelector('.full-terms-of-service'); // 이용약관 전문 보기 버튼
 const $privacyPolicyCheckbox = document.querySelector('#privacy-policy-checkbox'); // 개인정보 동의
-const $fullPrivacyPolicyBtn = document.querySelector('.full-terms-of-service'); // 개인정보 전문 보기 버튼
+const $fullPrivacyPolicyBtn = document.querySelector('.full-privacy-policy'); // 개인정보 전문 보기 버튼
 // 모달
 const $termsOfServiceModal = document.querySelector('.terms-of-service-modal'); // 이용약관 모달
 const $termsOfServiceModalCloseBtn = document.querySelector('.terms-of-service-modal .close-btn'); // 닫기 버튼
@@ -27,7 +27,38 @@ $termsOfServiceCheckBox.addEventListener('click', function() {
     activeNextBtn();
 });
 
+// 이용약관 전문 확인 버튼 클릭시
+$fullTermsOfServiceBtn.addEventListener('click', function() {
+    $termsOfServiceModal.classList.remove('hidden');
+});
+
+// 이용약관 전문 모달 닫기 버튼
+$termsOfServiceModalCloseBtn.addEventListener('click', function() {
+    $termsOfServiceModal.classList.add('hidden');
+});
+
+// 이용약관 전문 모달 동의 버튼
+$termsOfServiceModalAgreeBtn.addEventListener('click', function() {
+    $termsOfServiceModal.classList.add('hidden');
+    $termsOfServiceCheckBox.click();
+});
+
 // 개인정보 체크박스 클릭시
 $privacyPolicyCheckbox.addEventListener('click', function() {
     activeNextBtn();
+});
+
+// 개인정보 전문 확인 버튼 클릭시
+$fullPrivacyPolicyBtn.addEventListener('click', function() {
+    $privacyPolicyModal.classList.remove('hidden');
+});
+
+// 개인정보 전문 모달 닫기 버튼
+$privacyPolicyModalCloseBtn.addEventListener('click', function() {
+    $privacyPolicyModal.classList.add('hidden');
+});
+// 개인정보 전문 모달 동의 버튼
+$privacyPolicyeModalAgreeBtn.addEventListener('click', function() {
+    $privacyPolicyModal.classList.add('hidden');
+    $privacyPolicyCheckbox.click();
 });
