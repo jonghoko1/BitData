@@ -46,5 +46,5 @@ $apiManagementFrm.addEventListener('submit', (event) => {
 
 
 function spendApiKey() {
-    window.location.href = 'data-collction.html';
+    window.location.href = 'data-collection.html';
 }
