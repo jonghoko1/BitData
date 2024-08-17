@@ -1,0 +1,16 @@
+@import "../reset.css";
+@import "../default.css";
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 로고 */
+header {
+    margin-bottom: 250px;
+}
+.logo {
+    display: block;
+}
