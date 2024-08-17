@@ -75,5 +75,5 @@ function inputExitReason() {
 }
 
 function submitEixt() {
-    window.location.href = '/src/html/user-admin/exit-done.html';
+    window.location.href = './user-admin/exit-done.html';
 }

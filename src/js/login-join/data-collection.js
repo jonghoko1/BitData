@@ -17,7 +17,7 @@ function collectionFail() { // 데이터 수집 실패시
     $noticeText.innerHTML = `바이낸스 계정 연동 상태를 확인해주세요!`;
 
     setTimeout(() => { // 5초 뒤 설정화면으로 이동
-        window.location.href = '/src/html/user-admin/settings.html';
+        window.location.href = '../user-admin/settings.html';
     }, 5000);
 }
 

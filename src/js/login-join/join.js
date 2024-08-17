@@ -66,6 +66,6 @@ $privacyPolicyeModalAgreeBtn.addEventListener('click', function() {
 // 다음 버튼 클릭시
 $nextBtn.addEventListener('click', function() {
     if ($nextBtn.classList.contains('active')) {
-        window.location.href = '/src/html/login-join/onboarding.html';
+        window.location.href = './onboarding.html';
     }
 });
