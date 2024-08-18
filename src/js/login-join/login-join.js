@@ -10,6 +10,6 @@ function login() {
         window.location.href = './data-collection.html';
     } else {
         console.log('신규 회원');
-        window.location.href = './join.html.html';
+        window.location.href = './join.html';
     }
 }
