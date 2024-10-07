@@ -32,10 +32,10 @@ aside .sidebar-menu li a {
     display: block;
     padding: 10px;
     color: #363636;
-    opacity: 50%;
+    opacity: 0.5;
 }
 aside .sidebar-menu li.active a {
-    opacity: 100%;
+    opacity: 1;
 }
 /* 로그아웃 버튼 */
 aside footer {
