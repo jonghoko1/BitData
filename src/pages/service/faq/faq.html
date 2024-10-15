@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BitData | 자주 묻는 질문</title>
     <!-- favicon -->
-    <link rel="icon" href="/public/BitData_icon.ico" type="image/png">
-    <!-- css -->
-    <link rel="stylesheet" href="./faq.css">
-    <!-- js -->
-    <script defer src="./faq.js"></script>
+    <link rel="icon" href="/BitData_icon.ico" type="image/png">
 </head>
 <body>
     <div class="layout">
@@ -20,13 +16,13 @@
             </header>
             <ul class="sidebar-menu">
                 <li>
-                    <a href="./dashboard.html">대시보드</a>
+                    <a href="/src/pages/service/dashboard/dashboard.html">대시보드</a>
                 </li>
                 <li>
-                    <a href="./transaction-history.html">거래내역</a> 
+                    <a href="/src/pages/service/history/history.html">거래내역</a>
                 </li>
                 <li class="active">
-                    <a href="./settings.html">설정</a>
+                    <a href="/src/pages/service/settings/settings.html">설정</a>
                 </li>
             </ul>
             <footer>
@@ -45,7 +41,7 @@
                         <div class="question-block">
                             <p>Q1. 회원탈퇴는 어떻게 하나요?</p>
                             <button type="button" class="expand-arrow-btn">
-                                <img src="/src/assets/images/button/triangle-down.png" alt="아래 화살표">
+                                <img src="/assets/images/button/triangle-down.png" alt="아래 화살표">
                             </button>
                         </div>
                         <div class="answer-block hidden">
@@ -63,7 +59,7 @@
             <header>
                 <h2 class="title">탈퇴하기</h2>
                 <button type="button" class="close-btn">
-                    <img src="/src/assets/images/button/close.jpeg" alt="닫기 버튼">
+                    <img src="/assets/images/button/close.jpeg" alt="닫기 버튼">
                 </button>
             </header>
             <div class="modal-body">
@@ -88,5 +84,8 @@
             </div>
         </div>
     </div>
+
+    <!-- js -->
+    <script type="module" src="./faq.js"></script>
 </body>
 </html>

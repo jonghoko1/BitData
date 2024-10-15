@@ -2,7 +2,7 @@
 @import "/src/styles/common/default.css";
 
 /* layout */
-@import "../styles/layout/layout.css";
+@import "../../styles/layout/layout.css";
 
 /* exit-modal */
 @import "./exit-modal.css";
