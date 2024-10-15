@@ -5,13 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BitData | 설정</title>
     <!-- favicon -->
-    <link rel="icon" href="../../resources/img/BitData_icon.png" type="image/png">
-    <!-- font -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
-    <!-- css -->
-    <link rel="stylesheet" href="../../css/user-admin/settings/settings.css">
-    <!-- js -->
-    <script defer src="../../js/user-admin/settings/settings.js" type="module"></script>
+    <link rel="icon" href="/BitData_icon.png" type="image/png">
 </head>
 <body>
     <div class="layout">
@@ -22,13 +16,13 @@
             </header>
             <ul class="sidebar-menu">
                 <li>
-                    <a href="./dashboard.html">대시보드</a>
+                    <a href="/src/pages/service/dashboard/dashboard.html">대시보드</a>
                 </li>
                 <li>
-                    <a href="./transaction-history.html">거래내역</a> 
+                    <a href="/src/pages/service/history/history.html">거래내역</a>
                 </li>
                 <li class="active">
-                    <a href="./settings.html">설정</a>
+                    <a href="/src/pages/service/settings/settings.html">설정</a>
                 </li>
             </ul>
             <footer>
@@ -67,7 +61,7 @@
                                 <p class="binance-link-status">연동 상태 확인 필요</p>
                                 <button type="button" class="relink-btn">
                                     <span>연동 재시도</span>
-                                    <img src="../../resources/img/button/restart-btn.png" alt="재시작 버튼">
+                                    <img src="/assets/images/button/restart.png" alt="재시작 버튼">
                                 </button>
                             </header>
                             <div class="binance-link-info">
@@ -83,7 +77,7 @@
                     <header class="p-10">
                         <h2>기타</h2>
                     </header>
-                    <a href="./faq.html" class="faq">자주 묻는 질문</a>
+                    <a href="/src/pages/service/faq/faq.html" class="faq">자주 묻는 질문</a>
                 </div>
             </main>
         </div>
@@ -92,7 +86,7 @@
     <div class="modal loading hidden">
         <div class="modal-background"></div>
         <div class="box">
-            <img src="../../resources/gif/loading-spinner.gif" alt="로딩 스피너">
+            <img src="/assets/gif/loading-spinner.gif" alt="로딩 스피너">
             <p>바이낸스 계정 및 데이터 연동 시도중...</p>
         </div>
     </div>
@@ -103,7 +97,7 @@
             <header>
                 <h2 class="title">바이낸스 계정 연동</h2>
                 <button type="button" class="close-btn">
-                    <img src="../../resources/img/button/x-button.jpeg" alt="닫기 버튼">
+                    <img src="/assets/images/button/close.jpeg" alt="닫기 버튼">
                 </button>
             </header>
             <div class="modal-body">
@@ -131,7 +125,7 @@
                     </div>
                     <div class="form-footer">
                         <div>
-                            <a href="../../resources/pdf/TEST PDF LINK.pdf" class="pdf-link" target="_blank" rel="noreferrer">바이낸스 계정연동 설명서 보기</a>
+                            <a href="/assets/pdf/TEST PDF LINK.pdf" class="pdf-link" target="_blank" rel="noreferrer">바이낸스 계정연동 설명서 보기</a>
                             <p class="notice">※ Key 값이 외부 유출되지 않도록 절대 유의해주세요.</p>
                         </div>
                         <button type="submit" class="save-btn">저장</button>
@@ -140,5 +134,8 @@
             </div>
         </div>
     </div>
+
+    <!-- js -->
+    <script type="module" src="./settings.js"></script>
 </body>
 </html>

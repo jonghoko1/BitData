@@ -1,18 +1,24 @@
-# node_modules 디렉토리 제외
-node_modules/
-
-# 빌드된 파일이 들어가는 dist 디렉토리 제외
-dist/
-
-# 자동 생성되는 package-lock.json 파일 제외
-package-lock.json
-
-# 로그 파일 제외
-logs/
+# Logs
+logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# 캐시 디렉토리 제외
-.cache/
+node_modules
+dist
+dist-ssr
+*.local
 
-# macOS에서 생성되는 불필요한 시스템 파일 제외
-**/.DS_Store
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
