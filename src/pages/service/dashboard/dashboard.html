@@ -6,8 +6,6 @@
     <title>BitData | 대시보드</title>
     <!-- favicon -->
     <link rel="icon" href="/public/BitData_icon.ico" type="image/png">
-    <!-- css -->
-    <link rel="stylesheet" href="./dashboard.css">
 </head>
 <body>
     <div class="layout">
@@ -18,13 +16,13 @@
             </header>
             <ul class="sidebar-menu">
                 <li class="active">
-                    <a href="./dashboard.html">대시보드</a>
+                    <a href="/src/pages/service/dashboard/dashboard.html">대시보드</a>
                 </li>
                 <li>
-                    <a href="./transaction-history.html">거래내역</a> 
+                    <a href="/src/pages/service/history/history.html">거래내역</a>
                 </li>
                 <li>
-                    <a href="./settings.html">설정</a>
+                    <a href="/src/pages/service/settings/settings.html">설정</a>
                 </li>
             </ul>
             <footer>
@@ -41,5 +39,7 @@
             </main>
         </div>
     </div>
+
+    <script type="module" src="./dashboard.js"></script>
 </body>
 </html>
