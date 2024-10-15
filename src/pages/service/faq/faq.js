@@ -77,5 +77,5 @@ function inputExitReason() {
 }
 
 function submitEixt() {
-    window.location.href = '/src/pages/service/exit/exit.html';
+    window.location.href = '/exit';
 }

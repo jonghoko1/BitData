@@ -48,5 +48,5 @@ $apiManagementFrm.addEventListener('submit', (event) => {
 
 
 function spendApiKey() {
-    window.location.href = '/src/pages/main/collect/collect.html';
+    window.location.href = '/collect';
 }

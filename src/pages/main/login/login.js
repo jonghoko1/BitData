@@ -9,9 +9,9 @@ function login() {
 
     if (isUser) {
         console.log('기존 회원');
-        window.location.href = '/src/pages/main/collect/collect.html';
+        window.location.href = '/collect';
     } else {
         console.log('신규 회원');
-        window.location.href = '/src/pages/main/join/join.html';
+        window.location.href = '/join';
     }
 }
