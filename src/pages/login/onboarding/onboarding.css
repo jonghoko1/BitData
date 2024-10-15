@@ -1,5 +1,5 @@
-@import "../reset.css";
-@import "../default.css";
+@import "/src/styles/common/reset.css";
+@import "/src/styles/common/default.css";
 
 header .logo {
     margin-bottom: 160px;
@@ -71,11 +71,11 @@ main .content form .input-field button {
     width: 20px; height: 20px;
 }
 main .content form .input-field button.eye {
-    background: url(../../resources/img/button/eye.png);
+    background: url(/src/assets/images/button/eye.png);
     background-size: cover;
 }
 main .content form .input-field button.eye.private {
-    background: url(../../resources/img/button/eye-private.png);
+    background: url(/src/assets/images/button/eye-private.png);
     background-size: cover;
 }
 

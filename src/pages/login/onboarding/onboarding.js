@@ -2,11 +2,11 @@ import {
     checkInputValue, 
     noticeInputField, 
     checkActive
-} from '../common/key-input-field.js';
+} from '/src/components/common/key-input-field.js';
 
 import {
     maskingShowBtn
-} from '../common/eye-button.js';
+} from '/src/components/common/eye-button.js';
 
 const $apiManagementFrm = document.querySelector('#api-management-frm'); // API Management 폼
 const $apiKeyInputField = document.querySelector('#api-key'); // api-key 입력란
