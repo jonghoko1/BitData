@@ -1,3 +1,5 @@
+import './onboarding.css';
+
 import {
     checkInputValue, 
     noticeInputField, 
@@ -46,5 +48,5 @@ $apiManagementFrm.addEventListener('submit', (event) => {
 
 
 function spendApiKey() {
-    window.location.href = './data-collection.html';
+    window.location.href = '/src/pages/main/data-collection/data-collection.html';
 }
