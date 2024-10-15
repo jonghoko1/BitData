@@ -1,8 +1,8 @@
-@import "../../reset.css";
-@import "../../default.css";
+@import "/src/styles/common/reset.css";
+@import "/src/styles/common/default.css";
 
 /* layout */
-@import "../layout.css";
+@import "../../styles/layout/layout.css";
 
 @import "./image-memo-modal.css";
 @import "./image-memo-view-modal.css";
