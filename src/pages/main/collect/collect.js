@@ -1,10 +1,12 @@
+import './collect.css';
+
 const $statusImage = document.querySelector('.status-image');
 const $statusText = document.querySelector('.status');
 const $noticeText = document.querySelector('.notice');
 
 
 function collectionSusccess() { // 데이터 수집 성공시 
-    window.location.href = '../user-admin/transaction-history.html';
+    window.location.href = '/src/pages/service/history/history.html';
 }
 
 function collectionFail() { // 데이터 수집 실패시
@@ -17,7 +19,7 @@ function collectionFail() { // 데이터 수집 실패시
     $noticeText.innerHTML = `바이낸스 계정 연동 상태를 확인해주세요!`;
 
     setTimeout(() => { // 5초 뒤 설정화면으로 이동
-        window.location.href = '../user-admin/settings.html';
+        window.location.href = '/src/pages/service/settings/settings.html';
     }, 5000);
 }
 

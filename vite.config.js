@@ -12,6 +12,7 @@ export default defineConfig({
         login: resolve(__dirname, 'src/pages/main/login/login.html'),                 // 로그인 페이지
         join: resolve(__dirname, 'src/pages/main/join/join.html'),                    // 회원가입 페이지
         onboarding: resolve(__dirname, 'src/pages/main/onboarding/onboarding.html'),  // 회원가입 페이지
+        collect: resolve(__dirname, 'src/pages/main/collect/collect.html'),           // 데이터 수집 페이지
       }
     }
   }
