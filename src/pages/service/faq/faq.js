@@ -35,7 +35,7 @@ function expandAnswer() { // 답변 영역 확장
     const $expandArrowBtnImg = this.querySelector('img');
     const $answerBlock = this.closest('.faq').querySelector('.answer-block');
 
-    $expandArrowBtnImg.src = '../../resources/img/button/triangle-up.png'; // 이미지 변경
+    $expandArrowBtnImg.src = '/src/assets/images/button/triangle-up.png'; // 이미지 변경
     $answerBlock.classList.remove('hidden'); // 답변 영역 확장
 
     this.removeEventListener('click', expandAnswer); // 답변 영역 확장 이벤트 삭제
@@ -46,7 +46,7 @@ function collapseAnswer() { // 답변 영역 축소
     const $expandArrowBtnImg = this.querySelector('img');
     const $answerBlock = this.closest('.faq').querySelector('.answer-block');
 
-    $expandArrowBtnImg.src = '../../resources/img/button/triangle-down.png'; // 이미지 변경
+    $expandArrowBtnImg.src = '/src/assets/images/button/triangle-down.png'; // 이미지 변경
     $answerBlock.classList.add('hidden'); // 답변 영역 숨김
     
     this.removeEventListener('click', collapseAnswer); // 답변 영역 축소 이벤트 삭제

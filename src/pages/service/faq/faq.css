@@ -1,11 +1,11 @@
-@import "../../reset.css";
-@import "../../default.css";
+@import "/src/styles/common/reset.css";
+@import "/src/styles/common/default.css";
 
 /* layout */
-@import "../layout.css";
+@import "../styles/layout/layout.css";
 
 /* exit-modal */
-@import "../exit/exit-modal.css";
+@import "./exit-modal.css";
 
 /* 질문 컨테이너 */
 .faq-container {
