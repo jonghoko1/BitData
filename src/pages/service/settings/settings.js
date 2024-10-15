@@ -1,13 +1,15 @@
+import './styles/settings.css';
+
 import {
     checkInputValue, 
     noticeInputField, 
     checkActive,
     clearInputField
-} from '../../common/key-input-field.js';
+} from '/src/components/common/key-input-field.js';
 
 import {
     maskingShowBtn
-} from '../../common/eye-button.js';
+} from '/src/components/common/eye-button.js';
 
 const $relinkBtn = document.querySelector('.relink-btn'); // [연동 재시도] 버튼
 const $settingBtn = document.querySelector('.setting-btn'); // [설정하기] 버튼

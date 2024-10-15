@@ -14,7 +14,8 @@ export default defineConfig({
         onboarding: resolve(__dirname, 'src/pages/main/onboarding/onboarding.html'),  // 회원가입 페이지
         collect: resolve(__dirname, 'src/pages/main/collect/collect.html'),           // 데이터 수집 페이지
         history: resolve(__dirname, 'src/pages/service/history/history.html'),        // 거래내역 페이지
-        dashboard: resolve(__dirname, 'src/pages/service/dashboard/dashboard.html'),  // 거래내역 페이지
+        dashboard: resolve(__dirname, 'src/pages/service/dashboard/dashboard.html'),  // 대시보드 페이지
+        settings: resolve(__dirname, 'src/pages/service/settings/settings.html'),     // 설정 페이지
       }
     }
   }

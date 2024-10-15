@@ -1,11 +1,11 @@
-@import "../../reset.css";
-@import "../../default.css";
+@import "/src/styles/common/reset.css";
+@import "/src/styles/common/default.css";
 
 /* 바이낸스 계정 연동 모달 */
 @import "./binance-setting-modal.css"; 
 
 /* layout */
-@import "../layout.css";
+@import "../../styles/layout/layout.css";
 
 main .card-container {
     display: flex;

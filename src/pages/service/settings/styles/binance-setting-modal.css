@@ -54,11 +54,11 @@
     width: 20px; height: 20px;
 }
 .binance-setting .modal-body form .input-field button.eye {
-    background: url(../../../resources/img/button/eye.png);
+    background: url(/assets/images/button/eye.png);
     background-size: cover;
 }
 .binance-setting .modal-body form .input-field button.eye.private {
-    background: url(../../../resources/img/button/eye-private.png);
+    background: url(/assets/images/button/eye-private.png);
     background-size: cover;
 }
 /* 폼 푸터 영역 */
