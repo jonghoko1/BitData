@@ -1,5 +1,5 @@
-@import "../reset.css";
-@import "../default.css";
+@import "/src/styles/common/reset.css";
+@import "/src/styles/common/default.css";
 
 header p {
     margin-bottom: 160px;
