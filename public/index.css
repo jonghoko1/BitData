@@ -1,5 +1,5 @@
-@import "../reset.css";
-@import '../default.css';
+@import "/src/styles/common/reset.css";
+@import "/src/styles/common/default.css";
 
 /* 스크롤 화면 구성 */
 .scroll-box {
@@ -29,13 +29,13 @@
     padding: 10px;
 }
 .section-0 header .title {
-    font-size: 32px; font-weight: bold;
+    font-size: 32px; font-weight: 700;
 }
 .section-0 header .login-join a {
-    font-weight: bold; font-size: 14px;
+    font-weight: 700; font-size: 16px;
 }
 .section-0 .content .subtitle {
-    font-size: 48px; font-weight: bold; color: #555;
+    font-size: 48px; font-weight: 700; color: #555;
 }
 /* 스크롤 section 1 */
 .section-1 .content-container {
@@ -52,11 +52,11 @@
 .section-1 .content .user-guide a {
     display: block;
     margin-bottom: 20px;
-    font-size: 22px; font-weight: bold;
+    font-size: 24px; font-weight: 700;
 }
 /* 슬로건 */
 .section-1 .content .slogan-container {
-    font-size: 28px; font-weight: bold;
+    font-size: 24px; font-weight: 700;
 }
 .section-1 .content .slogan-container .slogan {
     margin-bottom: 20px;
@@ -78,9 +78,9 @@
 }
 .pagination ul li button {
     width: 20px; height: 20px;
-    background-image: url(../../resources/img/button/pagination-non-select.png);
+    background-image: url(./images/pagination-non-select.png);
     background-size: cover;
 }
 .pagination ul li button.active {
-    background-image: url(../../resources/img/button/pagination-select.png);
+    background-image: url(./images/pagination-select.png);
 }

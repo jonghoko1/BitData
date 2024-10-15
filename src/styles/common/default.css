@@ -1,6 +1,8 @@
 /* standard tag */
+/* font */
+@import "./font.css";
 body {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'NotoSansKR', sans-serif;
 }
 
 /* h* style */
