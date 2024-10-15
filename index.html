@@ -1,13 +1,81 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitData</title>
+    <!-- favicon -->
+    <link rel="icon" href="/BitData_icon.ico" type="image/png">
+</head>
+<body>
+    <main>
+        <div class="scroll-box">
+            <div class="scroll-section">
+                <div class="section-item section-0">
+                    <div class="content-container">
+                        <header>
+                            <p class="title">BitData</p>
+                            <div class="login-join">
+                                <a href="src/pages/main/login/login.html">로그인 / 회원가입</a>
+                            </div>
+                        </header>
+                        <div class="content">
+                            <div class="subtitle">
+                                <p>바이낸스</p>
+                                <p>USDT 선물</p>
+                                <p>거래 데이터</p>
+                            </div>
+                        </div>
+                        <footer></footer>
+                    </div>
+                </div>
+                <div class="section-item section-1">
+                    <div class="content-container">
+                        <div class="content">
+                            <div class="user-guide">
+                                <a href="./notice.html">공지사항</a>
+                                <a href="/src/assets/pdf/index/terms-of-service.pdf" target="_blank" rel="noreferrer">서비스 이용약관</a>
+                                <a href="/src/assets/pdf/index/privacy-policy.pdf" target="_blank" rel="noreferrer">개인정보 처리방침</a>
+                            </div>
+                            <div class="slogan-container">
+                                <div class="slogan">
+                                    <p>바이낸스 선물</p>
+                                    <p>거래 데이터 편하게</p>
+                                    <p>관리하고 분석하세요.</p>
+                                </div>
+                                <p>BitData</p>
+                            </div>
+                        </div>
+                        <footer>
+                            <section class="company-information">
+                                <div>
+                                    <p>빗데이터</p>
+                                    <p>사업자 번호 : 302-66-00538</p>
+                                    <p>서울시 강남구 압구정로 313, 43동 502호</p>
+                                </div>
+                                <div>
+                                    <p>고객센터</p>
+                                    <p>MAIL : orcabitdata@gmail.com</p>
+                                </div>
+                            </section>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <nav class="pagination">
+        <ul>
+            <li>
+                <button type="button" aria-labelledby="section-0"></button>
+            </li>
+            <li>
+                <button type="button" aria-labelledby="section-1"></button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- js -->
+    <script type="module" src="./index.js"></script>
+</body>
 </html>

@@ -78,9 +78,9 @@
 }
 .pagination ul li button {
     width: 20px; height: 20px;
-    background-image: url(./images/pagination-non-select.png);
+    background-image: url(/src/assets/images/button/pagination-non-select.png);
     background-size: cover;
 }
 .pagination ul li button.active {
-    background-image: url(./images/pagination-select.png);
+    background-image: url(/src/assets/images/button/pagination-select.png);
 }
