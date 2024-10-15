@@ -1,3 +1,5 @@
+import './styles/history.css';
+
 // field
 // 거래내역 페이지
 const $imageMemoBtn = document.querySelector('.image-memo-btn'); // 거래내역 메모 버튼

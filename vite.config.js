@@ -13,6 +13,7 @@ export default defineConfig({
         join: resolve(__dirname, 'src/pages/main/join/join.html'),                    // 회원가입 페이지
         onboarding: resolve(__dirname, 'src/pages/main/onboarding/onboarding.html'),  // 회원가입 페이지
         collect: resolve(__dirname, 'src/pages/main/collect/collect.html'),           // 데이터 수집 페이지
+        history: resolve(__dirname, 'src/pages/service/history/history.html'),           // 거래내역 페이지
       }
     }
   }
