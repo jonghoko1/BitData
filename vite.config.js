@@ -16,8 +16,8 @@ export default defineConfig({
         history: resolve(__dirname, 'src/pages/service/history/history.html'),        // 거래내역 페이지
         dashboard: resolve(__dirname, 'src/pages/service/dashboard/dashboard.html'),  // 대시보드 페이지
         settings: resolve(__dirname, 'src/pages/service/settings/settings.html'),     // 설정 페이지
-        faq: resolve(__dirname, 'src/pages/service/faq/faq.html'),                    // 설정 페이지
-        exit: resolve(__dirname, 'src/pages/service/exit/exit.html'),                 // 설정 페이지
+        faq: resolve(__dirname, 'src/pages/service/faq/faq.html'),                    // 자주 묻는 페이지
+        exit: resolve(__dirname, 'src/pages/service/exit/exit.html'),                 // 탈퇴 페이지
       }
     }
   }
