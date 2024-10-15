@@ -1,0 +1,88 @@
+/* 바이낸스 계정 연동 모달 */
+.notice.hidden {
+    display: block;
+    visibility: hidden;
+}
+
+.binance-setting {
+    z-index: 1;
+}
+.binance-setting .modal-content {
+    box-sizing: border-box;
+    width: 600px; height: 300px;
+}
+/* 헤더 */
+.binance-setting header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.binance-setting header .title {
+    padding: 5px;
+    color: #575757;
+}
+.binance-setting header .close-btn {
+    padding: 5px;
+}
+.binance-setting header .close-btn img {
+    width: 20px; height: 20px;
+}
+/* key 폼 */
+.binance-setting .modal-body form .notice {
+    display: inline;
+    font-size: 12px;
+    color: #FA7878;
+}
+.binance-setting .modal-body form .input-block label {
+    display: block;
+    padding: 5px;
+    font-weight: 700;
+}
+/* 아이디, 패스워드 입력란 */
+.binance-setting .modal-body form .input-block input {
+    width: 100%;
+}
+/* 패스워드 입력란 영역 */
+.binance-setting .modal-body form .input-field {
+    position: relative;
+}
+/* [보기/숨기기] 버튼 */
+.binance-setting .modal-body form .input-field button {
+    position: absolute;
+    top: 9px; right: 9px;
+    width: 20px; height: 20px;
+}
+.binance-setting .modal-body form .input-field button.eye {
+    background: url(/assets/images/button/eye.png);
+    background-size: cover;
+}
+.binance-setting .modal-body form .input-field button.eye.private {
+    background: url(/assets/images/button/eye-private.png);
+    background-size: cover;
+}
+/* 폼 푸터 영역 */
+.binance-setting .modal-body form .form-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.binance-setting .modal-body form .form-footer .pdf-link {
+    color: #0C8CE9;
+}
+/* [설정] 버튼 */
+.binance-setting .modal-body form .form-footer .save-btn {
+    padding: 5px 10px;
+    border: 1px solid #0C8CE9;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: default;
+}
+/* [설정] 버튼 활성화 */
+.binance-setting .modal-body form .form-footer .save-btn.active {
+    border: 1px solid rgba(0, 0, 0, 0);
+    background-color: #0C8CE9;
+    color: #fff;
+    cursor: pointer;
+}

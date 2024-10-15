@@ -1,0 +1,5 @@
+@import "/src/styles/common/reset.css";
+@import "/src/styles/common/default.css";
+
+/* layout */
+@import "../styles/layout/layout.css";
