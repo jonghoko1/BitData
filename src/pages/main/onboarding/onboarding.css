@@ -1,0 +1,97 @@
+@import "/src/styles/common/reset.css";
+@import "/src/styles/common/default.css";
+
+header .logo {
+    margin-bottom: 160px;
+}
+
+/* 양식 */
+/* 헤더 > 주의 사항 */
+main .notice {
+    padding: 5px 120px;
+    font-size: 12px;
+    color: #FA7878;
+}
+main .notice.hidden {
+    display: block;
+    visibility: hidden;
+}
+
+/* 메인 */
+main header {
+    padding: 10px;
+    text-align: center;
+}
+/* 헤더 > 바이낸스 계정 연동 설명서 */
+main header .pdf-link {
+    display: inline-block;
+    padding: 5px;
+    color: #0C8CE9;
+}
+
+/* 폼 영역 */
+main .content {
+    display: flex;
+    padding: 20px;
+
+    justify-content: center;
+}
+main .content form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* 입력란 블럭 */
+main .content form .input-block {
+    font-size: 0;
+}
+/* 입력란 라벨 */
+main .content form .input-block label {
+    display: inline-block;
+    width: 100px;
+    padding: 10px;
+    font-weight: bold; font-size: 16px;
+    text-align: right;
+}
+/* 아이디, 패스워드 입력란 */
+main .content form .input-block input {
+    width: 720px;
+    font-size: 14px;
+}
+/* 패스워드 */
+/* 패스워드 입력란 영역 */
+main .content form .input-field {
+    display: inline-block;
+    position: relative;
+}
+/* [보기/숨기기] 버튼 */
+main .content form .input-field button {
+    position: absolute;
+    top: 9px; right: 9px;
+    width: 20px; height: 20px;
+}
+main .content form .input-field button.eye {
+    background: url(/assets/images/button/eye.png);
+    background-size: cover;
+}
+main .content form .input-field button.eye.private {
+    background: url(/assets/images/button/eye-private.png);
+    background-size: cover;
+}
+
+/* [시작하기] 버튼 */
+main .content form .start-btn {
+    width: 280px; height: 50px;
+    margin-top: 50px;
+    border: 1px solid rgba(0, 134, 54, 0.5);
+    font-weight: bold; font-size: 18px;
+    color: rgba(0, 0, 0, 0.5);
+    cursor: default;
+}
+/* [시작하기] 버튼 활성화 */
+main .content form .start-btn.active {
+    border: none;
+    background-color: #008636;
+    color: #fff;
+    cursor: pointer;
+}

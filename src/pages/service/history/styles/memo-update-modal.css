@@ -1,0 +1,58 @@
+.memo-update {
+    z-index: 3;
+}
+/* 메모 수정 모달 */
+.memo-update .modal-content {
+    box-sizing: border-box;
+    width: 350px;
+}
+/* 메모 수정 모달 헤더 */
+.memo-update header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.memo-update header .title {
+    padding: 5px;
+    font-weight: bold; font-size: 22px;
+    color: #575757;
+}
+.memo-update header .close-btn {
+    padding: 5px;
+}
+.memo-update header .close-btn img {
+    width: 20px; height: 20px;
+}
+/* 메모 수정 폼 */
+.memo-update .content-body {
+    padding: 10px;
+}
+.memo-update .content-body form {
+    display: flex; flex-direction: column;
+    align-items: flex-end;
+}
+.memo-update .content-body form input, 
+.memo-update .content-body form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #D8D8D8; border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.memo-update .content-body form input:focus, 
+.memo-update .content-body form textarea:focus {
+    outline: 1px solid #0C8CE9;
+}
+.memo-update .content-body form textarea {
+    height: 250px;
+    resize: none;
+}
+.memo-update .content-body form .save-btn {
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: #0C8CE9;
+    font-weight: bold; font-size: 16px;
+    color: #fff;
+}
