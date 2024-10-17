@@ -4,14 +4,17 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "pm2 start ecosystem.config.cjs --env development",
     "build": "vite build",
-    "preview": "vite preview"
+    "start": "pm2 start ecosystem.config.cjs --env production",
+    "stop": "pm2 stop ecosystem.config.cjs",
+    "restart": "pm2 restart ecosystem.config.cjs"
   },
   "devDependencies": {
     "vite": "^5.4.8"
   },
   "dependencies": {
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "pm2": "^5.4.2"
   }
 }

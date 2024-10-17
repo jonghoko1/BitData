@@ -3,7 +3,9 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const app = express();
-const port = 3000;
+
+// 환경 변수에서 포트를 읽거나 기본값으로 3000을 사용
+const PORT = process.env.PORT || 3000;
 
 // 현재 파일의 디렉토리 경로를 가져옵니다.
 const __filename = fileURLToPath(import.meta.url);
@@ -19,6 +21,6 @@ app.get('/*', (req, res) => {
 });
 
 // 서버 실행
-app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Server is running at http://localhost:${PORT}`);
 });
