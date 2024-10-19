@@ -52,6 +52,7 @@ main .next-btn.active {
 }
 /* 이용약관 동의 */
 .modal header {
+    padding: 30px;
     margin-bottom: 0;
 }
 .modal .modal-content {
