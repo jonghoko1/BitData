@@ -1,6 +1,7 @@
 import './join.css';
 
 // 체크박스
+const $checkAllCheckBox = document.querySelector('#check-all-checkbox'); // 전체 동의
 const $termsOfServiceCheckBox = document.querySelector('#terms-of-service-checkbox'); // 이용약관 체크박스
 const $fullTermsOfServiceBtn = document.querySelector('.full-terms-of-service'); // 이용약관 전문 보기 버튼
 const $privacyPolicyCheckbox = document.querySelector('#privacy-policy-checkbox'); // 개인정보 동의
@@ -27,11 +28,30 @@ const activeNextBtn = function() {
         && $privacyPolicyCheckbox.checked 
         && $ageConfirmationCheckbox.checked
     ) {
+        $checkAllCheckBox.checked = true;
         $nextBtn.classList.add('active');
     } else {
+        $checkAllCheckBox.checked = false;
         $nextBtn.classList.remove('active');
     }
 };
+
+
+// 전체 동의 체크박스 클릭시
+$checkAllCheckBox.addEventListener('click', function() {
+    if (!$checkAllCheckBox.checked) {
+        $termsOfServiceCheckBox.checked = false;
+        $privacyPolicyCheckbox.checked = false;
+        $ageConfirmationCheckbox.checked = false;
+        $nextBtn.classList.remove('active');
+    } else {
+        $termsOfServiceCheckBox.checked = true;
+        $privacyPolicyCheckbox.checked = true;
+        $ageConfirmationCheckbox.checked = true;
+        $nextBtn.classList.add('active');
+    }
+
+});
 
 
 // 이용약관 체크박스 클릭시
