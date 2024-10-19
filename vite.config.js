@@ -12,7 +12,7 @@ const inputFiles = {
   collect: resolve(__dirname, 'src/pages/main/collect/collect.html'),           
   history: resolve(__dirname, 'src/pages/service/history/history.html'),        
   dashboard: resolve(__dirname, 'src/pages/service/dashboard/dashboard.html'),  
-  settings: resolve(__dirname, 'src/pages/service/settings/settings.html'),     
+  setting: resolve(__dirname, 'src/pages/service/setting/setting.html'),     
   faq: resolve(__dirname, 'src/pages/service/faq/faq.html'),                    
   exit: resolve(__dirname, 'src/pages/service/exit/exit.html')
 };
