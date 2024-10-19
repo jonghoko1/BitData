@@ -21,18 +21,39 @@ main .card .card-box {
     border: 1px solid #000; border-radius: 10px;
     position: relative;
 }
-/* 사용자 정보 */
+/* 내 프로필 */
 main .card.user-profile .card-box {
     width: 500px; height: 250px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
-main .card.user-profile .card-box .user-info {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+/* 바이낸스 연동 정보 */
+main .card.user-profile .card-box .binance-link-status .state {
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+    color: #24CD15;
 }
+main .card.user-profile .card-box .binance-link-status .relink-btn {
+    display: flex;
+    align-items: center;
+}
+main .card.user-profile .card-box .binance-link-status .relink-btn span {
+    font-weight: 700; font-size: 16px;
+    color: #575757;
+}
+/* 사용자 정보 */
 main .card.user-profile .card-box .user-info p {
     padding-bottom: 10px;
     font-weight: 700;
+}
+/* 설정하기 버튼 */
+main .card.user-profile .card-box .setting-btn {
+    padding: 10px;
+    border: 1px solid #8E8E8E; border-radius: 10px;
+    position: absolute;
+    bottom: 30px; right: 30px;
 }
 /* 바이낸스 연동 정보 */
 main .card.user-binance .card-box {
