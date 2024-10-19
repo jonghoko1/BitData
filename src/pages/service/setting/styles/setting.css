@@ -30,10 +30,46 @@ main .card.user-profile .card-box {
     gap: 40px;
 }
 /* 바이낸스 연동 정보 */
-main .card.user-profile .card-box .binance-link-status .state {
+main .card.user-profile .card-box .binance-link-status .state-box {
     padding-bottom: 10px;
+    
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+main .card.user-profile .card-box .binance-link-status .state {
     font-size: 1.5rem;
     color: #24CD15;
+}
+main .card.user-profile .card-box .binance-link-status .expose-info-btn {
+    position: relative;
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    background-color: #44556B;
+    color: #fff;
+}
+main .card.user-profile .card-box .binance-link-status .expose-info-btn .info-box {
+    visibility: hidden;
+
+    position: absolute;
+    top: 0; left: 30px;
+
+    padding: 10px;
+    border-radius: 10px;
+
+    background-color: #44556B;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+main .card.user-profile .card-box .binance-link-status .expose-info-btn .info-box p {
+    white-space: nowrap;
+}
+main .card.user-profile .card-box .binance-link-status .expose-info-btn:hover .info-box {
+    visibility: visible;
 }
 main .card.user-profile .card-box .binance-link-status .relink-btn {
     display: flex;
