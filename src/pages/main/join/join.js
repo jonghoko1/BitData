@@ -36,6 +36,11 @@ const activeNextBtn = function() {
     }
 };
 
+// 동의 버튼 동작
+const check = function(checkBox) {
+    checkBox.checked = true;
+    activeNextBtn();
+}
 
 // 전체 동의 체크박스 클릭시
 $checkAllCheckBox.addEventListener('click', function() {
@@ -50,7 +55,6 @@ $checkAllCheckBox.addEventListener('click', function() {
         $ageConfirmationCheckbox.checked = true;
         $nextBtn.classList.add('active');
     }
-
 });
 
 
@@ -69,7 +73,7 @@ $termsOfServiceModalCloseBtn.addEventListener('click', function() {
 // 이용약관 전문 모달 동의 버튼
 $termsOfServiceModalAgreeBtn.addEventListener('click', function() {
     $termsOfServiceModal.classList.add('hidden');
-    $termsOfServiceCheckBox.click();
+    check($termsOfServiceCheckBox);
 });
 
 
@@ -88,7 +92,7 @@ $privacyPolicyModalCloseBtn.addEventListener('click', function() {
 // 개인정보 전문 모달 동의 버튼
 $privacyPolicyeModalAgreeBtn.addEventListener('click', function() {
     $privacyPolicyModal.classList.add('hidden');
-    $privacyPolicyCheckbox.click();
+    check($privacyPolicyCheckbox);
 });
 
 
@@ -107,7 +111,7 @@ $ageConfirmationModalCloseBtn.addEventListener('click', function() {
 // 만 14세 이상 안내 모달 동의 버튼
 $ageConfirmationModalAgreeBtn.addEventListener('click', function() {
     $ageConfirmationModal.classList.add('hidden');
-    $ageConfirmationCheckbox.click();
+    check($ageConfirmationCheckbox);
 });
 
 
