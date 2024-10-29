@@ -7,6 +7,9 @@
     <title>거래내역</title>
     <!-- favicon -->
     <link rel="icon" href="/BitData_icon.ico" type="image/png">
+    
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
 </head>
 
 <body>
@@ -52,7 +55,7 @@
                         <!-- 일자 필터 -->
                         <div class="filter-date">
                             <span>일자 설정</span>
-                            <input type="date" name="data-date">
+                            <input type="text" name="data-date">
                         </div>
                     </div>
                     <div class="filter-container">
@@ -251,6 +254,9 @@
     </div>
 
     <!-- js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <script type="module" src="./history.js"></script>
 </body>
 </html>

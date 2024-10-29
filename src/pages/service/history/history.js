@@ -1,5 +1,36 @@
 import './styles/history.css';
 
+// 필터
+// 일자 필터
+$(document).ready(function () {
+    $('input[name="data-date"]').daterangepicker({
+        locale: {
+            format: 'YYYY/MM/DD',
+            separator: ' ~ ',
+            applyLabel: '적용',
+            cancelLabel: '취소',
+            monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+            daysOfWeek: ["일", "월", "화", "수", "목", "금", "토"],
+            customRangeLabel: '사용자 지정'
+        },
+        ranges: {
+            '이번 달': [moment().startOf('month'), moment().endOf('month')],
+            '지난 달': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')],
+            '지난 7일': [moment().subtract(6, 'days'), moment()],
+            '지난 14일': [moment().subtract(13, 'days'), moment()],
+            '지난 60일': [moment().subtract(59, 'days'), moment()],
+            '지난 3개월': [moment().subtract(3, 'months').startOf('month'), moment().endOf('month')],
+            '지난 6개월': [moment().subtract(6, 'months').startOf('month'), moment().endOf('month')]
+        },
+        showDropdowns: true,
+        alwaysShowCalendars: true,
+        opens: "left",
+        linkedCalendars: false
+    });
+});
+
+  
+// 메모
 // field
 // 거래내역 페이지
 const $imageMemoBtn = document.querySelector('.image-memo-btn'); // 거래내역 메모 버튼

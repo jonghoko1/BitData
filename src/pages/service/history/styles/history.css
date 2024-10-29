@@ -21,6 +21,10 @@
     display: flex;
     justify-content: space-between;
 }
+.filter-container input {
+    padding: 5px 10px;
+    border-radius: 5px;
+}
 /* 승패 필터 */
 .filter-winlose span,
 .filter-winlose label {
@@ -44,6 +48,13 @@
     margin-right: 10px;
     font-weight: 700;
     color: #575757;
+}
+.filter-date input {
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    font-size: 14px;
+    color: #0C8CE9;
 }
 /* 코인 필터 */
 .filter-symbol span {
