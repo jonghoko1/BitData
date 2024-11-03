@@ -2,6 +2,9 @@
 .filter-date {
     position: relative;
 }
+.filter-date .drp-selected::before {
+    content: "선택된 일자: ";
+}
 @media (min-width: 564px) {
     .daterangepicker {
         width: 639px;
