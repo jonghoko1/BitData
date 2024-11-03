@@ -10,6 +10,10 @@ $filterDate.addEventListener('input', function() {
 
 $(document).ready(function () {
     $('input[name="data-date"]').daterangepicker({
+        // 기본값 설정 (지난 7일)
+        startDate: moment().subtract(6, 'days'),
+        endDate: moment(),
+        // 지역 설정
         locale: {
             format: 'YYYY/MM/DD',
             separator: ' ~ ',
@@ -19,14 +23,13 @@ $(document).ready(function () {
             daysOfWeek: ['일', '월', '화', '수', '목', '금', '토'],
             customRangeLabel: '사용자 지정'
         },
+        // 선택 범위 노출
         ranges: {
             '이번 달': [moment().startOf('month'), moment().endOf('month')],
             '지난 달': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')],
             '지난 7일': [moment().subtract(6, 'days'), moment()],
             '지난 14일': [moment().subtract(13, 'days'), moment()],
-            '지난 60일': [moment().subtract(59, 'days'), moment()],
             '지난 3개월': [moment().subtract(3, 'months').startOf('month'), moment().endOf('month')],
-            '지난 6개월': [moment().subtract(6, 'months').startOf('month'), moment().endOf('month')]
         },
         showDropdowns: true,
         alwaysShowCalendars: true,
