@@ -4,6 +4,7 @@
 /* layout */
 @import "../../styles/layout/layout.css";
 
+@import "./filter.css";
 @import "./image-memo-modal.css";
 @import "./image-memo-view-modal.css";
 @import "./memo-update-modal.css";

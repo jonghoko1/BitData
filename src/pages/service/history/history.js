@@ -10,6 +10,8 @@ $filterDate.addEventListener('input', function() {
 
 $(document).ready(function () {
     $('input[name="data-date"]').daterangepicker({
+        // 부모 요소 설정
+        parentEl: '.filter-date',
         // 기본값 설정 (지난 7일)
         startDate: moment().subtract(6, 'days'),
         endDate: moment(),
