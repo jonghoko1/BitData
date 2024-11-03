@@ -98,9 +98,15 @@
     border-bottom: 1px solid #dddddd; /* 하단 테두리만 유지 */
 }
 /* 포지션 텍스트 강조 */
-.content-table td:nth-child(5), 
-.content-table td:nth-child(6) {
-    color: #d9534f; /* SHORT 포지션의 빨간색 */
+/* 승 색상 강조 */
+.content-table tr.win > td:nth-child(5), 
+.content-table tr.win > td:nth-child(6) {
+    color: #008636;
+}
+/* 패 색상 강조 */
+.content-table tr.lose > td:nth-child(5), 
+.content-table tr.lose > td:nth-child(6) {
+    color: #d9534f;
 }
 .content-table td .image-memo-btn {
     font-size: 0;
