@@ -2,6 +2,12 @@ import './styles/history.css';
 
 // 필터
 // 일자 필터
+const $filterDate = document.querySelector('.filter-date input');
+
+$filterDate.addEventListener('input', function() {
+    this.value = this.value.replace(/[^0-9/~ ]/g, '');
+});
+
 $(document).ready(function () {
     $('input[name="data-date"]').daterangepicker({
         locale: {
@@ -9,8 +15,8 @@ $(document).ready(function () {
             separator: ' ~ ',
             applyLabel: '적용',
             cancelLabel: '취소',
-            monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
-            daysOfWeek: ["일", "월", "화", "수", "목", "금", "토"],
+            monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+            daysOfWeek: ['일', '월', '화', '수', '목', '금', '토'],
             customRangeLabel: '사용자 지정'
         },
         ranges: {
@@ -24,7 +30,7 @@ $(document).ready(function () {
         },
         showDropdowns: true,
         alwaysShowCalendars: true,
-        opens: "left",
+        opens: 'left',
         linkedCalendars: false
     });
 });
@@ -106,15 +112,15 @@ const uploadImage = function(image) {
         const date = formatDate(new Date());
         newImageCard.classList.add('image-card');
         newImageCard.innerHTML = `
-            <img src="${image.target.result}" alt="Image">
-            <div class="info">
-                <p class="title">${title}</p>
-                <p class="description">디스크립션</p>
-                <p class="upload-date">${date}</p>
+            <img src='${image.target.result}' alt='Image'>
+            <div class='info'>
+                <p class='title'>${title}</p>
+                <p class='description'>디스크립션</p>
+                <p class='upload-date'>${date}</p>
             </div>
-            <div class="actions">
-                <button class="view-btn">보기</button>
-                <button class="delete-btn">삭제</button>
+            <div class='actions'>
+                <button class='view-btn'>보기</button>
+                <button class='delete-btn'>삭제</button>
             </div>
         `;
         $imageMemoModalImageCardContainer.appendChild(newImageCard);
