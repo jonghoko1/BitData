@@ -108,6 +108,11 @@
 .content-table tr.lose > td:nth-child(6) {
     color: #d9534f;
 }
+/* 돋보기 버튼 */
+.content-table td .magnifier-btn img {
+    width: 20px; height: 20px;
+}
+/* 메모 버튼 */
 .content-table td .image-memo-btn {
     font-size: 0;
     cursor: pointer;
