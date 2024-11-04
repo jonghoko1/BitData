@@ -161,6 +161,12 @@
 .pagination-number button img {
     width: 12px; height: 12px;
 }
-.pagination-number .page-number {
+.pagination-number .page-number-btn {
+    width: 20px; height: 20px;
+    border-radius: 20%;
     font-size: 16px;
+}
+.pagination-number .page-number-btn.current-page {
+    background-color: #0C8CE9;
+    color: #fff;
 }
