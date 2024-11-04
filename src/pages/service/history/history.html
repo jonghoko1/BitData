@@ -7,6 +7,9 @@
     <title>거래내역</title>
     <!-- favicon -->
     <link rel="icon" href="/BitData_icon.ico" type="image/png">
+    
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"/>
 </head>
 
 <body>
@@ -52,7 +55,7 @@
                         <!-- 일자 필터 -->
                         <div class="filter-date">
                             <span>일자 설정</span>
-                            <input type="date" name="data-date">
+                            <input type="text" name="data-date">
                         </div>
                     </div>
                     <div class="filter-container">
@@ -90,11 +93,12 @@
                                 <th>매수 단가</th>
                                 <th>매도 단가</th>
                                 <th>포지션 유지 시간</th>
+                                <th>자세히</th>
                                 <th>메모</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr class="win">
                                 <td>2024-10-22</td>
                                 <td>ETHUSDT.P</td>
                                 <td>SHORT</td>
@@ -107,6 +111,48 @@
                                 <td>222</td>
                                 <td>5시간 30분</td>
                                 <td>
+                                    <button type="button" class="detail-btn">
+                                        <img src="./images/magnifier.png" alt="자세히 버튼">
+                                        <div class="tooltip">
+                                            <p class="order-type buy">매수 체결 방식 : 시장가</p>
+                                            <p class="order-fee buy">매수 체결 수수료 : 5.22</p>
+                                            <p class="order-type sell">매도 체결 방식 : 지정가</p>
+                                            <p class="order-fee sell">매도 체결 수수료 : 1.45</p>
+                                            <p class="total-funding-cost">총 펀딩 비용 : 12.45</p>
+                                        </div>
+                                    </button>
+                                </td>
+                                <td>
+                                    <button type="button" class="image-memo-btn">
+                                        <img src="./images/memo.png" alt="메모 버튼">
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="lose">
+                                <td>2024-10-22</td>
+                                <td>ETHUSDT.P</td>
+                                <td>SHORT</td>
+                                <td>X100</td>
+                                <td>1,000,000</td>
+                                <td>50.0%</td>
+                                <td>2,000,000</td>
+                                <td>2,000,000</td>
+                                <td>221</td>
+                                <td>222</td>
+                                <td>5시간 30분</td>
+                                <td>
+                                    <button type="button" class="detail-btn">
+                                        <img src="./images/magnifier.png" alt="자세히 버튼">
+                                        <div class="tooltip">
+                                            <p class="order-type buy">매수 체결 방식 : 시장가</p>
+                                            <p class="order-fee buy">매수 체결 수수료 : 5.22</p>
+                                            <p class="order-type sell">매도 체결 방식 : 지정가</p>
+                                            <p class="order-fee sell">매도 체결 수수료 : 1.45</p>
+                                            <p class="total-funding-cost">총 펀딩 비용 : 12.45</p>
+                                        </div>
+                                    </button>
+                                </td>
+                                <td>
                                     <button type="button" class="image-memo-btn">
                                         <img src="./images/memo.png" alt="메모 버튼">
                                     </button>
@@ -118,14 +164,14 @@
                 <div class="content-footer">
                     <!-- 페이지 이동 -->
                     <div class="pagination-number">
-                        <button type="button" class="pre-start-btn">
+                        <button type="button" class="pre-start-btn deactive">
                             <img src="/assets/images/button/left-arrow-double.png" alt="처음으로 버튼">
                         </button>
-                        <button type="button" class="pre-btn">
+                        <button type="button" class="pre-btn deactive">
                             <img src="/assets/images/button/left-arrow.png" alt="이전 버튼">
                         </button>
                         <div class="page-number-container">
-                            <button type="button" class="page-number-btn page-number-1">1</button>
+                            <button type="button" class="page-number-btn page-number-1 current-page">1</button>
                             <button type="button" class="page-number-btn page-number-2">2</button>
                             <button type="button" class="page-number-btn page-number-3">3</button>
                             <button type="button" class="page-number-btn page-number-4">4</button>
@@ -251,6 +297,9 @@
     </div>
 
     <!-- js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <script type="module" src="./history.js"></script>
 </body>
 </html>

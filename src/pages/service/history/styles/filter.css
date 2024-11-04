@@ -1,0 +1,22 @@
+/* 일자 필터 */
+.filter-date {
+    position: relative;
+}
+.daterangepicker select.yearselect {
+    float: left;
+    width: 49%;
+}
+.daterangepicker select.monthselect {
+    float: right;
+    width: 49%;
+    margin-right: 0;
+}
+.daterangepicker .drp-selected::before {
+    content: "선택된 일자: ";
+}
+
+@media (min-width: 564px) {
+    .daterangepicker {
+        width: 639px;
+    }
+}
