@@ -12,7 +12,7 @@ module.exports = {
         },
         env_production: {
           NODE_ENV: "production",   // 프로덕션 환경 설정
-          PORT: 8080,
+          PORT: 8000,
         }
       }
     ]
