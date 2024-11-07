@@ -4,6 +4,7 @@
 /* layout */
 @import "../../styles/layout/layout.css";
 
+@import "./filter.css";
 @import "./image-memo-modal.css";
 @import "./image-memo-view-modal.css";
 @import "./memo-update-modal.css";
@@ -20,6 +21,10 @@
     margin-top: 50px;
     display: flex;
     justify-content: space-between;
+}
+.filter-container input {
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 /* 승패 필터 */
 .filter-winlose span,
@@ -45,6 +50,13 @@
     font-weight: 700;
     color: #575757;
 }
+.filter-date input {
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    font-size: 14px;
+    color: #0C8CE9;
+}
 /* 코인 필터 */
 .filter-symbol span {
     display: inline-block;
@@ -53,7 +65,7 @@
     color: #575757;
 }
 .filter-symbol input {
-    width: 200px;
+    width: 350px;
 }
 /* 페이지 노출 */
 .pagination-option label {
@@ -71,6 +83,7 @@
 }
 .content-table table {
     border: none;
+    width: 100%;
 }
 /* 테이블 헤더 스타일 */
 .content-table thead tr {
@@ -81,20 +94,48 @@
     padding: 12px 18px;
     text-align: center;
     vertical-align: middle;
-    border-top: 1px solid #dddddd;  /* 상단 테두리만 유지 */
+    border: none;
     border-bottom: 1px solid #dddddd; /* 하단 테두리만 유지 */
-    border-left: none; /* 좌측 테두리 제거 */
-    border-right: none; /* 우측 테두리 제거 */
-}
-/* 테이블 본문 스타일 */
-.content-table tbody tr {
-    border-bottom: 1px solid #dddddd;
 }
 /* 포지션 텍스트 강조 */
-.content-table td:nth-child(5), 
-.content-table td:nth-child(6) {
-    color: #d9534f; /* SHORT 포지션의 빨간색 */
+/* 승 색상 강조 */
+.content-table tr.win > td:nth-child(5), 
+.content-table tr.win > td:nth-child(6) {
+    color: #008636;
 }
+/* 패 색상 강조 */
+.content-table tr.lose > td:nth-child(5), 
+.content-table tr.lose > td:nth-child(6) {
+    color: #d9534f;
+}
+/* 돋보기 버튼 */
+.detail-btn {
+    position: relative;
+    font-size: 0;
+}
+.detail-btn img {
+    width: 20px; height: 20px;
+}
+.detail-btn .tooltip {
+    position: absolute;
+    top: 10px; right: 20px;
+    width: auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+.tooltip p {
+    font-size: 16px;
+    color: #fff;
+    white-space: nowrap;
+}
+.detail-btn:hover .tooltip {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+/* 메모 버튼 */
 .content-table td .image-memo-btn {
     font-size: 0;
     cursor: pointer;
@@ -120,6 +161,12 @@
 .pagination-number button img {
     width: 12px; height: 12px;
 }
-.pagination-number .page-number {
+.pagination-number .page-number-btn {
+    width: 20px; height: 20px;
+    border-radius: 20%;
     font-size: 16px;
+}
+.pagination-number .page-number-btn.current-page {
+    background-color: #0C8CE9;
+    color: #fff;
 }
