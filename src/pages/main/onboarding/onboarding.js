@@ -52,7 +52,6 @@ function spendApiKey() {
     const secretKey = document.querySelector('#secret-key').value.trim();
 
     try {
-        // POST 요청 전송
         fetch('/onboarding/start', {
             method: 'POST',
             headers: {
