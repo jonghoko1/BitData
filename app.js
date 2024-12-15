@@ -52,7 +52,8 @@ app.get("/login/kakao/auths/callback", async (req, res) => {
 
         req.session.sessionKey = response.session_key;
 
-        return res.redirect(response.is_member ? "/history" : "/join");
+        const redirectUrl = getRedirectByMemberState();
+        return res.redirect(redirectUrl);
     } catch (error) {
         res.status(500).send(error);
     }
@@ -77,6 +78,20 @@ async function getLoginKaKaoCallback(code, state) {
     } catch (error) {
         throw error;
     }
+}
+
+function getRedirectByMemberState(response) {
+    if (!response.isMember) { // 비회원
+        return "/join";
+    }
+    if (!response.hasBinanceKey) { // 회원 > 바이낸스 키 없음 
+        return "/onboarding";
+    }
+    if (response.hasBinanceKey) { // 회원 > 바이낸스 키 있음
+        return "/collect";
+    }
+    
+    throw new Error("Unexpected member state in response");
 }
 
 app.get("/join/kakao", async (req, res) => {
