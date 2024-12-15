@@ -13,7 +13,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 app.use(express.static(path.join(__dirname, "dist")));
-
+app.use(express.json()); // 항상 라우트 전에 선언
 app.use(
     session({
         secret: "my_secret_key",
@@ -26,9 +26,9 @@ app.use(
 app.get("/login/kakao", async (req, res) => {
     try {
         const response = await axios.get(`${SERVER_URL}/login/kakao`);
-        res.redirect(response.data.login_url);
+        return res.redirect(response.data.login_url);
     } catch (error) {
-        res.status(500).send(error);
+        return res.status(500).send(error);
     }
 });
 
@@ -44,23 +44,6 @@ app.get("/login/kakao/auths/callback", async (req, res) => {
     }
 
     try {
-        const response = await getLoginKaKaoCallback(code, state);
-
-        if (!response) {
-            return res.status(500).send("Response is null");
-        }
-
-        req.session.sessionKey = response.session_key;
-
-        const redirectUrl = getRedirectByMemberState();
-        return res.redirect(redirectUrl);
-    } catch (error) {
-        res.status(500).send(error);
-    }
-});
-
-async function getLoginKaKaoCallback(code, state) {
-    try {
         const response = await axios.post(
             `${SERVER_URL}/login/kakao/callback/`,
             {
@@ -74,11 +57,18 @@ async function getLoginKaKaoCallback(code, state) {
             },
         );
 
-        return response.data;
+        if (!response) {
+            return res.status(500).send("Response is null");
+        }
+
+        req.session.sessionKey = response.session_key;
+
+        const redirectUrl = getRedirectByMemberState();
+        return res.redirect(redirectUrl);
     } catch (error) {
-        throw error;
+        return res.status(500).send(error);
     }
-}
+});
 
 function getRedirectByMemberState(response) {
     if (!response.isMember) { // 비회원
@@ -96,30 +86,10 @@ function getRedirectByMemberState(response) {
 
 app.get("/join/kakao", async (req, res) => {
     try {
-        const sessionKey = req.session?.sessionKey;
-        
-        if (!sessionKey) {
-            return res.status(401).send("Session key is missing or expired");
-        }
-
-        const response = await getJoinKaKaoCallback(sessionKey);
-
-        if (!response) {
-            return res.status(500).send("Response is null");
-        }
-
-        return res.redirect("/onboarding");
-    } catch (error) {
-        res.status(500).send(error.message || "Internal Server Error");
-    }
-});
-
-async function getJoinKaKaoCallback(sessionKey) {
-    try {
-        const response = await axios.post(
+        const response = await await axios.post(
             `${SERVER_URL}/login/kakao/consent/`,
             {
-                session_key: sessionKey
+                session_key: getSessionKey()
             },
             {
                 headers: {
@@ -129,11 +99,48 @@ async function getJoinKaKaoCallback(sessionKey) {
             },
         );
 
-        return response.data;
+        if (!response) {
+            return res.status(500).send("Response is null");
+        }
+
+        return res.redirect("/onboarding");
     } catch (error) {
-        throw error;
+        return res.status(500).send(error.message || "Internal Server Error");
     }
-}
+});
+
+app.post("/onboarding/start", async (req, res) => {
+    const apiKey = req.body.api_key;
+    const secretKey = req.body.secret_key;
+
+    if (!apiKey) {
+        return res.status(500).send("API key is null");
+    }
+
+    if (!secretKey) {
+        return res.status(500).send("Secret key is null");
+    }
+
+    try {
+        const response = await axios.post(
+            `${SERVER_URL}/onboarding/start/`,
+            {
+                session_key: getSessionKey(),
+                api_key: apiKey,
+                secret_key: secretKey,
+            },
+        );
+
+        if (!response) {
+            return res.status(500).send("Response is null");
+        }
+        
+        return res.redirect("/collect");
+    } catch (error) {
+        return res.status(500).send(error.message || "Internal Server Error");
+    }
+});
+
 
 app.get("/*", (req, res) => {
     const fileName = req.params[0] ? req.params[0] : "index";
@@ -143,3 +150,17 @@ app.get("/*", (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);
 });
+
+
+// TODO: common js 스크립트 분리 필요
+// common js
+
+function getSessionKey() {
+    const sessionKey = req.session?.sessionKey;
+
+    if (!sessionKey) {
+        throw new Error("Session is missing");
+    }
+
+    return sessionKey;
+}

@@ -48,5 +48,23 @@ $apiManagementFrm.addEventListener('submit', (event) => {
 
 
 function spendApiKey() {
-    window.location.href = '/collect';
+    const apiKey = document.querySelector('#api-key').value.trim();
+    const secretKey = document.querySelector('#secret-key').value.trim();
+
+    try {
+        // POST 요청 전송
+        fetch('/onboarding/start', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                api_key: apiKey,
+                secret_key: secretKey
+            }),
+        });
+    } catch (error) {
+        console.error('Error:', error);
+        alert('An unexpected error occurred. Please try again.');
+    }
 }
